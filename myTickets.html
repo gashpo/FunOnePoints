@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <base href="/" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <title id="pageTitle">我的票夾 ｜ FunOne Points</title>
+    <meta name="description" content="用 FunOne Points 紅利點數，輕鬆兌換各大通路商品與票券！累積點數，享受超值回饋，讓每點紅利都更有價值。"/>
+    <meta name="keywords" content="FunOne Points, 紅利點數, 點數兌換, 商品兌換, 會員回饋, 紅利商城, 優惠兌換">
+    <!-- 瀏覽器 icon -->
+    <link rel="shortcut icon" href="images/Logo Coin.png" type="image/x-icon" sizes="any" />
+    <!-- 網站在瀏覽器標簽欄和書簽中顯示的圖標 -->
+    <meta
+      property="og:image"
+      content="絕對路徑"
+    />
+    <!-- 分享網頁時會顯示的縮圖 -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <!-- 是否使用全屏顯示 -->
+    <!-- iOS Safari Set Up -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- 新增到桌面時 開啟後 上方狀態欄顯示顏色  -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <!-- Google Material Symbols & Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- 樣式表 -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <header id="header-placeholder"></header>
+    <iframe src="mobile-menu.html" frameborder="0" class="mobile-frame"></iframe>
+
+    <ul class="breadcrumbs">
+      <li>會員中心</li>
+      <li>我的票夾</li>
+    </ul>
+    <h3 class="page-title">會員中心</h3>
+    <div class="container">
+      <nav class="sidebar">
+        <ul class="sidenav">
+          <li onclick="location.href='myPoints.html'"><i class="material-symbols-outlined">receipt_long</i>我的紅利</li>
+          <li class="active"><i class="material-symbols-outlined">folder_open</i>我的票夾</li>
+          <li class="divider"></li>
+          <li><i class="material-symbols-outlined">person</i>會員資料</li>
+          <li><i class="material-symbols-outlined">logout</i>登出</li>
+        </ul>
+      </nav>
+      <main>
+        <h4 class="main-title">我的票夾</h4>
+        <div class="tab-wrapper">
+          <ul class="tab">
+            <li class="tab-item active">空值畫面</li>
+            <li class="tab-item">可使用</li>
+            <li class="tab-item">已失效</li>
+            <div class="tab-underline"></div>
+          </ul>
+          <div class="tab-scroll-left"><i class="material-symbols-outlined">chevron_left</i></div>
+          <div class="tab-scroll-right"><i class="material-symbols-outlined">chevron_right</i></div>
+        </div>
+        <div class="tab-container">
+          <div class="tab-content" style="display: block;">
+            <div class="empty">
+              <img src="images/empty-box.png">
+              <p>這裡會收藏您用紅利兌換的各種票券，快去看看有什麼心動好禮吧！</p>
+              <button>立即兌換</button>
+            </div>
+          </div>
+          <div class="tab-content" style="display: none;">
+            <ul class="ticket-list">
+              <li>
+                <div class="ticket-info">
+                  <div class="ticket-img"><img src="images/product/product-01.png"></div>
+                  <div class="ticket-desc">
+                    <h6>Family mart 拿鐵熱咖啡(大)</h6>
+                    <dl>
+                      <dt>訂單編號</dt>
+                      <dd>atx250122150442308</dd>
+                      <dt>票券效期</dt>
+                      <dd>2025-03-31  15:20:32</dd>
+                    </dl>
+                  </div>
+                </div>
+                <div class="ticket-badge">立即使用</div>
+              </li>
+              <li>
+                <div class="ticket-info">
+                  <div class="ticket-img"><img src="images/product/product-02.png"></div>
+                  <div class="ticket-desc">
+                    <h6>統一超商 茶葉蛋 10元抵用券</h6>
+                    <dl>
+                      <dt>訂單編號</dt>
+                      <dd>atx250122150442308</dd>
+                      <dt>票券效期</dt>
+                      <dd>2025-03-31  15:20:32</dd>
+                    </dl>
+                  </div>
+                </div>
+                <div class="ticket-badge">立即使用</div>
+              </li>
+              <li>
+                <div class="ticket-info">
+                  <div class="ticket-img"><img src="images/product/product-03.png"></div>
+                  <div class="ticket-desc">
+                    <h6>統一超商 雙蔬鮪魚飯糰</h6>
+                    <dl>
+                      <dt>訂單編號</dt>
+                      <dd>atx250122150442308</dd>
+                      <dt>票券效期</dt>
+                      <dd>2025-03-31  15:20:32</dd>
+                    </dl>
+                  </div>
+                </div>
+                <div class="ticket-badge">立即使用</div>
+              </li>
+              <li>
+                <div class="ticket-info">
+                  <div class="ticket-img"><img src="images/product/product-04.png"></div>
+                  <div class="ticket-desc">
+                    <h6>CITY CAFÉ 拿鐵熱咖啡(大)</h6>
+                    <dl>
+                      <dt>訂單編號</dt>
+                      <dd>atx250122150442308</dd>
+                      <dt>票券效期</dt>
+                      <dd>2025-03-31  15:20:32</dd>
+                    </dl>
+                  </div>
+                </div>
+                <div class="ticket-badge">立即使用</div>
+              </li>
+              <li>
+                <div class="ticket-info">
+                  <div class="ticket-img"><img src="images/product/product-05.png"></div>
+                  <div class="ticket-desc">
+                    <h6>統一超商 統一陽光黃金豆豆漿</h6>
+                    <dl>
+                      <dt>訂單編號</dt>
+                      <dd>atx250122150442308</dd>
+                      <dt>票券效期</dt>
+                      <dd>2025-03-31  15:20:32</dd>
+                    </dl>
+                  </div>
+                </div>
+                <div class="ticket-badge">立即使用</div>
+              </li>
+            </ul>
+            <button class="btn-tertiary">顯示更多 <i class="material-symbols-outlined">keyboard_arrow_down</i></button>
+          </div>
+          <div class="tab-content" style="display: none;">
+            <ul class="ticket-list invalid">
+              <li>
+                <div class="ticket-info">
+                  <div class="ticket-img"><img src="images/product/product-01.png"></div>
+                  <div class="ticket-desc">
+                    <h6>Family mart 拿鐵熱咖啡(大)</h6>
+                    <dl>
+                      <dt>訂單編號</dt>
+                      <dd>atx250122150442308</dd>
+                      <dt>票券效期</dt>
+                      <dd>2025-03-31  15:20:32</dd>
+                      <dt>使用時間</dt>
+                      <dd>2025-02-28  09:34:01</dd>
+                    </dl>
+                  </div>
+                </div>
+                <div class="ticket-badge"><img src="images/stamp-used.png"></div>
+              </li>
+              <li>
+                <div class="ticket-info">
+                  <div class="ticket-img"><img src="images/product/product-02.png"></div>
+                  <div class="ticket-desc">
+                    <h6>統一超商 茶葉蛋 10元抵用券</h6>
+                    <dl>
+                      <dt>訂單編號</dt>
+                      <dd>atx250122150442308</dd>
+                      <dt>票券效期</dt>
+                      <dd>2025-03-31  15:20:32</dd>
+                    </dl>
+                  </div>
+                </div>
+                <div class="ticket-badge"><img src="images/stamp-expired.png"></div>
+              </li>
+              <li>
+                <div class="ticket-info">
+                  <div class="ticket-img"><img src="images/product/product-03.png"></div>
+                  <div class="ticket-desc">
+                    <h6>統一超商 雙蔬鮪魚飯糰</h6>
+                    <dl>
+                      <dt>訂單編號</dt>
+                      <dd>atx250122150442308</dd>
+                      <dt>票券效期</dt>
+                      <dd>2025-03-31  15:20:32</dd>
+                      <dt>使用時間</dt>
+                      <dd>2025-02-28  09:34:01</dd>
+                    </dl>
+                  </div>
+                </div>
+                <div class="ticket-badge"><img src="images/stamp-used.png"></div>
+              </li>
+              <li>
+                <div class="ticket-info">
+                  <div class="ticket-img"><img src="images/product/product-04.png"></div>
+                  <div class="ticket-desc">
+                    <h6>CITY CAFÉ 拿鐵熱咖啡(大)</h6>
+                    <dl>
+                      <dt>訂單編號</dt>
+                      <dd>atx250122150442308</dd>
+                      <dt>票券效期</dt>
+                      <dd>2025-03-31  15:20:32</dd>
+                    </dl>
+                  </div>
+                </div>
+                <div class="ticket-badge"><img src="images/stamp-expired.png"></div>
+              </li>
+              <li>
+                <div class="ticket-info">
+                  <div class="ticket-img"><img src="images/product/product-05.png"></div>
+                  <div class="ticket-desc">
+                    <h6>統一超商 統一陽光黃金豆豆漿</h6>
+                    <dl>
+                      <dt>訂單編號</dt>
+                      <dd>atx250122150442308</dd>
+                      <dt>票券效期</dt>
+                      <dd>2025-03-31  15:20:32</dd>
+                      <dt>使用時間</dt>
+                      <dd>2025-02-28  09:34:01</dd>
+                    </dl>
+                  </div>
+                </div>
+                <div class="ticket-badge"><img src="images/stamp-used.png"></div>
+              </li>
+            </ul>
+            <button class="btn-tertiary">顯示更多 <i class="material-symbols-outlined">keyboard_arrow_down</i></button>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <footer id="footer-placeholder"></footer>
+
+
+    <!-- Lottie -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
+    <script>
+      var loadingWhite = lottie.loadAnimation({
+          container: document.getElementById('lottie-loading_white'),
+          renderer: 'svg',
+          loop: true,
+          autoplay: true,
+          path: 'images/Loading_white.json',
+      });
+      var loadingGray = lottie.loadAnimation({
+          container: document.getElementById('lottie-loading_gray'),
+          renderer: 'svg',
+          loop: true,
+          autoplay: true,
+          path: 'images/Loading_gray.json',
+      });
+      var success = lottie.loadAnimation({
+          container: document.getElementById('lottie-success'),
+          renderer: 'svg',
+          loop: true,
+          autoplay: true,
+          path: 'images/Success.json',
+      });
+    </script>
+
+    <!-- jQuery -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#header-placeholder").load("header.html");
+        $("#footer-placeholder").load("footer.html");
+      });
+    </script>
+
+    <script src="js/tab.js"></script>
+  </body>
+</html>

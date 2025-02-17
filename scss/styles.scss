@@ -1,0 +1,41 @@
+@import "reset";
+@import "variable/variable";
+
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Varela&display=swap");
+* {
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: px(5);
+  background-color: transparent;
+  @include rounded(100);
+}
+
+::-webkit-scrollbar-thumb {
+  width: px(5);
+  background-color: color(gray-150);
+  @include rounded(100);
+}
+
+body {
+  color: color(gray-900);
+  background-color: color(primary-50);
+}
+
+@import "components/button";
+@import "components/badge";
+@import "components/divider";
+@import "components/input";
+@import "components/popup";
+@import "components/select";
+@import "components/tab";
+
+@import "layout/main";
+@import "layout/sidebar";
+@import "layout/layout";
+@import "layout/header";
+@import "layout/footer";
+
+@import "pages/mypoints";
+@import "pages/mytickets";

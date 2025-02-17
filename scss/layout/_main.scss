@@ -1,0 +1,26 @@
+main {
+  padding: spacing(32);
+  @include rounded(24);
+  background-color: color(gray-0);
+  display: flex;
+  flex-direction: column;
+  gap: spacing(40);
+
+  @include max-to(mobile) {
+    padding: spacing(32) spacing(16);
+    gap: spacing(16);
+  }
+}
+
+.main-title {
+  display: flex;
+  align-items: center;
+  gap: spacing(8);
+
+  &::before {
+    content: "";
+    width: px(4);
+    height: px(22);
+    background-color: color(gray-900);
+  }
+}

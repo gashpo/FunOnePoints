@@ -1,0 +1,110 @@
+.container {
+  width: px(1200);
+  margin: auto;
+  display: flex;
+  gap: spacing(16);
+  min-height: calc(100dvh - px(389));
+
+  @include max-to(desktop) {
+    width: calc(100dvw - px(320));
+    min-width: px(720);
+  }
+
+  @include max-to(tablet) {
+    width: calc(100dvw - px(272));
+  }
+
+  @include max-to(mobile) {
+    width: calc(100dvw - px(32));
+    min-width: auto;
+  }
+}
+
+section {
+  padding: spacing(20);
+}
+
+ul.breadcrumbs {
+  display: none;
+
+  li {
+    position: relative;
+    margin-right: spacing(12);
+
+    span {
+      cursor: pointer;
+      padding: spacing(0) spacing(4);
+      @include fontRWD(caption);
+    }
+
+    &:after {
+      font-family: "Material Icons";
+      content: "\e5cc";
+      color: color(gray-500);
+      font-weight: fontweight(4Regular);
+      font-size: fontsize(12);
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      transform: translate(0, calc(-50% + spacing(2)));
+    }
+
+    &:last-child {
+      color: color(gray-500);
+
+      span {
+        cursor: default;
+      }
+
+      &:after {
+        content: "";
+      }
+    }
+  }
+
+  @include max-to(mobile) {
+    display: flex;
+    align-items: center;
+    padding-top: spacing(96);
+    margin: spacing(0) auto spacing(20);
+    width: calc(100svw - px(32));
+    @include fontRWD(caption);
+  }
+}
+
+.page-title {
+  padding-top: spacing(130);
+  width: px(1200);
+  margin: spacing(0) auto spacing(20);
+
+  @include max-to(desktop) {
+    width: calc(100svw - px(320));
+    min-width: px(720);
+  }
+
+  @include max-to(tablet) {
+    width: calc(100svw - px(272));
+  }
+
+  @include max-to(mobile) {
+    display: none;
+  }
+}
+
+.sidebar {
+  flex: 3;
+  max-width: px(296);
+
+  @include max-to(tablet) {
+    display: none;
+  }
+}
+
+main {
+  flex: 9;
+  max-width: px(888);
+
+  @include max-to(tablet) {
+    flex: 12;
+  }
+}
