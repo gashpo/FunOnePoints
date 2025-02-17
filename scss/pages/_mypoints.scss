@@ -1,0 +1,129 @@
+.mypoints {
+  background-color: color(gray-900);
+  @include rounded(20);
+  display: flex;
+  flex-direction: column;
+  gap: spacing(20);
+  padding: spacing(32);
+  color: color(gray-0);
+
+  .points {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: spacing(8);
+    @include fontRWD(h4);
+
+    .coin {
+      width: px(40);
+      height: px(40);
+      align-self: center;
+    }
+
+    span {
+      @include fontRWD(body4);
+    }
+  }
+
+  .expired-info {
+    display: flex;
+    gap: spacing(32);
+    padding: spacing(0) spacing(12);
+    @include fontRWD(caption);
+
+    li {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: spacing(8);
+
+      &.divider {
+        flex: 0;
+      }
+    }
+  }
+
+  @include max-to(mobile) {
+    padding: spacing(32) spacing(16);
+
+    .expired-info {
+      gap: spacing(8);
+      padding: spacing(0);
+    }
+  }
+}
+
+ul.list {
+  > li {
+    padding: spacing(20) spacing(0);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: spacing(32);
+    border-bottom: px(1) solid color(gray-150);
+
+    .desc {
+      p {
+        @include fontRWD(body2);
+      }
+
+      span {
+        @include fontRWD(body4);
+        color: color(gray-400);
+        position: relative;
+
+        + span {
+          padding-left: spacing(16);
+          margin-left: spacing(-6);
+
+          &::before {
+            position: absolute;
+            content: "";
+            display: block;
+            width: px(1);
+            height: px(20);
+            background-color: color(gray-100);
+            top: 50%;
+            left: px(8);
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+
+    .coin {
+      height: px(24);
+      display: flex;
+      align-items: center;
+      gap: spacing(8);
+      @include fontRWD(h6);
+    }
+  }
+
+  &.deduction {
+    li {
+      .coin {
+        color: color(error-500);
+      }
+    }
+  }
+
+  + button {
+    width: 100%;
+    text-align: center;
+    margin-top: spacing(16);
+  }
+}
+
+.empty {
+  text-align: center;
+
+  p {
+    @include fontRWD(body3);
+    margin: spacing(16) spacing(0);
+  }
+
+  button {
+    margin: auto;
+  }
+}

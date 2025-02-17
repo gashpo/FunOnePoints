@@ -1,0 +1,52 @@
+.select {
+  padding: spacing(0) spacing(4) spacing(0) spacing(8);
+  height: auto;
+  @include rounded(20);
+  @include dropshadow;
+  background-color: color(gray-0);
+  max-height: px(0);
+  color: color(gray-900);
+  @include transition(all);
+  overflow: hidden;
+
+  ul {
+    padding-right: spacing(4);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    li {
+      display: flex;
+      align-items: center;
+      padding: spacing(16);
+      gap: spacing(8);
+      @include rounded(20);
+      cursor: pointer;
+      @include transition(all);
+
+      i {
+        color: color(gray-500);
+      }
+
+      &:hover {
+        background-color: color(primary-50);
+        color: color(primary-500);
+
+        i {
+          color: color(primary-500);
+        }
+      }
+
+      &.divider {
+        cursor: default;
+        background-color: color(gray-0);
+      }
+    }
+  }
+
+  &.active {
+    max-height: px(300);
+    padding: spacing(8) spacing(4) spacing(8) spacing(8);
+    overflow-y: auto;
+  }
+}

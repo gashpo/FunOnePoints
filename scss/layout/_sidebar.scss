@@ -1,0 +1,30 @@
+.sidenav {
+  background-color: color(gray-0);
+  @include rounded(24);
+  padding: spacing(16);
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: spacing(16);
+    padding: spacing(16) spacing(8);
+    @include rounded(20);
+    cursor: pointer;
+    @include transition(all);
+
+    @include hover {
+      background-color: color(primary-50);
+      color: color(primary-500);
+    }
+
+    &.active {
+      background-color: color(primary-50);
+      color: color(primary-500);
+      cursor: default;
+    }
+
+    &.divider {
+      cursor: default;
+    }
+  }
+}

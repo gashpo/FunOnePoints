@@ -1,0 +1,6 @@
+.popup {
+  padding: spacing(32) spacing(32) spacing(34);
+  @include rounded(24);
+  background-color: color(gray-0);
+  box-shadow: 0 0 px(10) rgba(color(gray-0), 0.1);
+}
