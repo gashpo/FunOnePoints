@@ -396,6 +396,9 @@ input {
     line-height: 150%;
   }
 }
+input::-moz-placeholder {
+  color: #b0b0b0;
+}
 input::placeholder {
   color: #b0b0b0;
 }
@@ -526,7 +529,9 @@ input[type=text] {
 .checkbox-wrapper label input[type=checkbox], .checkbox-wrapper label input[type=radio],
 .radio-wrapper label input[type=checkbox],
 .radio-wrapper label input[type=radio] {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   width: 1.5rem;
   height: 1.5rem;
   cursor: pointer;
@@ -785,6 +790,7 @@ input[type=text] {
   color: #959595;
   cursor: pointer;
   width: 5.625rem;
+  min-width: -moz-max-content;
   min-width: max-content;
   transition: color 0.3s ease-in-out;
   text-align: center;
@@ -854,6 +860,7 @@ header .action .header-dropdown .point {
   padding: 1rem;
   border-radius: 1.5rem;
   flex: 100%;
+  height: -moz-fit-content;
   height: fit-content;
   display: flex;
   align-items: center;
@@ -891,4 +898,4 @@ header .action .header-dropdown .point {
 .mobile-menu li.divider {
   cursor: default;
   background-color: #ffffff;
-}
+}/*# sourceMappingURL=mobile-menu.css.map */

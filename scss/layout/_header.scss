@@ -53,6 +53,16 @@ header {
     gap: spacing(20);
     pointer-events: all;
 
+    #login {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      i {
+        display: none;
+      }
+    }
+
     .header-dropdown {
       position: relative;
 
@@ -133,6 +143,7 @@ header {
 
       .logo {
         background-color: color(primary-900);
+        border: px(1) solid color(primary-0);
         padding: spacing(0) spacing(20);
         height: px(50);
         @include rounded(64);
@@ -166,6 +177,27 @@ header {
     }
 
     .action {
+      #login {
+        padding: spacing(8);
+        width: px(50);
+        height: px(50);
+        position: fixed;
+        top: spacing(16);
+        right: spacing(16);
+
+        i {
+          display: inline;
+        }
+
+        span {
+          display: none;
+        }
+      }
+
+      #language {
+        display: none;
+      }
+
       .header-dropdown {
         padding: spacing(0);
         background-color: transparent;
@@ -175,6 +207,22 @@ header {
         top: spacing(16);
         right: spacing(16);
 
+        .point {
+          border: none;
+          padding: spacing(0);
+          background-color: transparent;
+          min-width: auto;
+
+          img {
+            max-width: px(50);
+            max-height: px(50);
+          }
+
+          span {
+            display: none;
+          }
+        }
+
         img {
           max-width: px(50);
           max-height: px(50);
@@ -183,11 +231,6 @@ header {
         span {
           display: none;
         }
-      }
-
-      #language,
-      #login {
-        display: none;
       }
     }
 
@@ -269,5 +312,22 @@ header {
 
   &.open {
     display: block;
+  }
+}
+
+
+
+
+#user {
+  display: none;
+}
+
+body.loggedin {
+  #user {
+    display: inline;
+  }
+  
+  #login {
+    display: none;
   }
 }

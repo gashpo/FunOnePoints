@@ -16,4 +16,12 @@ $(document).ready(function () {
   $(document).click(function () {
     $(".select").removeClass("active");
   });
+
+  // 登入登出示意
+  $('#login').click(function () {
+    $('body').addClass('loggedin');
+  })
+  $('#user').click(function () {
+    $('body').removeClass('loggedin');
+  })
 });

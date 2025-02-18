@@ -559,6 +559,9 @@ input {
     line-height: 150%;
   }
 }
+input::-moz-placeholder {
+  color: #b0b0b0;
+}
 input::placeholder {
   color: #b0b0b0;
 }
@@ -689,7 +692,9 @@ input[type=text] {
 .checkbox-wrapper label input[type=checkbox], .checkbox-wrapper label input[type=radio],
 .radio-wrapper label input[type=checkbox],
 .radio-wrapper label input[type=radio] {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   width: 1.5rem;
   height: 1.5rem;
   cursor: pointer;
@@ -948,6 +953,7 @@ input[type=text] {
   color: #959595;
   cursor: pointer;
   width: 5.625rem;
+  min-width: -moz-max-content;
   min-width: max-content;
   transition: color 0.3s ease-in-out;
   text-align: center;
@@ -1046,8 +1052,7 @@ main {
 }
 @media (hover: hover) {
   .sidenav li:hover {
-    background-color: #f0e5fd;
-    color: #6500ee;
+    color: #7b7b7b;
   }
 }
 .sidenav li.active {
@@ -1243,6 +1248,14 @@ header .action {
   gap: 1.25rem;
   pointer-events: all;
 }
+header .action #login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .action #login i {
+  display: none;
+}
 header .action .header-dropdown {
   position: relative;
 }
@@ -1315,6 +1328,7 @@ header .action .header-dropdown .select.active {
   }
   header .menu .logo {
     background-color: #140030;
+    border: 0.0625rem solid;
     padding: 0rem 1.25rem;
     height: 3.125rem;
     border-radius: 4rem;
@@ -1342,6 +1356,23 @@ header .action .header-dropdown .select.active {
     content: "";
     width: 3.125rem;
   }
+  header .action #login {
+    padding: 0.5rem;
+    width: 3.125rem;
+    height: 3.125rem;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+  }
+  header .action #login i {
+    display: inline;
+  }
+  header .action #login span {
+    display: none;
+  }
+  header .action #language {
+    display: none;
+  }
   header .action .header-dropdown {
     padding: 0rem;
     background-color: transparent;
@@ -1351,15 +1382,24 @@ header .action .header-dropdown .select.active {
     top: 1rem;
     right: 1rem;
   }
+  header .action .header-dropdown .point {
+    border: none;
+    padding: 0rem;
+    background-color: transparent;
+    min-width: auto;
+  }
+  header .action .header-dropdown .point img {
+    max-width: 3.125rem;
+    max-height: 3.125rem;
+  }
+  header .action .header-dropdown .point span {
+    display: none;
+  }
   header .action .header-dropdown img {
     max-width: 3.125rem;
     max-height: 3.125rem;
   }
   header .action .header-dropdown span {
-    display: none;
-  }
-  header .action #language,
-  header .action #login {
     display: none;
   }
   header.open {
@@ -1421,6 +1461,17 @@ header .action .header-dropdown .select.active {
 }
 .mobile-frame.open {
   display: block;
+}
+
+#user {
+  display: none;
+}
+
+body.loggedin #user {
+  display: inline;
+}
+body.loggedin #login {
+  display: none;
 }
 
 footer {
@@ -1749,7 +1800,6 @@ ul.list + button {
 .ticket-list.invalid li {
   background-color: #ffffff;
   border: 0.1875rem solid #b0b0b0;
-  cursor: default;
 }
 .ticket-list.invalid li .ticket-info {
   border: none;
@@ -1952,4 +2002,4 @@ ul.list + button {
     top: 1rem;
     right: 1rem;
   }
-}
+}/*# sourceMappingURL=styles.css.map */
