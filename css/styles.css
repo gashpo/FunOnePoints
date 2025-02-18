@@ -1425,7 +1425,7 @@ header .action .header-dropdown .select.active {
   header.open .action #language {
     display: inline;
   }
-  header.open .action #user {
+  header.open .action #login, header.open .action #user {
     display: none;
   }
 }

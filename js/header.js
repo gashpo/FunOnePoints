@@ -21,7 +21,7 @@ $(document).ready(function () {
   $('#login').click(function () {
     $('body').addClass('loggedin');
   })
-  $('#user').click(function () {
+  $('#logout').click(function () {
     $('body').removeClass('loggedin');
   })
 });
