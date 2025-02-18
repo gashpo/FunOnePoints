@@ -1599,6 +1599,16 @@ ul.list + button {
   display: flex;
   overflow: hidden;
 }
+.ticket-list li .ticket-info .ticket-img {
+  aspect-ratio: 1;
+  height: 100%;
+  background-image: url("../images/product/Product-default.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.ticket-list li .ticket-info .ticket-img:has(img) {
+  background-image: none;
+}
 .ticket-list li .ticket-info .ticket-desc {
   background-image: url("../images/divider.png");
   background-position: left;

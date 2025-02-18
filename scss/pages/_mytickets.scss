@@ -19,6 +19,18 @@
       display: flex;
       overflow: hidden;
 
+      .ticket-img {
+        aspect-ratio: 1;
+        height: 100%;
+        background-image: url("../images/product/Product-default.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        &:has(img) {
+          background-image: none;
+        }
+      }
+
       .ticket-desc {
         background-image: url("../images/divider.png");
         background-position: left;
