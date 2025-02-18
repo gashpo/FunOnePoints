@@ -81,12 +81,18 @@ body {
 
 ol {
   line-height: initial;
+  padding-left: 24px;
+  margin-bottom: 16px;
 }
 
 ul {
   list-style: none;
   padding-left: 0;
   line-height: initial;
+}
+
+hr {
+  border: none;
 }
 
 blockquote,

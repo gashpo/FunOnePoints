@@ -83,12 +83,18 @@ body {
 
 ol {
   line-height: initial;
+  padding-left: 24px;
+  margin-bottom: 16px;
 }
 
 ul {
   list-style: none;
   padding-left: 0;
   line-height: initial;
+}
+
+hr {
+  border: none;
 }
 
 blockquote,
@@ -228,7 +234,7 @@ h6 {
 
 ::-webkit-scrollbar {
   width: 0.3125rem;
-  background-color: transparent;
+  background-color: #ffffff;
   border-radius: 6.25rem;
 }
 
@@ -241,6 +247,9 @@ h6 {
 body {
   color: #191919;
   background-color: #f0e5fd;
+}
+body:has(.overlay) {
+  overflow: hidden;
 }
 
 button,
@@ -763,10 +772,101 @@ input[type=text] {
 }
 
 .popup {
-  padding: 2rem 2rem 2.125rem;
+  display: none;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem 2rem 1.5rem;
   border-radius: 1.5rem;
   background-color: #ffffff;
   box-shadow: 0 0 0.625rem rgba(255, 255, 255, 0.1);
+  z-index: 5;
+  max-width: 25rem;
+}
+.popup .action {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0.75rem;
+}
+.popup .action i {
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.5rem;
+  border-radius: 6.25rem;
+  background-color: #f9f9f9;
+  color: #7b7b7b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  top: 0.75rem;
+}
+.popup .action i[action=back] {
+  left: 0.75rem;
+}
+.popup .action i[action=close] {
+  right: 0.75rem;
+}
+.popup h4 {
+  text-align: center;
+  padding: 0rem 1rem;
+}
+.popup .popup-container {
+  max-height: calc(100dvh - 15rem);
+  overflow-y: auto;
+}
+.popup .btns {
+  display: flex;
+  gap: 1.25rem;
+}
+.popup .btns button {
+  flex: 1;
+}
+.popup.show {
+  display: flex;
+}
+@media (max-width: 767px) {
+  .popup {
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 1.5rem 1.5rem 0 0;
+    transform: translate(0, 0);
+    padding: 3.75rem 0rem 0rem;
+  }
+  .popup .action {
+    height: 3.75rem;
+  }
+  .popup .action i {
+    top: 0.9375rem;
+  }
+  .popup .action i[action=back] {
+    left: 1rem;
+  }
+  .popup .action i[action=close] {
+    right: 1rem;
+  }
+  .popup .popup-container {
+    max-height: calc(100dvh - 7rem);
+    border-top: 0.0625rem solid #d7d7d7;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 4;
 }
 
 .select {
@@ -1308,7 +1408,7 @@ header .action .header-dropdown .select.active {
 }
 
 .mobile-frame {
-  z-index: 4;
+  z-index: 5;
   display: none;
   position: fixed;
   top: 0;
@@ -1695,5 +1795,163 @@ ul.list + button {
     top: 50%;
     left: 65dvw;
     transform: translateY(-50%);
+  }
+}
+
+.product-content {
+  background-color: #f8f7ff;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1rem;
+}
+.product-content .product-code,
+.product-content .product-info {
+  background-color: #ffffff;
+  display: flex;
+}
+.product-content .product-code {
+  padding: 1.25rem 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+.product-content .product-code .barcode {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.125rem;
+  cursor: pointer;
+}
+.product-content .product-code .barcode span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.125rem;
+}
+.product-content .product-code .barcode span::after {
+  font-family: "Material Icons";
+  content: "\e145";
+  font-weight: 100;
+  height: 1.625rem;
+  width: 1.625rem;
+  font-size: 1.125rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.0625rem solid #d7d7d7;
+  border-radius: 6.25rem;
+}
+.product-content .product-info {
+  padding: 2rem 1rem;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  position: relative;
+}
+.product-content .product-info .product-title {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  height: 6.25rem;
+  flex: 100%;
+}
+.product-content .product-info .product-title img {
+  aspect-ratio: 1;
+}
+.product-content .product-info .stamp {
+  display: none;
+  position: absolute;
+  right: 1rem;
+  top: 6.875rem;
+  width: 6.25rem;
+  height: 6.25rem;
+}
+.product-content .product-info.product-details {
+  justify-content: center;
+  gap: 1rem;
+}
+.product-content .product-info.product-details ul {
+  flex: 100%;
+}
+.product-content .product-info.product-details ul li {
+  display: flex;
+  gap: 1rem;
+  padding: 0.75rem 0rem;
+  border-bottom: 0.0625rem solid #d7d7d7;
+}
+.product-content .product-info.product-details ul li span {
+  color: #7b7b7b;
+}
+.product-content .product-info.product-details ul li:last-child {
+  border: none;
+}
+.product-content.used .product-code .barcode, .product-content.expired .product-code .barcode {
+  cursor: default;
+}
+.product-content.used .product-code img,
+.product-content.used .product-code span, .product-content.expired .product-code img,
+.product-content.expired .product-code span {
+  opacity: 0.4;
+}
+.product-content.used .product-code img::after,
+.product-content.used .product-code span::after, .product-content.expired .product-code img::after,
+.product-content.expired .product-code span::after {
+  display: none;
+}
+.product-content.used .product-info .stamp, .product-content.expired .product-info .stamp {
+  display: inline;
+}
+
+#barcode-full {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  z-index: 5;
+  padding: 5.75rem 7.5rem 3.75rem;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+#barcode-full .barcode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30rem;
+}
+#barcode-full .barcode img {
+  height: 11.625rem;
+}
+#barcode-full i {
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.5rem;
+  border-radius: 6.25rem;
+  background-color: #f9f9f9;
+  color: #7b7b7b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+#barcode-full.show {
+  display: flex;
+}
+@media (max-width: 767px) {
+  #barcode-full .barcode {
+    transform: rotate(90deg);
+  }
+  #barcode-full i {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
   }
 }
