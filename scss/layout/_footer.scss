@@ -47,17 +47,13 @@ footer {
 
 .footer-selector {
   padding: spacing(13) spacing(28);
-  background-color: color(gray-900);
+  background-color: color(primary-900);
+  border: px(1) solid color(gray-0);
   color: color(gray-0);
   @include rounded(64);
   @include fontRWD(body3);
   cursor: pointer;
   text-align: center;
-
-  @include max-to(tablet) {
-    background-color: color(primary-900);
-    border: px(1) solid color(gray-0);
-  }
 }
 
 .footer-textlink {

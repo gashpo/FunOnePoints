@@ -1202,6 +1202,7 @@ header {
 header .menu {
   padding: 0rem 1.75rem;
   background-color: #140030;
+  border: 0.0625rem solid #ffffff;
   color: #ffffff;
   border-radius: 3rem;
   display: flex;
@@ -1252,7 +1253,8 @@ header .action .header-dropdown .point {
   justify-content: center;
   gap: 0.5rem;
   cursor: pointer;
-  background-color: #191919;
+  background-color: #140030;
+  border: 0.0625rem solid #ffffff;
   color: #ffffff;
   border-radius: 4rem;
   height: 3.125rem;
@@ -1287,6 +1289,7 @@ header .action .header-dropdown .select.active {
   }
   header .menu {
     background-color: transparent;
+    border-color: transparent;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -1465,7 +1468,8 @@ footer .info .menu {
 
 .footer-selector {
   padding: 0.8125rem 1.75rem;
-  background-color: #191919;
+  background-color: #140030;
+  border: 0.0625rem solid #ffffff;
   color: #ffffff;
   border-radius: 4rem;
   font-size: 1rem;
@@ -1477,12 +1481,6 @@ footer .info .menu {
   .footer-selector {
     font-size: 1rem;
     line-height: 150%;
-  }
-}
-@media (max-width: 991px) {
-  .footer-selector {
-    background-color: #140030;
-    border: 0.0625rem solid #ffffff;
   }
 }
 

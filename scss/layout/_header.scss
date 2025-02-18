@@ -14,6 +14,7 @@ header {
   .menu {
     padding: spacing(0) spacing(28);
     background-color: color(primary-900);
+    border: px(1) solid color(gray-0);
     color: color(gray-0);
     @include rounded(48);
     display: flex;
@@ -62,7 +63,8 @@ header {
         justify-content: center;
         gap: spacing(8);
         cursor: pointer;
-        background-color: color(gray-900);
+        background-color: color(primary-900);
+        border: px(1) solid color(gray-0);
         color: color(gray-0);
         @include rounded(64);
         height: px(50);
@@ -103,6 +105,7 @@ header {
 
     .menu {
       background-color: transparent;
+      border-color: transparent;
       width: 100%;
       display: flex;
       justify-content: space-between;
