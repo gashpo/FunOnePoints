@@ -32,6 +32,8 @@ $(document).ready(function () {
     var scrollTop = $(window).scrollTop();
 
     if (scrollTop < 100) {
+      $("header").removeClass("hide");
+    } else {
       $("header").toggleClass("hide", scrollTop > prev);
       prev = scrollTop;
     }
