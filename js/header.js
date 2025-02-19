@@ -30,7 +30,10 @@ $(document).ready(function () {
 
   $(window).on("scroll", function () {
     var scrollTop = $(window).scrollTop();
-    $("header").toggleClass("hide", scrollTop > prev);
-    prev = scrollTop;
+
+    if (scrollTop < 100) {
+      $("header").toggleClass("hide", scrollTop > prev);
+      prev = scrollTop;
+    }
   });
 });
