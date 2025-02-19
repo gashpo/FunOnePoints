@@ -35,11 +35,12 @@ body {
 @import "components/select";
 @import "components/tab";
 
-@import "layout/main";
-@import "layout/sidebar";
-@import "layout/layout";
-@import "layout/header";
 @import "layout/footer";
+@import "layout/header";
+@import "layout/layout";
+@import "layout/main";
+@import "layout/mobile-menu";
+@import "layout/sidebar";
 
 @import "pages/mypoints";
 @import "pages/mytickets";

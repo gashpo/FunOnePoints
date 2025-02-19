@@ -4,7 +4,7 @@ span {
   font-size: 1rem;
   line-height: 150%;
 }
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   p,
   span {
     font-size: 1rem;
@@ -16,7 +16,7 @@ h1 {
   font-size: 3rem;
   line-height: 120%;
 }
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   h1 {
     font-size: 2.375rem;
     line-height: 120%;
@@ -27,7 +27,7 @@ h2 {
   font-size: 2.5rem;
   line-height: 120%;
 }
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   h2 {
     font-size: 2rem;
     line-height: 120%;
@@ -38,7 +38,7 @@ h3 {
   font-size: 2rem;
   line-height: 120%;
 }
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   h3 {
     font-size: 1.5rem;
     line-height: 120%;
@@ -49,7 +49,7 @@ h4 {
   font-size: 1.5rem;
   line-height: 120%;
 }
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   h4 {
     font-size: 1.25rem;
     line-height: 120%;
@@ -60,7 +60,7 @@ h5 {
   font-size: 1.125rem;
   line-height: 120%;
 }
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   h5 {
     font-size: 1.125rem;
     line-height: 120%;
@@ -71,7 +71,7 @@ h6 {
   font-size: 1rem;
   line-height: 120%;
 }
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   h6 {
     font-size: 1rem;
     line-height: 120%;
@@ -82,7 +82,7 @@ h6 {
   font-size: 0.75rem;
   line-height: 120%;
 }
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .caption {
     font-size: 0.75rem;
     line-height: 120%;
@@ -113,7 +113,7 @@ input[type=submit] {
   /* Secondary */
   /* Tertiary */
 }
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   button,
   .btn,
   input[type=submit] {
@@ -145,7 +145,7 @@ input[type=submit].btn-l {
   line-height: 150%;
   border-radius: 1.25rem;
 }
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   button.btn-l,
   .btn.btn-l,
   input[type=submit].btn-l {
@@ -173,7 +173,7 @@ input[type=submit].btn-xl {
   line-height: 150%;
   border-radius: 1.5rem;
 }
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   button.btn-xl,
   .btn.btn-xl,
   input[type=submit].btn-xl {
@@ -315,7 +315,7 @@ a.link-s *,
   font-size: 0.75rem;
   line-height: 120%;
 }
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   a.link-s *,
   .link.link-s * {
     font-size: 0.75rem;
@@ -353,7 +353,7 @@ a.link-noline span,
   justify-content: center;
   gap: 0.25rem;
 }
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .badge {
     font-size: 0.75rem;
     line-height: 120%;
@@ -390,7 +390,7 @@ input {
   border-radius: 1.25rem;
   border: 0.0625rem solid #d7d7d7;
 }
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   input {
     font-size: 1rem;
     line-height: 150%;
@@ -417,7 +417,7 @@ input[type=text] {
   line-height: 150%;
   line-height: 3rem;
 }
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .input-wrapper label {
     font-size: 0.875rem;
     line-height: 150%;
@@ -449,7 +449,7 @@ input[type=text] {
   line-height: 120%;
   color: #c13515;
 }
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .input-wrapper .input-content .error-message {
     font-size: 0.75rem;
     line-height: 120%;
@@ -460,7 +460,7 @@ input[type=text] {
   line-height: 120%;
   color: #959595;
 }
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .input-wrapper .input-content .helper {
     font-size: 0.75rem;
     line-height: 120%;
@@ -488,7 +488,7 @@ input[type=text] {
   line-height: 150%;
   -moz-appearance: textfield;
 }
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .otp-wrapper input {
     font-size: 1.125rem;
     line-height: 150%;
@@ -516,7 +516,7 @@ input[type=text] {
   min-width: 9.375rem;
   cursor: pointer;
 }
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .checkbox-wrapper label,
   .radio-wrapper label {
     font-size: 1rem;
@@ -668,7 +668,7 @@ input[type=text] {
 .popup.show {
   display: flex;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .popup {
     display: flex;
     max-width: none;
@@ -795,7 +795,7 @@ input[type=text] {
   transition: color 0.3s ease-in-out;
   text-align: center;
 }
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .tab-wrapper .tab .tab-item {
     font-size: 1rem;
     line-height: 150%;
@@ -865,6 +865,7 @@ header .action .header-dropdown .point {
   border-radius: 1.5rem;
   flex: 100%;
   height: fit-content;
+  flex-grow: 0;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -876,6 +877,7 @@ header .action .header-dropdown .point {
 
 .mobile-menu {
   flex: 100%;
+  flex-grow: 0;
   background-color: #ffffff;
   padding: 1rem;
   border-radius: 1.5rem;

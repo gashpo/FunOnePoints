@@ -5,6 +5,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: spacing(40);
+  align-self: flex-start;
 
   @include max-to(mobile) {
     padding: spacing(32) spacing(16);

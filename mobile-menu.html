@@ -1,72 +1,17 @@
-<!DOCTYPE html>
-<html lang="zh-Hant">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-    />
-    <title id="pageTitle">FunOne Points</title>
-    <meta name="description" content="用 FunOne Points 紅利點數，輕鬆兌換各大通路商品與票券！累積點數，享受超值回饋，讓每點紅利都更有價值。"/>
-    <meta name="keywords" content="FunOne Points, 紅利點數, 點數兌換, 商品兌換, 會員回饋, 紅利商城, 優惠兌換">
-    <!-- 瀏覽器 icon -->
-    <link rel="shortcut icon" href="images/Logo_Coin.svg" type="image/x-icon" sizes="any" />
-    <!-- 網站在瀏覽器標簽欄和書簽中顯示的圖標 -->
-    <meta
-      property="og:image"
-      content="絕對路徑"
-    />
-    <!-- 分享網頁時會顯示的縮圖 -->
-    <meta name="mobile-web-app-capable" content="yes" />
-    <!-- 是否使用全屏顯示 -->
-    <!-- iOS Safari Set Up -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <!-- 新增到桌面時 開啟後 上方狀態欄顯示顏色  -->
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-
-    <!-- Google Material Symbols & Icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-    <!-- 樣式表 -->
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/mobile-menu.css" />
-  </head>
-
-  <body class="loggedin">
-    <header id="header-placeholder"></header>
-
-    <div class="container">
-        <div class="balance">
-            <img src="images/Logo_Coin.svg">
-            <h6>9,999</h6>
-        </div>
-        <ul class="mobile-menu">
-            <li onclick="location.href='myPoints.html'"><i class="material-symbols-outlined">receipt_long</i>我的紅利</li>
-            <li onclick="location.href='myTickets.html'"><i class="material-symbols-outlined">folder_open</i>我的票夾</li>
-            <li class="divider"></li>
-            <li><i class="material-symbols-outlined">person</i>會員資料</li>
-            <li onclick="location.href='index.html'"><i class="material-symbols-outlined">logout</i>登出</li>
-        </ul>
+<div id="mobile-menu">
+  <!-- <header id="header-placeholder"></header> -->
+  <div class="container">
+    <div class="balance">
+      <img src="images/Logo_Coin.svg">
+      <h6>9,999</h6>
     </div>
-
-    <footer id="footer-placeholder"></footer>
-
-
-
-    <!-- jQuery -->
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        $("#header-placeholder").load("header.html");
-        $("#footer-placeholder").load("footer.html");
-      });
-      
-      $(document).ready(function () {
-        $(".menu-toggle").click(function () {
-          $("header").toggleClass("open");
-        });
-      });
-    </script>
-  </body>
-</html>
+    <ul class="mobile-menu">
+      <li onclick="location.href='myPoints.html'"><i class="material-symbols-outlined">receipt_long</i>我的紅利</li>
+      <li onclick="location.href='myTickets.html'"><i class="material-symbols-outlined">folder_open</i>我的票夾</li>
+      <li class="divider"></li>
+      <li><i class="material-symbols-outlined">person</i>會員資料</li>
+      <li onclick="location.href='index.html'"><i class="material-symbols-outlined">logout</i>登出</li>
+    </ul>
+  </div>
+  <!-- <footer id="footer-placeholder"></footer> -->
+</div>

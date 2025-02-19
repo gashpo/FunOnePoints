@@ -36,9 +36,8 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
 
-  <body>
+  <body class="loggedin">
     <header id="header-placeholder"></header>
-    <iframe src="mobile-menu.html" frameborder="0" class="mobile-frame"></iframe>
 
     <ul class="breadcrumbs">
       <li>會員中心</li>
@@ -539,8 +538,22 @@
     <script src="js/jquery-3.7.1.min.js"></script>
     <script>
       $(document).ready(function () {
-        // 引入頭尾
-        $("#header-placeholder").load("header.html");
+        /* 引入頭尾 */
+        // 確保 header 加載完成後才綁定事件
+        $("#header-placeholder").load("header.html", function () {
+          $("#user").click(function () {
+            if (window.innerWidth < 768) {
+              if ($("#mobile-menu").length === 0) {
+                // 引入 mobile-menu
+                $("body").append('<div id="mobile-menu-placeholder"></div>');
+                $("#mobile-menu-placeholder").load("mobile-menu.html");
+              } else {
+                // 移除 mobile-menu
+                $("#mobile-menu").remove();
+              }
+            }
+          });
+        });
         $("#footer-placeholder").load("footer.html");
       });
     </script>

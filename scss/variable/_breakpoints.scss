@@ -13,7 +13,10 @@ $breakpoints: (
     // 獲取斷點的原始值
     $max-width: map-get($breakpoints, $bp);
 
-    @media (max-width: $max-width) {
+    // 將 breakpoint 值 -1px
+    $adjusted-width: $max-width - 1px;
+
+    @media (max-width: $adjusted-width) {
       @content;
     }
   } @else {
@@ -32,9 +35,9 @@ $breakpoints: (
     $min-width: map-get($breakpoints, $bp);
 
     // 將 breakpoint 值 +1px
-    $adjusted-width: $min-width + 1px;
+    // $adjusted-width: $min-width + 1px;
 
-    @media (min-width: $adjusted-width) {
+    @media (min-width: $min-width) {
       @content;
     }
   } @else {

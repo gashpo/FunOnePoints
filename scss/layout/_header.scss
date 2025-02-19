@@ -97,14 +97,18 @@ header {
           justify-content: center;
           gap: spacing(8);
         }
+
+        i {
+          @include transition(transform);
+        }
       }
 
       .select {
         position: absolute;
         top: calc(100% + spacing(8));
-        width: auto;
-        left: 0;
         right: 0;
+        width: 100%;
+        min-width: max-content;
 
         &.active {
           overflow-y: hidden;
@@ -119,17 +123,14 @@ header {
 
   @include max-to(tablet) {
     padding: spacing(16);
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
+    gap: spacing(12);
 
     .menu {
       background-color: transparent;
       border-color: transparent;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
+      flex: 1;
+      gap: spacing(12);
+      padding: 0;
 
       .menu-toggle {
         width: px(50);
@@ -152,13 +153,13 @@ header {
       }
 
       .logo {
+        flex-grow: 1;
         background-color: color(primary-900);
         border: px(1) solid color(primary-0);
         padding: spacing(0) spacing(20);
         height: px(50);
         @include rounded(64);
         display: flex;
-        flex-grow: 0;
         align-items: center;
         justify-content: center;
         @include transition(all);
@@ -179,11 +180,6 @@ header {
           padding: spacing(16) spacing(0);
         }
       }
-
-      &::after {
-        content: "";
-        width: px(50);
-      }
     }
 
     .action {
@@ -191,9 +187,6 @@ header {
         padding: spacing(8);
         width: px(50);
         height: px(50);
-        position: fixed;
-        top: spacing(16);
-        right: spacing(16);
 
         i {
           display: inline;
@@ -209,24 +202,9 @@ header {
       }
 
       .header-dropdown {
-        padding: spacing(0);
-        background-color: transparent;
-        width: px(50);
-        height: px(50);
-        position: fixed;
-        top: spacing(16);
-        right: spacing(16);
-
         .point {
-          border: none;
-          padding: spacing(0);
-          background-color: transparent;
+          padding: spacing(8) spacing(16);
           min-width: auto;
-
-          img {
-            max-width: px(50);
-            max-height: px(50);
-          }
 
           span {
             display: none;
@@ -247,6 +225,8 @@ header {
     &.open {
       background-color: color(primary-900);
       bottom: 0;
+      align-items: flex-start;
+      gap: spacing(0);
 
       .menu {
         flex: 1;
@@ -274,6 +254,9 @@ header {
       .action {
         #language {
           display: inline;
+          position: absolute;
+          bottom: spacing(16);
+          left: spacing(32);
         }
 
         #login,
@@ -300,39 +283,6 @@ header {
     .menu {
       padding: spacing(0);
     }
-
-    .action {
-      .header-dropdown {
-        .point {
-          padding: spacing(0);
-          background-color: transparent;
-          min-width: auto;
-
-          img {
-            max-width: px(50);
-            max-height: px(50);
-          }
-
-          span {
-            display: none;
-          }
-        }
-      }
-    }
-  }
-}
-
-.mobile-frame {
-  z-index: 5;
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100dvw;
-  height: 100dvh;
-
-  &.open {
-    display: block;
   }
 }
 
@@ -353,5 +303,15 @@ body {
 
   &:has(header.open) {
     overflow: hidden;
+  }
+
+  &:has(#mobile-menu) {
+    #user {
+      .point {
+        i {
+          transform: rotate(180deg);
+        }
+      }
+    }
   }
 }
