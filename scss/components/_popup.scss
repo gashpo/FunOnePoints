@@ -68,13 +68,16 @@
   }
 
   @include max-to(mobile) {
+    display: flex;
+    max-width: none;
     top: auto;
-    left: 0;
     right: 0;
-    bottom: 0;
+    bottom: -100%;
+    left: 0;
     border-radius: px(24) px(24) 0 0;
     transform: translate(0, 0);
     padding: spacing(60) spacing(0) spacing(0);
+    @include transition(bottom);
 
     .action {
       height: px(60);
@@ -95,6 +98,10 @@
     .popup-container {
       max-height: calc(100dvh - px(112));
       border-top: px(1) solid color(gray-150);
+    }
+
+    &.show {
+      bottom: 0;
     }
   }
 }

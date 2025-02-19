@@ -10,6 +10,7 @@ header {
   align-items: center;
   gap: spacing(20);
   pointer-events: none;
+  @include transition(top);
 
   .menu {
     padding: spacing(0) spacing(28);
@@ -52,6 +53,11 @@ header {
     align-items: center;
     gap: spacing(20);
     pointer-events: all;
+
+    #login,
+    #user {
+      @include transition(top);
+    }
 
     #login {
       display: flex;
@@ -105,6 +111,10 @@ header {
         }
       }
     }
+  }
+
+  &.hide {
+    top: -100%;
   }
 
   @include max-to(tablet) {
@@ -266,8 +276,18 @@ header {
           display: inline;
         }
 
-        #login, #user {
+        #login,
+        #user {
           display: none;
+        }
+      }
+    }
+
+    &.hide {
+      .action {
+        #login,
+        #user {
+          top: calc(-100% - px(32));
         }
       }
     }
@@ -275,6 +295,7 @@ header {
 
   @include max-to(mobile) {
     padding: spacing(16);
+    @include transition(top);
 
     .menu {
       padding: spacing(0);
@@ -319,12 +340,18 @@ header {
   display: none;
 }
 
-body.loggedin {
-  #user {
-    display: inline;
+body {
+  &.loggedin {
+    #user {
+      display: inline;
+    }
+
+    #login {
+      display: none;
+    }
   }
-  
-  #login {
-    display: none;
+
+  &:has(header.open) {
+    overflow: hidden;
   }
 }

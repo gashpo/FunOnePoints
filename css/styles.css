@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Varela&display=swap");
 * {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html,
@@ -143,7 +144,7 @@ span {
   font-size: 1rem;
   line-height: 150%;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   p,
   span {
     font-size: 1rem;
@@ -155,7 +156,7 @@ h1 {
   font-size: 3rem;
   line-height: 120%;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   h1 {
     font-size: 2.375rem;
     line-height: 120%;
@@ -166,7 +167,7 @@ h2 {
   font-size: 2.5rem;
   line-height: 120%;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   h2 {
     font-size: 2rem;
     line-height: 120%;
@@ -177,7 +178,7 @@ h3 {
   font-size: 2rem;
   line-height: 120%;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   h3 {
     font-size: 1.5rem;
     line-height: 120%;
@@ -188,7 +189,7 @@ h4 {
   font-size: 1.5rem;
   line-height: 120%;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   h4 {
     font-size: 1.25rem;
     line-height: 120%;
@@ -199,7 +200,7 @@ h5 {
   font-size: 1.125rem;
   line-height: 120%;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   h5 {
     font-size: 1.125rem;
     line-height: 120%;
@@ -210,7 +211,7 @@ h6 {
   font-size: 1rem;
   line-height: 120%;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   h6 {
     font-size: 1rem;
     line-height: 120%;
@@ -221,7 +222,7 @@ h6 {
   font-size: 0.75rem;
   line-height: 120%;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .caption {
     font-size: 0.75rem;
     line-height: 120%;
@@ -276,7 +277,7 @@ input[type=submit] {
   /* Secondary */
   /* Tertiary */
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   button,
   .btn,
   input[type=submit] {
@@ -308,7 +309,7 @@ input[type=submit].btn-l {
   line-height: 150%;
   border-radius: 1.25rem;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   button.btn-l,
   .btn.btn-l,
   input[type=submit].btn-l {
@@ -336,7 +337,7 @@ input[type=submit].btn-xl {
   line-height: 150%;
   border-radius: 1.5rem;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   button.btn-xl,
   .btn.btn-xl,
   input[type=submit].btn-xl {
@@ -478,7 +479,7 @@ a.link-s *,
   font-size: 0.75rem;
   line-height: 120%;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   a.link-s *,
   .link.link-s * {
     font-size: 0.75rem;
@@ -516,7 +517,7 @@ a.link-noline span,
   justify-content: center;
   gap: 0.25rem;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .badge {
     font-size: 0.75rem;
     line-height: 120%;
@@ -553,14 +554,11 @@ input {
   border-radius: 1.25rem;
   border: 0.0625rem solid #d7d7d7;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   input {
     font-size: 1rem;
     line-height: 150%;
   }
-}
-input::-moz-placeholder {
-  color: #b0b0b0;
 }
 input::placeholder {
   color: #b0b0b0;
@@ -583,7 +581,7 @@ input[type=text] {
   line-height: 150%;
   line-height: 3rem;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .input-wrapper label {
     font-size: 0.875rem;
     line-height: 150%;
@@ -615,7 +613,7 @@ input[type=text] {
   line-height: 120%;
   color: #c13515;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .input-wrapper .input-content .error-message {
     font-size: 0.75rem;
     line-height: 120%;
@@ -626,7 +624,7 @@ input[type=text] {
   line-height: 120%;
   color: #959595;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .input-wrapper .input-content .helper {
     font-size: 0.75rem;
     line-height: 120%;
@@ -654,7 +652,7 @@ input[type=text] {
   line-height: 150%;
   -moz-appearance: textfield;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .otp-wrapper input {
     font-size: 1.125rem;
     line-height: 150%;
@@ -682,7 +680,7 @@ input[type=text] {
   min-width: 9.375rem;
   cursor: pointer;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .checkbox-wrapper label,
   .radio-wrapper label {
     font-size: 1rem;
@@ -692,9 +690,7 @@ input[type=text] {
 .checkbox-wrapper label input[type=checkbox], .checkbox-wrapper label input[type=radio],
 .radio-wrapper label input[type=checkbox],
 .radio-wrapper label input[type=radio] {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   width: 1.5rem;
   height: 1.5rem;
   cursor: pointer;
@@ -836,15 +832,18 @@ input[type=text] {
 .popup.show {
   display: flex;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .popup {
+    display: flex;
+    max-width: none;
     top: auto;
-    left: 0;
     right: 0;
-    bottom: 0;
+    bottom: -100%;
+    left: 0;
     border-radius: 1.5rem 1.5rem 0 0;
     transform: translate(0, 0);
     padding: 3.75rem 0rem 0rem;
+    transition: bottom 0.3s ease-in-out;
   }
   .popup .action {
     height: 3.75rem;
@@ -861,6 +860,9 @@ input[type=text] {
   .popup .popup-container {
     max-height: calc(100dvh - 7rem);
     border-top: 0.0625rem solid #d7d7d7;
+  }
+  .popup.show {
+    bottom: 0;
   }
 }
 
@@ -953,12 +955,11 @@ input[type=text] {
   color: #959595;
   cursor: pointer;
   width: 5.625rem;
-  min-width: -moz-max-content;
   min-width: max-content;
   transition: color 0.3s ease-in-out;
   text-align: center;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .tab-wrapper .tab .tab-item {
     font-size: 1rem;
     line-height: 150%;
@@ -1009,6 +1010,10 @@ input[type=text] {
   justify-content: flex-end;
 }
 
+.tab-content {
+  display: none;
+}
+
 main {
   padding: 2rem;
   border-radius: 1.5rem;
@@ -1017,7 +1022,7 @@ main {
   flex-direction: column;
   gap: 2.5rem;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   main {
     padding: 2rem 1rem;
     gap: 1rem;
@@ -1071,18 +1076,18 @@ main {
   gap: 1rem;
   min-height: calc(100dvh - 24.3125rem);
 }
-@media (max-width: 1279px) {
+@media (max-width: 1280px) {
   .container {
     width: calc(100dvw - 20rem);
     min-width: 45rem;
   }
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .container {
     width: calc(100dvw - 17rem);
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .container {
     width: calc(100dvw - 2rem);
     min-width: auto;
@@ -1106,7 +1111,7 @@ ul.breadcrumbs li span {
   font-size: 0.75rem;
   line-height: 120%;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   ul.breadcrumbs li span {
     font-size: 0.75rem;
     line-height: 120%;
@@ -1131,7 +1136,7 @@ ul.breadcrumbs li:last-child span {
 ul.breadcrumbs li:last-child:after {
   content: "";
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   ul.breadcrumbs {
     display: flex;
     align-items: center;
@@ -1142,7 +1147,7 @@ ul.breadcrumbs li:last-child:after {
     line-height: 120%;
   }
 }
-@media (max-width: 767px) and (max-width: 991px) {
+@media (max-width: 768px) and (max-width: 992px) {
   ul.breadcrumbs {
     font-size: 0.75rem;
     line-height: 120%;
@@ -1154,18 +1159,18 @@ ul.breadcrumbs li:last-child:after {
   width: 75rem;
   margin: 0rem auto 1.25rem;
 }
-@media (max-width: 1279px) {
+@media (max-width: 1280px) {
   .page-title {
     width: calc(100svw - 20rem);
     min-width: 45rem;
   }
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .page-title {
     width: calc(100svw - 17rem);
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .page-title {
     display: none;
   }
@@ -1175,7 +1180,7 @@ ul.breadcrumbs li:last-child:after {
   flex: 3;
   max-width: 18.5rem;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .sidebar {
     display: none;
   }
@@ -1185,7 +1190,7 @@ main {
   flex: 9;
   max-width: 55.5rem;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   main {
     flex: 12;
   }
@@ -1203,6 +1208,7 @@ header {
   align-items: center;
   gap: 1.25rem;
   pointer-events: none;
+  transition: top 0.3s ease-in-out;
 }
 header .menu {
   padding: 0rem 1.75rem;
@@ -1236,7 +1242,7 @@ header .menu .navigation .nav-item {
   line-height: 150%;
   cursor: pointer;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   header .menu .navigation .nav-item {
     font-size: 1rem;
     line-height: 150%;
@@ -1247,6 +1253,10 @@ header .action {
   align-items: center;
   gap: 1.25rem;
   pointer-events: all;
+}
+header .action #login,
+header .action #user {
+  transition: top 0.3s ease-in-out;
 }
 header .action #login {
   display: flex;
@@ -1293,7 +1303,10 @@ header .action .header-dropdown .select {
 header .action .header-dropdown .select.active {
   overflow-y: hidden;
 }
-@media (max-width: 991px) {
+header.hide {
+  top: -100%;
+}
+@media (max-width: 992px) {
   header {
     padding: 1rem;
     flex-direction: column;
@@ -1425,13 +1438,19 @@ header .action .header-dropdown .select.active {
   header.open .action #language {
     display: inline;
   }
-  header.open .action #login, header.open .action #user {
+  header.open .action #login,
+  header.open .action #user {
     display: none;
   }
+  header.hide .action #login,
+  header.hide .action #user {
+    top: calc(-100% - 2rem);
+  }
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   header {
     padding: 1rem;
+    transition: top 0.3s ease-in-out;
   }
   header .menu {
     padding: 0rem;
@@ -1473,6 +1492,9 @@ body.loggedin #user {
 body.loggedin #login {
   display: none;
 }
+body:has(header.open) {
+  overflow: hidden;
+}
 
 footer {
   background-color: #140030;
@@ -1507,7 +1529,7 @@ footer .info .menu {
   align-items: center;
   gap: 1.75rem;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   footer {
     flex-direction: column;
     gap: 4rem;
@@ -1528,7 +1550,7 @@ footer .info .menu {
   cursor: pointer;
   text-align: center;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .footer-selector {
     font-size: 1rem;
     line-height: 150%;
@@ -1545,7 +1567,7 @@ footer .info .menu {
   font-size: 0.875rem;
   line-height: 150%;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .footer-textlink {
     font-size: 0.875rem;
     line-height: 150%;
@@ -1564,7 +1586,7 @@ copyright {
   font-size: 0.75rem;
   line-height: 120%;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   copyright {
     font-size: 0.75rem;
     line-height: 120%;
@@ -1588,7 +1610,7 @@ copyright {
   font-size: 1.5rem;
   line-height: 120%;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .mypoints .points {
     font-size: 1.25rem;
     line-height: 120%;
@@ -1603,7 +1625,7 @@ copyright {
   font-size: 0.875rem;
   line-height: 150%;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .mypoints .points span {
     font-size: 0.875rem;
     line-height: 150%;
@@ -1616,7 +1638,7 @@ copyright {
   font-size: 0.75rem;
   line-height: 120%;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .mypoints .expired-info {
     font-size: 0.75rem;
     line-height: 120%;
@@ -1631,7 +1653,7 @@ copyright {
 .mypoints .expired-info li.divider {
   flex: 0;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .mypoints {
     padding: 2rem 1rem;
   }
@@ -1653,7 +1675,7 @@ ul.list > li .desc p {
   font-size: 1.125rem;
   line-height: 150%;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   ul.list > li .desc p {
     font-size: 1.125rem;
     line-height: 150%;
@@ -1665,7 +1687,7 @@ ul.list > li .desc span {
   color: #959595;
   position: relative;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   ul.list > li .desc span {
     font-size: 0.875rem;
     line-height: 150%;
@@ -1694,7 +1716,7 @@ ul.list > li .coin {
   font-size: 1rem;
   line-height: 120%;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   ul.list > li .coin {
     font-size: 1rem;
     line-height: 120%;
@@ -1717,7 +1739,7 @@ ul.list + button {
   line-height: 150%;
   margin: 1rem 0rem;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .empty p {
     font-size: 1rem;
     line-height: 150%;
@@ -1774,7 +1796,7 @@ ul.list + button {
   font-size: 0.875rem;
   line-height: 150%;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .ticket-list li .ticket-info .ticket-desc dl {
     font-size: 0.875rem;
     line-height: 150%;
@@ -1788,7 +1810,8 @@ ul.list + button {
   flex: calc(100% - 5rem);
   color: #191919;
 }
-.ticket-list li .ticket-badge {
+.ticket-list li .ticket-badge,
+.ticket-list li .ticket-stamp {
   color: #ffffff;
   writing-mode: vertical-lr;
   flex: 3.5rem;
@@ -1796,6 +1819,11 @@ ul.list + button {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.ticket-list li .ticket-stamp {
+  padding-right: 1rem;
+  flex: 7.25rem;
+  max-width: 7.25rem;
 }
 .ticket-list.invalid li {
   background-color: #ffffff;
@@ -1810,17 +1838,12 @@ ul.list + button {
 .ticket-list.invalid li .ticket-info .ticket-desc {
   opacity: 0.4;
 }
-.ticket-list.invalid li .ticket-badge {
-  padding-right: 1rem;
-  flex: 7.25rem;
-  max-width: 7.25rem;
-}
 .ticket-list + button {
   width: 100%;
   text-align: center;
   margin-top: 1rem;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .ticket-list li {
     position: relative;
   }
@@ -1831,18 +1854,18 @@ ul.list + button {
     background-image: none;
     justify-content: center;
   }
-  .ticket-list.invalid li {
-    overflow: hidden;
-    height: auto;
-  }
-  .ticket-list.invalid li .ticket-badge {
+  .ticket-list li .ticket-stamp {
     width: 6.25rem;
     height: 6.25rem;
     padding: 0rem;
     position: absolute;
     top: 50%;
-    left: 65dvw;
+    right: -0.75rem;
     transform: translateY(-50%);
+  }
+  .ticket-list.invalid li {
+    overflow: hidden;
+    height: auto;
   }
 }
 
@@ -1867,6 +1890,7 @@ ul.list + button {
 .product-content .product-code .barcode {
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
@@ -1993,7 +2017,7 @@ ul.list + button {
 #barcode-full.show {
   display: flex;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   #barcode-full .barcode {
     transform: rotate(90deg);
   }
@@ -2002,4 +2026,4 @@ ul.list + button {
     top: 1rem;
     right: 1rem;
   }
-}/*# sourceMappingURL=styles.css.map */
+}

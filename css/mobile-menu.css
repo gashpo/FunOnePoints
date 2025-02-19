@@ -4,7 +4,7 @@ span {
   font-size: 1rem;
   line-height: 150%;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   p,
   span {
     font-size: 1rem;
@@ -16,7 +16,7 @@ h1 {
   font-size: 3rem;
   line-height: 120%;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   h1 {
     font-size: 2.375rem;
     line-height: 120%;
@@ -27,7 +27,7 @@ h2 {
   font-size: 2.5rem;
   line-height: 120%;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   h2 {
     font-size: 2rem;
     line-height: 120%;
@@ -38,7 +38,7 @@ h3 {
   font-size: 2rem;
   line-height: 120%;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   h3 {
     font-size: 1.5rem;
     line-height: 120%;
@@ -49,7 +49,7 @@ h4 {
   font-size: 1.5rem;
   line-height: 120%;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   h4 {
     font-size: 1.25rem;
     line-height: 120%;
@@ -60,7 +60,7 @@ h5 {
   font-size: 1.125rem;
   line-height: 120%;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   h5 {
     font-size: 1.125rem;
     line-height: 120%;
@@ -71,7 +71,7 @@ h6 {
   font-size: 1rem;
   line-height: 120%;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   h6 {
     font-size: 1rem;
     line-height: 120%;
@@ -82,7 +82,7 @@ h6 {
   font-size: 0.75rem;
   line-height: 120%;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .caption {
     font-size: 0.75rem;
     line-height: 120%;
@@ -113,7 +113,7 @@ input[type=submit] {
   /* Secondary */
   /* Tertiary */
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   button,
   .btn,
   input[type=submit] {
@@ -145,7 +145,7 @@ input[type=submit].btn-l {
   line-height: 150%;
   border-radius: 1.25rem;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   button.btn-l,
   .btn.btn-l,
   input[type=submit].btn-l {
@@ -173,7 +173,7 @@ input[type=submit].btn-xl {
   line-height: 150%;
   border-radius: 1.5rem;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   button.btn-xl,
   .btn.btn-xl,
   input[type=submit].btn-xl {
@@ -315,7 +315,7 @@ a.link-s *,
   font-size: 0.75rem;
   line-height: 120%;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   a.link-s *,
   .link.link-s * {
     font-size: 0.75rem;
@@ -353,7 +353,7 @@ a.link-noline span,
   justify-content: center;
   gap: 0.25rem;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .badge {
     font-size: 0.75rem;
     line-height: 120%;
@@ -390,14 +390,11 @@ input {
   border-radius: 1.25rem;
   border: 0.0625rem solid #d7d7d7;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   input {
     font-size: 1rem;
     line-height: 150%;
   }
-}
-input::-moz-placeholder {
-  color: #b0b0b0;
 }
 input::placeholder {
   color: #b0b0b0;
@@ -420,7 +417,7 @@ input[type=text] {
   line-height: 150%;
   line-height: 3rem;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .input-wrapper label {
     font-size: 0.875rem;
     line-height: 150%;
@@ -452,7 +449,7 @@ input[type=text] {
   line-height: 120%;
   color: #c13515;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .input-wrapper .input-content .error-message {
     font-size: 0.75rem;
     line-height: 120%;
@@ -463,7 +460,7 @@ input[type=text] {
   line-height: 120%;
   color: #959595;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .input-wrapper .input-content .helper {
     font-size: 0.75rem;
     line-height: 120%;
@@ -491,7 +488,7 @@ input[type=text] {
   line-height: 150%;
   -moz-appearance: textfield;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .otp-wrapper input {
     font-size: 1.125rem;
     line-height: 150%;
@@ -519,7 +516,7 @@ input[type=text] {
   min-width: 9.375rem;
   cursor: pointer;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .checkbox-wrapper label,
   .radio-wrapper label {
     font-size: 1rem;
@@ -529,9 +526,7 @@ input[type=text] {
 .checkbox-wrapper label input[type=checkbox], .checkbox-wrapper label input[type=radio],
 .radio-wrapper label input[type=checkbox],
 .radio-wrapper label input[type=radio] {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   width: 1.5rem;
   height: 1.5rem;
   cursor: pointer;
@@ -673,15 +668,18 @@ input[type=text] {
 .popup.show {
   display: flex;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .popup {
+    display: flex;
+    max-width: none;
     top: auto;
-    left: 0;
     right: 0;
-    bottom: 0;
+    bottom: -100%;
+    left: 0;
     border-radius: 1.5rem 1.5rem 0 0;
     transform: translate(0, 0);
     padding: 3.75rem 0rem 0rem;
+    transition: bottom 0.3s ease-in-out;
   }
   .popup .action {
     height: 3.75rem;
@@ -698,6 +696,9 @@ input[type=text] {
   .popup .popup-container {
     max-height: calc(100dvh - 7rem);
     border-top: 0.0625rem solid #d7d7d7;
+  }
+  .popup.show {
+    bottom: 0;
   }
 }
 
@@ -790,12 +791,11 @@ input[type=text] {
   color: #959595;
   cursor: pointer;
   width: 5.625rem;
-  min-width: -moz-max-content;
   min-width: max-content;
   transition: color 0.3s ease-in-out;
   text-align: center;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .tab-wrapper .tab .tab-item {
     font-size: 1rem;
     line-height: 150%;
@@ -846,6 +846,10 @@ input[type=text] {
   justify-content: flex-end;
 }
 
+.tab-content {
+  display: none;
+}
+
 header .action .header-dropdown .point {
   cursor: default;
 }
@@ -860,7 +864,6 @@ header .action .header-dropdown .point {
   padding: 1rem;
   border-radius: 1.5rem;
   flex: 100%;
-  height: -moz-fit-content;
   height: fit-content;
   display: flex;
   align-items: center;
@@ -898,4 +901,4 @@ header .action .header-dropdown .point {
 .mobile-menu li.divider {
   cursor: default;
   background-color: #ffffff;
-}/*# sourceMappingURL=mobile-menu.css.map */
+}

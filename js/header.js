@@ -18,10 +18,19 @@ $(document).ready(function () {
   });
 
   // 登入登出示意
-  $('#login').click(function () {
-    $('body').addClass('loggedin');
-  })
-  $('#logout').click(function () {
-    $('body').removeClass('loggedin');
-  })
+  $("#login").click(function () {
+    $("body").addClass("loggedin");
+  });
+  $("#logout").click(function () {
+    $("body").removeClass("loggedin");
+  });
+
+  // 小網隱藏header
+  var prev = 0;
+
+  $(window).on("scroll", function () {
+    var scrollTop = $(window).scrollTop();
+    $("header").toggleClass("hide", scrollTop > prev);
+    prev = scrollTop;
+  });
 });
