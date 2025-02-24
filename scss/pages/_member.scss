@@ -1,0 +1,61 @@
+ul.member-list {
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: spacing(24);
+    padding: spacing(24) spacing(0);
+
+    .label {
+      max-width: calc(50% - px(12));
+
+      span {
+        display: block;
+        @include fontRWD(body2);
+
+        &.desc {
+          @include fontRWD(caption);
+          color: color(gray-400);
+        }
+      }
+    }
+
+    .value {
+      flex: 1;
+      max-width: calc(50% - px(12));
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: spacing(8);
+      cursor: pointer;
+      color: color(gray-500);
+
+      span {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      i {
+        color: color(gray-150);
+        width: px(24);
+      }
+    }
+  }
+}
+
+#name {
+  .popup-container {
+    overflow-y: hidden;
+  }
+}
+
+.popup-slot {
+  padding: spacing(12) spacing(16);
+  background-color: color(gray-50);
+  @include rounded(20);
+  border: px(1) solid color(gray-150);
+  color: color(gray-500);
+  @include fontRWD(body3);
+  word-break: break-all;
+}

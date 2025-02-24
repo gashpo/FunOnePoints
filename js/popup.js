@@ -16,7 +16,7 @@ $(document).ready(function () {
     $(".popup").removeClass("show");
   });
 
-  $(document).on("click", "i[action='close']", function () {
+  $(document).on("click", ".action i[action='close']", function () {
     $(".overlay").remove();
     $(".popup").removeClass("show");
   });

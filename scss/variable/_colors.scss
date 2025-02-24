@@ -120,6 +120,14 @@ $colors: map-merge(
   )
 );
 
-@mixin dropshadow {
-  box-shadow: 0 0 px(10) rgba(color(gray-1000), 0.1);
+@each $name, $value in $colors {
+  .color-#{$name} {
+    color: $value;
+  }
+}
+
+@each $name, $value in $colors {
+  .bg-#{$name} {
+    background-color: $value;
+  }
 }

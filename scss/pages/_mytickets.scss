@@ -325,3 +325,29 @@
     }
   }
 }
+
+.popup-ticket {
+  @include max-to(mobile) {
+    &.bottom_sheet {
+      padding: spacing(60) spacing(0) spacing(0);
+
+      .popup-container {
+        padding: spacing(0);
+      }
+
+      &.show {
+        bottom: 0;
+      }
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(color(gray-1000), 0.75);
+  z-index: 4;
+}

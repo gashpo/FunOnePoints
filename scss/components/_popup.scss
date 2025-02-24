@@ -9,9 +9,9 @@
   padding: spacing(32) spacing(32) spacing(24);
   @include rounded(24);
   background-color: color(gray-0);
-  box-shadow: 0 0 px(10) rgba(color(gray-0), 0.1);
+  @include dropshadow;
   z-index: 5;
-  max-width: px(400);
+  width: px(400);
 
   .action {
     position: absolute;
@@ -52,6 +52,13 @@
   .popup-container {
     max-height: calc(100dvh - px(240));
     overflow-y: auto;
+
+    &.reminder {
+      display: flex;
+      flex-direction: column;
+      gap: spacing(24);
+      text-align: center;
+    }
   }
 
   .btns {
@@ -68,50 +75,106 @@
   }
 
   @include max-to(mobile) {
-    display: flex;
-    max-width: none;
-    top: auto;
-    right: 0;
-    bottom: -100%;
-    left: 0;
-    border-radius: px(24) px(24) 0 0;
-    transform: translate(0, 0);
-    padding: spacing(60) spacing(0) spacing(0);
-    @include transition(bottom);
+    width: calc(100dvw - spacing(40));
 
-    .action {
-      height: px(60);
+    &.bottom_sheet {
+      display: flex;
+      gap: spacing(0);
+      width: 100dvw;
+      top: auto;
+      right: 0;
+      bottom: -100%;
+      left: 0;
+      border-radius: px(24) px(24) 0 0;
+      transform: translate(0, 0);
+      padding: spacing(0);
+      @include transition(bottom);
+      min-height: calc(100dvh - px(268));
 
-      i {
-        top: px(15);
+      .action {
+        height: px(60);
 
-        &[action="back"] {
-          left: px(16);
+        i {
+          top: px(15);
+
+          &[action="back"] {
+            left: px(16);
+          }
+
+          &[action="close"] {
+            right: px(16);
+          }
         }
 
-        &[action="close"] {
-          right: px(16);
+        ~ .popup-container {
+          border-top: px(1) solid color(gray-150);
         }
+      }
+
+      h4 {
+        line-height: px(60);
+      }
+
+      .popup-container {
+        max-height: calc(100dvh - px(112));
+        padding: spacing(32) spacing(16);
+        flex-grow: 1;
+      }
+
+      .btns {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: color(gray-0);
+        padding: spacing(16);
+        @include dropshadow(up);
+      }
+
+      &.show {
+        bottom: 0;
       }
     }
 
-    .popup-container {
-      max-height: calc(100dvh - px(112));
-      border-top: px(1) solid color(gray-150);
-    }
-
-    &.show {
+    &.full {
+      position: fixed;
+      top: 0;
+      right: 0;
       bottom: 0;
+      left: 0;
+      width: 100dvw;
+      height: auto;
+      max-height: 0dvh;
+      border-radius: 0;
+      transform: none;
+      @include transition(max-height);
+
+      &.show {
+        max-height: 100dvh;
+      }
     }
   }
 }
 
-.overlay {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(color(gray-1000), 0.75);
-  z-index: 4;
+#registration {
+  .popup-container {
+    overflow: visible;
+
+    > div {
+      display: flex;
+      gap: px(16);
+    }
+  }
+
+  @include min-to(mobile) {
+    .select-wrapper {
+      &.open {
+        .select-items {
+          ul {
+            max-height: px(240);
+          }
+        }
+      }
+    }
+  }
 }

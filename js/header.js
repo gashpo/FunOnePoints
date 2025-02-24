@@ -23,7 +23,7 @@ $(document).ready(function () {
                 <li onclick="location.href='myPoints.html'"><i class="material-symbols-outlined">receipt_long</i>我的紅利</li>
                 <li onclick="location.href='myTickets.html'"><i class="material-symbols-outlined">folder_open</i>我的票夾</li>
                 <li class="divider"></li>
-                <li><i class="material-symbols-outlined">person</i>會員資料</li>
+                <li onclick="location.href='member.html'"><i class="material-symbols-rounded">person</i>會員資料</li>
                 <li onclick="location.href='index.html'"><i class="material-symbols-outlined">logout</i>登出</li>
               </ul>
             </div>

@@ -29,14 +29,19 @@
     <meta name="format-detection" content="telephone=no" />
 
     <!-- Google Material Symbols & Icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon" />
+    <!-- Google Material Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined">
+    <!-- Google Material Symbols -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
 
     <!-- 樣式表 -->
     <link rel="stylesheet" href="css/styles.css" />
   </head>
 
-  <body>
+  <body class="loggedin">
     <header id="header-placeholder"></header>
 
     <ul class="breadcrumbs">
@@ -45,13 +50,13 @@
     </ul>
     <h3 class="page-title">會員中心</h3>
     <div class="container">
-      <nav class="sidebar">
+      <nav id="sidebar-placeholder">
         <ul class="sidenav">
-          <li class="active"><i class="material-symbols-outlined">receipt_long</i>我的紅利</li>
+          <li class="active" onclick="location.href='myPoints.html'"><i class="material-symbols-outlined">receipt_long</i>我的紅利</li>
           <li onclick="location.href='myTickets.html'"><i class="material-symbols-outlined">folder_open</i>我的票夾</li>
           <li class="divider"></li>
-          <li><i class="material-symbols-outlined">person</i>會員資料</li>
-          <li><i class="material-symbols-outlined">logout</i>登出</li>
+          <li onclick="location.href='member.html'"><i class="material-symbols-rounded">person</i>會員資料</li>
+          <li class="logout"><i class="material-symbols-outlined">logout</i>登出</li>
         </ul>
       </nav>
       <main>
@@ -181,42 +186,95 @@
 
     <footer id="footer-placeholder"></footer>
 
+    <div class="popup full show" id="verify">
+      <div class="action">
+        <i class="material-symbols-outlined" action="back">chevron_left</i>
+      </div>
+      <h4>驗證</h4>
+      <div class="popup-container reminder">
+        <p>請輸入我們傳送至 +886 91*****78 的驗證碼。</p>
+        <div class="otp-wrapper error">
+          <input type="number">
+          <input type="number">
+          <input type="number">
+          <input type="number">
+          <input type="number">
+          <span class="error-message">驗證碼已過期，請重新傳送驗證碼。</span>
+        </div>
+        <p>在 <span class="color-error-500">60</span> 秒後，您可以重新傳送驗證碼</p>
+        <p><a class="link-secondary" href="#"><span>重新傳送驗證碼</span></a></p>
+      </div>
+    </div>
+
+    <div class="popup full" id="remind">
+      <div class="action">
+        <i class="material-symbols-outlined" action="back">chevron_left</i>
+      </div>
+      <h4>貼心提醒</h4>
+      <div class="popup-container reminder">
+        <p>+886 912345678 已綁定其他 FunOne Points 帳號，請重新確認其他 Google 帳號。</p>
+        <button class="btn-secondary btn-l"><img src="images/google.svg">使用其他 Google 帳號登入</button>
+      </div>
+    </div>
+    
+    <div class="popup full" id="registration">
+      <h4>完成註冊</h4>
+      <div class="popup-container reminder">
+        <p>最後一步！ 綁定手機號碼，立即完成註冊！<br>為保障帳號安全，手機號碼在註冊後將無法變更。</p>
+        <div>
+          <div class="select-wrapper bottom_sheet">
+            <div class="select-dropdown">+886</div>
+            <div class="select-items">
+              <i class="material-symbols-outlined" action="close">close</i>
+              <ul>
+                <!-- 此處下拉選單顯示「國家」及「國碼」，但上方.select-dropdown只顯示「國碼」 -->
+                <!-- P1只會有台灣+886，不會有其他國家。故國碼無法點擊下拉 -->
+                <li>Taiwan  <span class="color-gray-500">+886</span></li>
+                <li>South Korea  <span class="color-gray-500">+82</span></li>
+                <li>Thailand  <span class="color-gray-500">+66</span></li>
+                <li>Japan  <span class="color-gray-500">+81</span></li>
+                <li>United States  <span class="color-gray-500">+1</span></li>
+                <li>Brazil  <span class="color-gray-500">+55</span></li>
+                <li>Svalbard and Jan Mayen  <span class="color-gray-500">+47</span></li>
+                <li>Swaziland  <span class="color-gray-500">+268</span></li>
+                <li>Sweden  <span class="color-gray-500">+46</span></li>
+                <li>Switzerland  <span class="color-gray-500">+41</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="input-wrapper">
+            <div class="input-content">
+              <div>
+                <input type="text" placeholder="手機號碼" id="phone-input">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="btns">
+        <button id="phone-save" disabled>傳送驗證碼</button>
+      </div>
+    </div>
+
 
     <!-- Lottie -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
-    <script>
-      var loadingWhite = lottie.loadAnimation({
-          container: document.getElementById('lottie-loading_white'),
-          renderer: 'svg',
-          loop: true,
-          autoplay: true,
-          path: 'images/Loading_white.json',
-      });
-      var loadingGray = lottie.loadAnimation({
-          container: document.getElementById('lottie-loading_gray'),
-          renderer: 'svg',
-          loop: true,
-          autoplay: true,
-          path: 'images/Loading_gray.json',
-      });
-      var success = lottie.loadAnimation({
-          container: document.getElementById('lottie-success'),
-          renderer: 'svg',
-          loop: true,
-          autoplay: true,
-          path: 'images/Success.json',
-      });
-    </script>
+    <script src="js/lottie-images.js"></script>
 
     <!-- jQuery -->
     <script src="js/jquery-3.7.1.min.js"></script>
     <script>
       $(document).ready(function () {
-        $("#header-placeholder").load("header.html");
-        $("#footer-placeholder").load("footer.html");
+        $("#phone-input").on("input", function () {
+          let inputVal = $(this).val().trim();
+          $("#phone-save").prop("disabled", inputVal === "");
+        });
       });
     </script>
-
+    
+    <script src="js/layout.js"></script>
     <script src="js/tab.js"></script>
+    <script src="js/select.js"></script>
+    <script src="js/sidebar.js"></script>
   </body>
 </html>

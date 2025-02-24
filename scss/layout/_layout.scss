@@ -43,7 +43,7 @@ ul.breadcrumbs {
       font-family: "Material Icons";
       content: "\e5cc";
       color: color(gray-500);
-      font-weight: fontweight(4Regular);
+      font-weight: fontweight(Regular);
       font-size: fontsize(12);
       position: absolute;
       top: 50%;
@@ -93,7 +93,7 @@ ul.breadcrumbs {
   }
 }
 
-.sidebar {
+#sidebar-placeholder {
   flex: 3;
   max-width: px(296);
 
@@ -115,4 +115,16 @@ body:has(#mobile-menu) {
   .container {
     min-height: calc(100dvh - px(340));
   }
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
 }

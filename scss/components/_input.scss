@@ -15,12 +15,14 @@ input {
   &[type="text"] {
     height: px(48);
     padding: spacing(12) spacing(46) spacing(12) spacing(16);
+    width: 100%;
   }
 }
 
 .input-wrapper {
   display: inline-flex;
   gap: spacing(16);
+  width: 100%;
 
   label {
     @include fontRWD(body4);
@@ -30,12 +32,14 @@ input {
   .input-content {
     display: inline-flex;
     gap: spacing(4);
+    width: 100%;
 
     > div {
       display: inline-flex;
       gap: spacing(4);
       flex-direction: column;
       position: relative;
+      width: 100%;
     }
 
     [type="submit"] {
@@ -81,6 +85,19 @@ input {
 }
 
 .otp-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: spacing(4);
+
+  .error-message {
+    flex: 100%;
+    @include fontRWD(body4);
+    color: color(error-500);
+    text-align: left;
+  }
+
   input {
     height: px(54);
     width: px(54);

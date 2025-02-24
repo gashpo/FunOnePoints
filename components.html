@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
-    <title id="pageTitle">FunOne Points</title>
+    <title id="pageTitle">Components | FunOne Points</title>
     <meta name="description" content="用 FunOne Points 紅利點數，輕鬆兌換各大通路商品與票券！累積點數，享受超值回饋，讓每點紅利都更有價值。"/>
     <meta name="keywords" content="FunOne Points, 紅利點數, 點數兌換, 商品兌換, 會員回饋, 紅利商城, 優惠兌換">
     
@@ -29,8 +29,13 @@
     <meta name="format-detection" content="telephone=no" />
 
     <!-- Google Material Symbols & Icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon" />
+    <!-- Google Material Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined">
+    <!-- Google Material Symbols -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
 
     <!-- 樣式表 -->
     <link rel="stylesheet" href="css/styles.css" />
@@ -38,26 +43,38 @@
 
   <body>
     <section>
-      <h5>Breadcrumbs</h5>
+      <h5 class="color-primary-500">Breadcrumbs</h5>
+      <p>Mobile only</p>
       <ul class="breadcrumbs">
-        <li><span>Parent</span></li>
-        <li><span>Parent</span></li>
-        <li><span>Current page</span></li>
+        <li>會員中心</li>
+        <li>我的票夾</li>
       </ul>
     </section>
 
+    <hr>
+
     <section>
-      <h5>Pop up</h5>
-      <div class="popup">
-        Title
-        Slot
-        <button class="btn-secondary">Label</button>
-        <button>Label</button>
+      <h5 class="color-primary-500">Pop up</h5>
+      <div class="popup bottom_sheet show" id="popup-name" style="position: relative; margin-top: 12px; left: auto; transform: none;">
+        <div class="action">
+          <i class="material-symbols-outlined" action="back">chevron_left</i>
+          <i class="material-symbols-outlined" action="close">close</i>
+        </div>
+        <h4>Title</h4>
+        <div class="popup-container">
+          Popup Container
+        </div>
+        <div class="btns">
+          <button class="btn-secondary">Label</button>
+          <button>Label</button>
+        </div>
       </div>
     </section>
 
+    <hr>
+
     <section>
-      <h5>Input</h5>
+      <h5 class="color-primary-500">Input</h5>
       <div class="input-wrapper input-vertical">
         <label for="input">Label</label>
         <div class="input-content">
@@ -92,8 +109,238 @@
       </div>
     </section>
 
+    <hr>
+    
     <section>
-      <h5>Checkbox</h5>
+      <h5 class="color-primary-500">Select</h5>
+      <div class="input-wrapper input-vertical">
+        <label for="input">Label</label>
+        <div class="input-content">
+          <div>
+            <div class="custom-select">
+              <select>
+                <option value="0">Select</option>
+                <option value="1">Audi</option>
+                <option value="2">BMW</option>
+                <option value="3">Citroen</option>
+                <option value="4">Ford</option>
+                <option value="5">Honda</option>
+                <option value="6">Jaguar</option>
+                <option value="7">Land Rover</option>
+                <option value="8">Mercedes</option>
+                <option value="9">Mini</option>
+                <option value="10">Nissan</option>
+                <option value="11">Toyota</option>
+                <option value="12">Volvo</option>
+              </select>
+            </div>
+            <span class="error-message">Error message</span>
+            <span class="helper">Helper text</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="input-wrapper input-vertical">
+        <label>Label</label>
+        <div class="input-content">
+          <div>
+            <div class="select-wrapper">
+              <div class="select-dropdown">Select</div>
+              <div class="select-items">
+                <ul>
+                  <li>
+                    <i class="material-icons-outlined">settings</i>
+                    Item 01
+                  </li>
+                  <li>
+                    <i class="material-icons-outlined">settings</i>
+                    Item 02
+                  </li>
+                  <li>
+                    <i class="material-icons-outlined">settings</i>
+                    Item 03
+                  </li>
+                  <li>
+                    <i class="material-icons-outlined">settings</i>
+                    Item 04
+                  </li>
+                  <li>
+                    <i class="material-icons-outlined">settings</i>
+                    Item 05
+                  </li>
+                  <li>
+                    <i class="material-icons-outlined">settings</i>
+                    Item 06
+                  </li>
+                  <li>
+                    <i class="material-icons-outlined">settings</i>
+                    Item 07
+                  </li>
+                  <li>
+                    <i class="material-icons-outlined">settings</i>
+                    Item 08
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <span class="error-message">Error message</span>
+            <span class="helper">Helper text</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="input-wrapper">
+        <label>Label</label>
+        <div class="input-content">
+          <div>
+            <div class="select-wrapper">
+              <div class="select-dropdown">Select</div>
+              <div class="select-items">
+                <ul>
+                  <li>
+                    <i class="material-icons-outlined">settings</i>
+                    Item 01
+                  </li>
+                  <li>
+                    <i class="material-icons-outlined">settings</i>
+                    Item 02
+                  </li>
+                  <li>
+                    <i class="material-icons-outlined">settings</i>
+                    Item 03
+                  </li>
+                  <li>
+                    <i class="material-icons-outlined">settings</i>
+                    Item 04
+                  </li>
+                  <li>
+                    <i class="material-icons-outlined">settings</i>
+                    Item 05
+                  </li>
+                  <li>
+                    <i class="material-icons-outlined">settings</i>
+                    Item 06
+                  </li>
+                  <li>
+                    <i class="material-icons-outlined">settings</i>
+                    Item 07
+                  </li>
+                  <li>
+                    <i class="material-icons-outlined">settings</i>
+                    Item 08
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <span class="error-message">Error message</span>
+            <span class="helper">Helper text</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="input-wrapper input-vertical">
+        <label>Label</label>
+        <div class="input-content">
+          <div>
+            <div class="select-wrapper">
+              <div class="select-dropdown small">Select</div>
+              <div class="select-items">
+                <ul>
+                  <li>
+                    <i class="material-icons-outlined">settings</i>
+                    Item 01
+                  </li>
+                  <li>
+                    <i class="material-icons-outlined">settings</i>
+                    Item 02
+                  </li>
+                  <li>
+                    <i class="material-icons-outlined">settings</i>
+                    Item 03
+                  </li>
+                  <li>
+                    <i class="material-icons-outlined">settings</i>
+                    Item 04
+                  </li>
+                  <li>
+                    <i class="material-icons-outlined">settings</i>
+                    Item 05
+                  </li>
+                  <li>
+                    <i class="material-icons-outlined">settings</i>
+                    Item 06
+                  </li>
+                  <li>
+                    <i class="material-icons-outlined">settings</i>
+                    Item 07
+                  </li>
+                  <li>
+                    <i class="material-icons-outlined">settings</i>
+                    Item 08
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <span class="error-message">Error message</span>
+            <span class="helper">Helper text</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="input-wrapper">
+        <label>Label</label>
+        <div class="input-content">
+          <div>
+            <div class="select-wrapper">
+              <div class="select-dropdown small">Select</div>
+              <div class="select-items">
+                <ul>
+                  <li>
+                    <i class="material-icons-outlined">settings</i>
+                    Item 01
+                  </li>
+                  <li>
+                    <i class="material-icons-outlined">settings</i>
+                    Item 02
+                  </li>
+                  <li>
+                    <i class="material-icons-outlined">settings</i>
+                    Item 03
+                  </li>
+                  <li>
+                    <i class="material-icons-outlined">settings</i>
+                    Item 04
+                  </li>
+                  <li>
+                    <i class="material-icons-outlined">settings</i>
+                    Item 05
+                  </li>
+                  <li>
+                    <i class="material-icons-outlined">settings</i>
+                    Item 06
+                  </li>
+                  <li>
+                    <i class="material-icons-outlined">settings</i>
+                    Item 07
+                  </li>
+                  <li>
+                    <i class="material-icons-outlined">settings</i>
+                    Item 08
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <span class="error-message">Error message</span>
+            <span class="helper">Helper text</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+    
+    <section>
+      <h5 class="color-primary-500">Checkbox</h5>
       <div class="checkbox-wrapper">
         <label>
           <input type="checkbox" name="checkbox">
@@ -114,8 +361,10 @@
       </div>
     </section>
 
+    <hr>
+    
     <section>
-      <h5>Radio</h5>
+      <h5 class="color-primary-500">Radio</h5>
       <div class="radio-wrapper">
         <label>
           <input type="radio" name="radio">
@@ -141,8 +390,10 @@
       </div>
     </section>
 
+    <hr>
+    
     <section>
-      <h5>A link</h5>
+      <h5 class="color-primary-500">A link</h5>
       <div>
         <p>
           <a href="#"><span>TextLink</span></a>
@@ -167,8 +418,10 @@
       </div>
     </section>
 
+    <hr>
+    
     <section>
-      <h5>Buttons</h5>
+      <h5 class="color-primary-500">Buttons</h5>
       <div style="padding: 20px 0; display: flex; gap: 20px; flex-wrap: wrap;">
         <div style="width:100svw; display: flex; gap: 8px;">
           <button class="icon-only">
@@ -299,18 +552,20 @@
       </div>
     </section>
 
+    <hr>
+    
     <section>
-      <h5>Badge</h5>
-      <div style="background-color: lightgray; padding: 20px">
-        <div class="badge">
-          <i class="material-symbols-outlined">info</i>
-          Label
-        </div>
-        <div class="badge">
-          Label
-        </div>
+      <h5 class="color-primary-500">Badge</h5>
+      <div class="badge">
+        <i class="material-symbols-outlined">info</i>
+        Label
+      </div>
+      <div class="badge">
+        Label
       </div>
     </section>
+
+    <hr>
 
 
     <!-- Lottie -->
@@ -338,6 +593,10 @@
           path: 'images/Success.json',
       });
     </script>
+
+    <!-- jQuery -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/select.js"></script>
   
   </body>
 </html>

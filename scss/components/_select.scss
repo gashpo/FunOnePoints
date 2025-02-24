@@ -1,52 +1,166 @@
-.select {
-  padding: spacing(0) spacing(4) spacing(0) spacing(8);
-  height: auto;
-  @include rounded(20);
-  @include dropshadow;
-  background-color: color(gray-0);
-  max-height: px(0);
-  color: color(gray-900);
-  @include transition(all);
-  overflow: hidden;
+.select-wrapper {
+  position: relative;
 
-  ul {
-    padding-right: spacing(4);
+  .select-dropdown,
+  .select-items {
+    color: color(gray-900);
+    background-color: color(gray-0);
+    user-select: none;
+    @include rounded(20);
+  }
+
+  .select-dropdown {
+    border: px(1) solid color(gray-150);
+    padding: spacing(12) spacing(16);
+    position: relative;
+    cursor: pointer;
     display: flex;
-    flex-direction: column;
-    align-items: stretch;
+    align-items: center;
+    justify-content: space-between;
+    gap: spacing(8);
 
-    li {
-      display: flex;
-      align-items: center;
-      padding: spacing(16);
-      gap: spacing(8);
-      @include rounded(20);
-      cursor: pointer;
-      @include transition(all);
+    i {
+      position: inherit;
+      top: auto;
+      right: auto;
+    }
+
+    &.small {
+      @include fontRWD(body4);
+      padding: spacing(8) spacing(16);
 
       i {
-        color: color(gray-500);
+        font-size: fontsize(18) !important;
       }
+    }
 
-      &:hover {
-        background-color: color(primary-50);
-        color: color(primary-500);
+    &::after {
+      font-family: "Material ICons";
+      content: "\e313";
+      font-size: fontsize(16);
+      @include transition(all);
+    }
+  }
+
+  .select-items {
+    position: absolute;
+    @include dropshadow;
+    top: calc(100% + px(8));
+    left: 0;
+    right: 0;
+    z-index: 3;
+    padding: spacing(0) spacing(4) spacing(0) spacing(8);
+    overflow: hidden;
+    @include transition(all);
+
+    i {
+      display: none;
+    }
+
+    ul {
+      max-height: px(0);
+      overflow-x: hidden;
+      overflow-y: auto;
+      @include transition(max-height);
+
+      li {
+        padding: spacing(16);
+        @include transition;
+        cursor: pointer;
+        @include rounded(20);
+        display: flex;
+        align-items: center;
+        gap: spacing(8);
 
         i {
-          color: color(primary-500);
+          position: inherit;
+          @include transition(color);
         }
-      }
 
-      &.divider {
-        cursor: default;
-        background-color: color(gray-0);
+        @include hover {
+          background-color: color(primary-50);
+          color: color(primary-500);
+
+          i {
+            color: color(primary-500);
+          }
+        }
       }
     }
   }
 
-  &.active {
-    max-height: px(300);
-    padding: spacing(8) spacing(4) spacing(8) spacing(8);
-    overflow-y: auto;
+  &.open {
+    .select-dropdown::after {
+      transform: rotate(180deg);
+    }
+
+    .select-items {
+      padding: spacing(8) spacing(4) spacing(8) spacing(8);
+      min-width: max-content;
+
+      ul {
+        max-height: px(300);
+      }
+    }
+  }
+
+  @include max-to(mobile) {
+    &.bottom_sheet {
+      .select-items {
+        position: fixed;
+        width: 100dvw;
+        top: auto;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: auto;
+        max-height: 0;
+        z-index: 6;
+        border-radius: px(20) px(20) 0 0;
+        @include transition(max-height);
+
+        ul {
+          max-height: 0;
+          @include transition(max-height);
+          padding: spacing(0) spacing(16);
+
+          li:not(:last-child) {
+            border-bottom: px(1) solid color(gray-100);
+          }
+        }
+      }
+
+      &.open {
+        .select-items {
+          height: px(500);
+          max-height: px(500);
+
+          i {
+            display: block;
+            position: absolute;
+            width: px(32);
+            height: px(32);
+            font-size: fontsize(24);
+            @include rounded(100);
+            background-color: color(gray-50);
+            color: color(gray-500);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            position: absolute;
+            top: spacing(16);
+            right: spacing(16);
+          }
+          
+          ul {
+            max-height: px(440);
+            margin-top: spacing(60);
+            border-top: px(1) solid color(gray-150);
+            padding: spacing(0) spacing(16) spacing(16);
+          }
+        }
+      }
+    }
   }
 }

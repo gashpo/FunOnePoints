@@ -1,9 +1,9 @@
 // 字重
 $font-weight: (
-  "3Light": 300,
-  "4Regular": 400,
-  "5Medium": 500,
-  "7Bold": 700,
+  "Light": 300,
+  "Regular": 400,
+  "Medium": 500,
+  "Bold": 700,
 );
 @function fontweight($key) {
   @return map-get($font-weight, $key);
@@ -19,114 +19,114 @@ $font-family: (
   desktop: (
     h1: (
       font-size: fontsize(48),
-      font-weight: fontweight(7Bold),
+      font-weight: fontweight(Bold),
       line-height: 120%,
     ),
     h2: (
       font-size: fontsize(40),
-      font-weight: fontweight(7Bold),
+      font-weight: fontweight(Bold),
       line-height: 120%,
     ),
     h3: (
       font-size: fontsize(32),
-      font-weight: fontweight(7Bold),
+      font-weight: fontweight(Bold),
       line-height: 120%,
     ),
     h4: (
       font-size: fontsize(24),
-      font-weight: fontweight(7Bold),
+      font-weight: fontweight(Bold),
       line-height: 120%,
     ),
     h5: (
       font-size: fontsize(18),
-      font-weight: fontweight(7Bold),
+      font-weight: fontweight(Bold),
       line-height: 120%,
     ),
     h6: (
       font-size: fontsize(16),
-      font-weight: fontweight(7Bold),
+      font-weight: fontweight(Bold),
       line-height: 120%,
     ),
     body1: (
       font-size: fontsize(20),
-      font-weight: fontweight(4Regular),
+      font-weight: fontweight(Regular),
       line-height: 150%,
     ),
     body2: (
       font-size: fontsize(18),
-      font-weight: fontweight(4Regular),
+      font-weight: fontweight(Regular),
       line-height: 150%,
     ),
     body3: (
       font-size: fontsize(16),
-      font-weight: fontweight(4Regular),
+      font-weight: fontweight(Regular),
       line-height: 150%,
     ),
     body4: (
       font-size: fontsize(14),
-      font-weight: fontweight(4Regular),
+      font-weight: fontweight(Regular),
       line-height: 150%,
     ),
     caption: (
       font-size: fontsize(12),
-      font-weight: fontweight(4Regular),
+      font-weight: fontweight(Regular),
       line-height: 120%,
     ),
   ),
   tablet: (
     h1: (
       font-size: fontsize(38),
-      font-weight: fontweight(7Bold),
+      font-weight: fontweight(Bold),
       line-height: 120%,
     ),
     h2: (
       font-size: fontsize(32),
-      font-weight: fontweight(7Bold),
+      font-weight: fontweight(Bold),
       line-height: 120%,
     ),
     h3: (
       font-size: fontsize(24),
-      font-weight: fontweight(7Bold),
+      font-weight: fontweight(Bold),
       line-height: 120%,
     ),
     h4: (
       font-size: fontsize(20),
-      font-weight: fontweight(7Bold),
+      font-weight: fontweight(Bold),
       line-height: 120%,
     ),
     h5: (
       font-size: fontsize(18),
-      font-weight: fontweight(7Bold),
+      font-weight: fontweight(Bold),
       line-height: 120%,
     ),
     h6: (
       font-size: fontsize(16),
-      font-weight: fontweight(7Bold),
+      font-weight: fontweight(Bold),
       line-height: 120%,
     ),
     body1: (
       font-size: fontsize(20),
-      font-weight: fontweight(4Regular),
+      font-weight: fontweight(Regular),
       line-height: 150%,
     ),
     body2: (
       font-size: fontsize(18),
-      font-weight: fontweight(4Regular),
+      font-weight: fontweight(Regular),
       line-height: 150%,
     ),
     body3: (
       font-size: fontsize(16),
-      font-weight: fontweight(4Regular),
+      font-weight: fontweight(Regular),
       line-height: 150%,
     ),
     body4: (
       font-size: fontsize(14),
-      font-weight: fontweight(4Regular),
+      font-weight: fontweight(Regular),
       line-height: 150%,
     ),
     caption: (
       font-size: fontsize(12),
-      font-weight: fontweight(4Regular),
+      font-weight: fontweight(Regular),
       line-height: 120%,
     ),
   ),
