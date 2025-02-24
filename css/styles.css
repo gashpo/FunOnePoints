@@ -3158,6 +3158,7 @@ ul.member-list li .value i {
 
 .regulations {
   gap: 1.5rem;
+  max-width: 75rem;
 }
 .regulations ul {
   display: flex;
