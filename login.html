@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title id="pageTitle">登入/註冊 ｜ FunOne Points</title>
+    <meta name="description" content="用 FunOne Points 紅利點數，輕鬆兌換各大通路商品與票券！累積點數，享受超值回饋，讓每點紅利都更有價值。" />
+    <meta name="keywords" content="FunOne Points, 紅利點數, 點數兌換, 商品兌換, 會員回饋, 紅利商城, 優惠兌換">
+    
+    <!-- 瀏覽器 icon -->
+    <link rel="shortcut icon" href="images/Logo_Coin.svg" type="image/x-icon" sizes="any" />
+    
+    <!-- 網站在瀏覽器標簽欄和書簽中顯示的圖標 -->
+    <meta property="og:image" content="絕對路徑" />
+    
+    <!-- 分享網頁時會顯示的縮圖 -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    
+    <!-- 是否使用全屏顯示 -->
+    <!-- iOS Safari Set Up -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    
+    <!-- iOS 捷徑 icon -->
+    <link rel="apple-touch-icon" href="images/Logo_Coin.svg" />
+    
+    <!-- 新增到桌面時 開啟後 上方狀態欄顯示顏色  -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    
+    <!-- 防止手機版電話號碼出現撥號連結 -->
+    <meta name="format-detection" content="telephone=no" />
+    
+    <!-- Google Material Symbols & Icons -->
+    <!-- Google Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined">
+    
+    <!-- Google Material Symbols -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
+    
+    <!-- 樣式表 -->
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="loggedin">
+    <header id="header-placeholder"></header>
+
+    <ul class="breadcrumbs">
+        <li>首頁</li>
+        <li>登入/註冊</li>
+    </ul>
+
+    <h3 class="page-title">登入/註冊</h3>
+
+    <div class="container">
+        <main>
+            <div style="width:100svw; display: flex; gap: 8px;">
+                <button for="registration">
+                    完成註冊
+                    <i class="material-symbols-outlined">chevron_right</i>
+                </button>
+                <button for="verify">驗證</button>
+                <button for="remind">貼心提醒</button>
+            </div>
+        </main>
+    </div>
+
+    <footer id="footer-placeholder"></footer>
+
+    <div class="popup full" id="verify">
+        <div class="action">
+            <i class="material-symbols-outlined" action="back">chevron_left</i>
+        </div>
+        <h4>驗證</h4>
+        <div class="popup-container reminder">
+            <p>請輸入我們傳送至 +886 91*****78 的驗證碼。</p>
+            <div class="otp-wrapper error">
+                <input type="number">
+                <input type="number">
+                <input type="number">
+                <input type="number">
+                <input type="number">
+                <span class="error-message">驗證碼已過期，請重新傳送驗證碼。</span>
+            </div>
+            <p>在 <span class="color-error-500">60</span> 秒後，您可以重新傳送驗證碼</p>
+            <p><a class="link-secondary" href="#"><span>重新傳送驗證碼</span></a></p>
+        </div>
+    </div>
+
+    <div class="popup full" id="remind">
+        <div class="action">
+            <i class="material-symbols-outlined" action="back">chevron_left</i>
+        </div>
+        <h4>貼心提醒</h4>
+        <div class="popup-container reminder">
+            <p>+886 912345678 已綁定其他 FunOne Points 帳號，請重新確認其他 Google 帳號。</p>
+            <button class="btn-secondary btn-l"><img src="images/google.svg">使用其他 Google 帳號登入</button>
+        </div>
+    </div>
+
+    <div class="popup full" id="registration">
+        <h4>完成註冊</h4>
+        <div class="popup-container reminder">
+            <p>最後一步！ 綁定手機號碼，立即完成註冊！<br>為保障帳號安全，手機號碼在註冊後將無法變更。</p>
+            <div>
+                <div class="select-wrapper bottom_sheet">
+                    <div class="select-dropdown">+886</div>
+                    <div class="select-items">
+                        <i class="material-symbols-outlined" action="close">close</i>
+                        <ul>
+                            <!-- 此處下拉選單顯示「國家」及「國碼」，但上方.select-dropdown只顯示「國碼」 -->
+                            <!-- P1只會有台灣+886，不會有其他國家。故國碼無法點擊下拉 -->
+                            <li>Taiwan <span class="color-gray-500">+886</span></li>
+                            <li>South Korea <span class="color-gray-500">+82</span></li>
+                            <li>Thailand <span class="color-gray-500">+66</span></li>
+                            <li>Japan <span class="color-gray-500">+81</span></li>
+                            <li>United States <span class="color-gray-500">+1</span></li>
+                            <li>Brazil <span class="color-gray-500">+55</span></li>
+                            <li>Svalbard and Jan Mayen <span class="color-gray-500">+47</span></li>
+                            <li>Swaziland <span class="color-gray-500">+268</span></li>
+                            <li>Sweden <span class="color-gray-500">+46</span></li>
+                            <li>Switzerland <span class="color-gray-500">+41</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="input-wrapper">
+                    <div class="input-content">
+                        <div>
+                            <input type="text" placeholder="手機號碼" id="phone-input">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btns">
+            <button id="phone-save" disabled>傳送驗證碼</button>
+        </div>
+    </div>
+
+
+
+    <!-- Lottie -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
+    <script src="js/lottie-images.js"></script>
+
+    <!-- jQuery -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $("#phone-input").on("input", function() {
+            let inputVal = $(this).val().trim();
+            $("#phone-save").prop("disabled", inputVal === "");
+        });
+    });
+    </script>
+
+    <script src="js/layout.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/select.js"></script>
+</body>
+
+</html>
