@@ -2673,6 +2673,9 @@ body:has(#mobile-menu) {
   border: 0.0625rem solid #6500ee;
   border-radius: 3rem;
   padding: 0rem 3rem;
+  position: sticky;
+  z-index: 2;
+  transition: top 0.3s ease-in-out;
 }
 .exchange .exchange-container .tab-container .pd-container {
   display: flex;
@@ -2766,6 +2769,18 @@ body:has(#mobile-menu) {
   .exchange .exchange-container .tab-container .tab-content button {
     display: block;
     margin: 2rem auto 0rem;
+  }
+}
+
+header ~ .exchange .exchange-container .tab-wrapper {
+  top: 6.25rem;
+}
+header.hide ~ .exchange .exchange-container .tab-wrapper {
+  top: 1rem;
+}
+@media (max-width: 767px) {
+  header ~ .exchange .exchange-container .tab-wrapper {
+    top: 5rem;
   }
 }
 

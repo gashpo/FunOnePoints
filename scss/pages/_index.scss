@@ -75,6 +75,9 @@
       border: px(1) solid color(primary-500);
       @include rounded(48);
       padding: spacing(0) spacing(48);
+      position: sticky;
+      z-index: 2;
+      @include transition(top);
     }
 
     .tab-container {
@@ -185,6 +188,37 @@
             display: block;
             margin: spacing(32) auto spacing(0);
           }
+        }
+      }
+    }
+  }
+}
+
+header {
+  ~ .exchange {
+    .exchange-container {
+      .tab-wrapper {
+        top: spacing(100);
+        // top: spacing(80);
+      }
+    }
+  }
+
+  &.hide {
+    ~ .exchange {
+      .exchange-container {
+        .tab-wrapper {
+          top: spacing(16);
+        }
+      }
+    }
+  }
+
+  @include max-to(mobile) {
+    ~ .exchange {
+      .exchange-container {
+        .tab-wrapper {
+          top: spacing(80);
         }
       }
     }
