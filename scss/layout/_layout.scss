@@ -97,18 +97,22 @@ ul.breadcrumbs {
   flex: 3;
   max-width: px(296);
 
+  + main {
+    flex: 9;
+    max-width: px(888);
+  }
+
   @include max-to(tablet) {
     display: none;
+
+    + main {
+      flex: 12;
+    }
   }
 }
 
 main {
-  flex: 9;
-  max-width: px(888);
-
-  @include max-to(tablet) {
-    flex: 12;
-  }
+  flex: 12;
 }
 
 body:has(#mobile-menu) {

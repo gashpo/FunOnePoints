@@ -1,6 +1,5 @@
 .regulations {
   gap: spacing(24);
-  max-width: px(1200);
 
   ul {
     display: flex;
@@ -12,12 +11,12 @@
     counter-reset: list-counter;
     list-style: none;
     padding-left: 0;
-  
+
     > li {
       counter-increment: list-counter;
       position: relative;
       padding-left: fontsize(28);
-  
+
       &::before {
         content: counters(list-counter, ".") " ";
         position: absolute;
@@ -26,13 +25,13 @@
         width: spacing(20);
         text-align: right;
       }
-  
+
       > ol {
         counter-reset: list-counter;
-        
+
         > li {
           padding-left: fontsize(32);
-  
+
           &::before {
             font-weight: fontweight(Bold);
           }
@@ -44,7 +43,7 @@
             > li {
               padding-left: fontsize(0);
               list-style-type: upper-alpha;
-  
+
               &::before {
                 display: none;
               }
@@ -56,7 +55,7 @@
                 > li {
                   padding-left: fontsize(0);
                   list-style-type: lower-alpha;
-          
+
                   &::before {
                     display: none;
                   }
@@ -68,7 +67,6 @@
       }
     }
   }
-  
 
   h6 {
     line-height: 150%;

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <title id="pageTitle">我的紅利 ｜ FunOne Points</title>
-    <meta name="description" content="用 FunOne Points 紅利點數，輕鬆兌換各大通路商品與票券！累積點數，享受超值回饋，讓每點紅利都更有價值。"/>
+    <meta name="description" content="用 FunOne Points 紅利點數，輕鬆兌換各大通路商品與票券！累積點數，享受超值回饋，讓每點紅利都更有價值。" />
     <meta name="keywords" content="FunOne Points, 紅利點數, 點數兌換, 商品兌換, 會員回饋, 紅利商城, 優惠兌換">
     
     <!-- 瀏覽器 icon -->
@@ -12,22 +13,22 @@
     
     <!-- 網站在瀏覽器標簽欄和書簽中顯示的圖標 -->
     <meta property="og:image" content="絕對路徑" />
-
+    
     <!-- 分享網頁時會顯示的縮圖 -->
     <meta name="mobile-web-app-capable" content="yes" />
-
+    
     <!-- 是否使用全屏顯示 -->
     <!-- iOS Safari Set Up -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <!-- iOS 捷徑 icon -->
     <link rel="apple-touch-icon" href="images/Logo_Coin.svg" />
-
+    
     <!-- 新增到桌面時 開啟後 上方狀態欄顯示顏色  -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
-
+    
     <!-- 防止手機版電話號碼出現撥號連結 -->
     <meta name="format-detection" content="telephone=no" />
-
+    
     <!-- Google Material Symbols & Icons -->
     <!-- Google Material Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -36,155 +37,158 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
-
+    
     <!-- 樣式表 -->
     <link rel="stylesheet" href="css/styles.css" />
-  </head>
+</head>
 
-  <body class="loggedin">
+<body class="loggedin">
     <header id="header-placeholder"></header>
 
     <ul class="breadcrumbs">
-      <li>會員中心</li>
-      <li>我的紅利</li>
+        <li>會員中心</li>
+        <li>我的紅利</li>
     </ul>
+
     <h3 class="page-title">會員中心</h3>
+
     <div class="container">
-      <nav id="sidebar-placeholder">
-        <ul class="sidenav">
-          <li class="active" onclick="location.href='myPoints.html'"><i class="material-symbols-outlined">receipt_long</i>我的紅利</li>
-          <li onclick="location.href='myTickets.html'"><i class="material-symbols-outlined">folder_open</i>我的票夾</li>
-          <li class="divider"></li>
-          <li onclick="location.href='member.html'"><i class="material-symbols-rounded">person</i>會員資料</li>
-          <li class="logout"><i class="material-symbols-outlined">logout</i>登出</li>
-        </ul>
-      </nav>
-      <main>
-        <h4 class="main-title">我的紅利</h4>
-        <div class="mypoints">
-          <div class="points">
-            <img class="coin" src="images/Logo_Coin.svg">
-            <div>9,999 <span>點</span></div>
-          </div>
-          <div class="divider"></div>
-          <ul class="expired-info">
-            <li>
-              2025-12-31 到期
-              <h6>5,000 點</h6>
-            </li>
-            <li class="divider vertical"></li>
-            <li>
-              2026-12-31 到期
-              <h6>4,999 點</h6>
-            </li>
-          </ul>
-        </div>
-        <div class="tab-wrapper">
-          <ul class="tab">
-            <li class="tab-item active">空值畫面</li>
-            <li class="tab-item">加點</li>
-            <li class="tab-item">扣點</li>
-            <div class="tab-underline"></div>
-          </ul>
-          <div class="tab-scroll-left"><i class="material-symbols-outlined">chevron_left</i></div>
-          <div class="tab-scroll-right"><i class="material-symbols-outlined">chevron_right</i></div>
-        </div>
-        <div class="tab-container">
-          <div class="tab-content" style="display: block;">
-            <div class="empty">
-              <img src="images/empty.png">
-              <p>開始您的紅利兌換之旅！ 透過儲值與扣點累積紅利， 兌換各式專屬好禮。</p>
-              <button>瞭解更多</button>
+        <nav id="sidebar-placeholder">
+            <ul class="sidenav">
+                <li class="active" onclick="location.href='myPoints.html'"><i class="material-symbols-outlined">receipt_long</i>我的紅利</li>
+                <li onclick="location.href='myTickets.html'"><i class="material-symbols-outlined">folder_open</i>我的票夾</li>
+                <li class="divider"></li>
+                <li onclick="location.href='member.html'"><i class="material-symbols-rounded">person</i>會員資料</li>
+                <li class="logout"><i class="material-symbols-outlined">logout</i>登出</li>
+            </ul>
+        </nav>
+        <main>
+            <h4 class="main-title">我的紅利</h4>
+            <div class="mypoints">
+                <div class="points">
+                    <img class="coin" src="images/Logo_Coin.svg">
+                    <div>9,999 <span>點</span></div>
+                </div>
+                <div class="divider"></div>
+                <ul class="expired-info">
+                    <li>
+                        2025-12-31 到期
+                        <h6>5,000 點</h6>
+                    </li>
+                    <li class="divider vertical"></li>
+                    <li>
+                        2026-12-31 到期
+                        <h6>4,999 點</h6>
+                    </li>
+                </ul>
             </div>
-          </div>
-          <div class="tab-content" style="display: none;">
-            <ul class="list">
-              <li>
-                <div class="desc">
-                  <p>通路來源 $500</p>
-                  <span>2024-06-01</span>
+            <div class="tab-wrapper">
+                <ul class="tab">
+                    <li class="tab-item active">空值畫面</li>
+                    <li class="tab-item">加點</li>
+                    <li class="tab-item">扣點</li>
+                    <div class="tab-underline"></div>
+                </ul>
+                <div class="tab-scroll-left"><i class="material-symbols-outlined">chevron_left</i></div>
+                <div class="tab-scroll-right"><i class="material-symbols-outlined">chevron_right</i></div>
+            </div>
+            <div class="tab-container">
+                <div class="tab-content" style="display: block;">
+                    <div class="empty">
+                        <img src="images/empty.png">
+                        <p>開始您的紅利兌換之旅！ 透過儲值與扣點累積紅利， 兌換各式專屬好禮。</p>
+                        <button>瞭解更多</button>
+                    </div>
                 </div>
-                <div class="coin"><img src="images/Logo_Coin.svg"> 29</div>
-              </li>
-              <li>
-                <div class="desc">
-                  <p>通路來源 $1,000</p>
-                  <span>2024-06-01</span>
+                <div class="tab-content" style="display: none;">
+                    <ul class="list">
+                        <li>
+                            <div class="desc">
+                                <p>通路來源 $500</p>
+                                <span>2024-06-01</span>
+                            </div>
+                            <div class="coin"><img src="images/Logo_Coin.svg"> 29</div>
+                        </li>
+                        <li>
+                            <div class="desc">
+                                <p>通路來源 $1,000</p>
+                                <span>2024-06-01</span>
+                            </div>
+                            <div class="coin"><img src="images/Logo_Coin.svg"> 29</div>
+                        </li>
+                        <li>
+                            <div class="desc">
+                                <p>通路來源 $5,000</p>
+                                <span>2024-06-01</span>
+                            </div>
+                            <div class="coin"><img src="images/Logo_Coin.svg"> 29</div>
+                        </li>
+                        <li>
+                            <div class="desc">
+                                <p>通路來源 $100</p>
+                                <span>2024-06-01</span>
+                            </div>
+                            <div class="coin"><img src="images/Logo_Coin.svg"> 29</div>
+                        </li>
+                        <li>
+                            <div class="desc">
+                                <p>通路來源 $500</p>
+                                <span>2024-06-01</span>
+                            </div>
+                            <div class="coin"><img src="images/Logo_Coin.svg"> 29</div>
+                        </li>
+                    </ul>
+                    <button class="btn-tertiary">顯示更多 <i class="material-symbols-outlined">keyboard_arrow_down</i></button>
                 </div>
-                <div class="coin"><img src="images/Logo_Coin.svg"> 29</div>
-              </li>
-              <li>
-                <div class="desc">
-                  <p>通路來源 $5,000</p>
-                  <span>2024-06-01</span>
+                <div class="tab-content" style="display: none;">
+                    <ul class="list deduction">
+                        <li>
+                            <div class="desc">
+                                <p>兌換商品_星巴克美式咖啡（大）</p>
+                                <span>2024-06-01</span>
+                                <span>FP123456789</span>
+                            </div>
+                            <div class="coin"><img src="images/Logo_Coin.svg"> -10</div>
+                        </li>
+                        <li>
+                            <div class="desc">
+                                <p>兌換商品_星巴克美式咖啡（大）</p>
+                                <span>2024-06-01</span>
+                                <span>FP123456789</span>
+                            </div>
+                            <div class="coin"><img src="images/Logo_Coin.svg"> -6</div>
+                        </li>
+                        <li>
+                            <div class="desc">
+                                <p>點數到期</p>
+                                <span>2024-06-01</span>
+                            </div>
+                            <div class="coin"><img src="images/Logo_Coin.svg"> -20</div>
+                        </li>
+                        <li>
+                            <div class="desc">
+                                <p>點數到期</p>
+                                <span>2024-06-01</span>
+                            </div>
+                            <div class="coin"><img src="images/Logo_Coin.svg"> -7</div>
+                        </li>
+                        <li>
+                            <div class="desc">
+                                <p>兌換商品_星巴克美式咖啡（大）</p>
+                                <span>2024-06-01</span>
+                                <span>FP123456789</span>
+                            </div>
+                            <div class="coin"><img src="images/Logo_Coin.svg"> -5</div>
+                        </li>
+                    </ul>
+                    <button class="btn-tertiary">顯示更多 <i class="material-symbols-outlined">keyboard_arrow_down</i></button>
                 </div>
-                <div class="coin"><img src="images/Logo_Coin.svg"> 29</div>
-              </li>
-              <li>
-                <div class="desc">
-                  <p>通路來源 $100</p>
-                  <span>2024-06-01</span>
-                </div>
-                <div class="coin"><img src="images/Logo_Coin.svg"> 29</div>
-              </li>
-              <li>
-                <div class="desc">
-                  <p>通路來源 $500</p>
-                  <span>2024-06-01</span>
-                </div>
-                <div class="coin"><img src="images/Logo_Coin.svg"> 29</div>
-              </li>
-            </ul>
-            <button class="btn-tertiary">顯示更多 <i class="material-symbols-outlined">keyboard_arrow_down</i></button>
-          </div>
-          <div class="tab-content" style="display: none;">
-            <ul class="list deduction">
-              <li>
-                <div class="desc">
-                  <p>兌換商品_星巴克美式咖啡（大）</p>
-                  <span>2024-06-01</span>
-                  <span>FP123456789</span>
-                </div>
-                <div class="coin"><img src="images/Logo_Coin.svg"> -10</div>
-              </li>
-              <li>
-                <div class="desc">
-                  <p>兌換商品_星巴克美式咖啡（大）</p>
-                  <span>2024-06-01</span>
-                  <span>FP123456789</span>
-                </div>
-                <div class="coin"><img src="images/Logo_Coin.svg"> -6</div>
-              </li>
-              <li>
-                <div class="desc">
-                  <p>點數到期</p>
-                  <span>2024-06-01</span>
-                </div>
-                <div class="coin"><img src="images/Logo_Coin.svg"> -20</div>
-              </li>
-              <li>
-                <div class="desc">
-                  <p>點數到期</p>
-                  <span>2024-06-01</span>
-                </div>
-                <div class="coin"><img src="images/Logo_Coin.svg"> -7</div>
-              </li>
-              <li>
-                <div class="desc">
-                  <p>兌換商品_星巴克美式咖啡（大）</p>
-                  <span>2024-06-01</span>
-                  <span>FP123456789</span>
-                </div>
-                <div class="coin"><img src="images/Logo_Coin.svg"> -5</div>
-              </li>
-            </ul>
-            <button class="btn-tertiary">顯示更多 <i class="material-symbols-outlined">keyboard_arrow_down</i></button>
-          </div>
-        </div>
-      </main>
+            </div>
+        </main>
     </div>
 
     <footer id="footer-placeholder"></footer>
+
 
 
     <!-- Lottie -->
@@ -197,5 +201,6 @@
     <script src="js/layout.js"></script>
     <script src="js/tab.js"></script>
     <script src="js/sidebar.js"></script>
-  </body>
+</body>
+
 </html>
