@@ -1242,6 +1242,56 @@ hr.vertical::before,
   height: 100%;
 }
 
+ol {
+  counter-reset: list-counter;
+  list-style: none;
+  padding-left: 0;
+}
+ol > li {
+  counter-increment: list-counter;
+  position: relative;
+  padding-left: 1.75rem;
+}
+ol > li::before {
+  content: counters(list-counter, ".") " ";
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+  width: 1.25rem;
+  text-align: right;
+}
+ol > li > ol {
+  counter-reset: list-counter;
+}
+ol > li > ol > li {
+  padding-left: 2rem;
+}
+ol > li > ol > li::before {
+  font-weight: 700;
+}
+ol > li > ol > li > ol {
+  padding-left: 1.25rem;
+  margin-bottom: 0;
+}
+ol > li > ol > li > ol > li {
+  padding-left: 0rem;
+  list-style-type: upper-alpha;
+}
+ol > li > ol > li > ol > li::before {
+  display: none;
+}
+ol > li > ol > li > ol > li > ol {
+  padding-left: 1.25rem;
+  margin-bottom: 0;
+}
+ol > li > ol > li > ol > li > ol > li {
+  padding-left: 0rem;
+  list-style-type: lower-alpha;
+}
+ol > li > ol > li > ol > li > ol > li::before {
+  display: none;
+}
+
 input {
   font-size: 1rem;
   font-weight: 400;
@@ -1817,6 +1867,61 @@ input[type=text] {
     margin-top: 3.75rem;
     border-top: 0.0625rem solid #d7d7d7;
     padding: 0rem 1rem 1rem;
+  }
+}
+
+.stepper-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+.stepper-wrapper .stepper-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.stepper-wrapper .stepper-content button {
+  padding: 0.5rem;
+  background-color: #f0e5fd;
+  min-width: auto;
+  border-radius: 1rem;
+}
+.stepper-wrapper .stepper-content button i {
+  color: #6500ee;
+  transition: color 0.2s ease-in-out;
+}
+.stepper-wrapper .stepper-content button:disabled {
+  background-color: #f0e5fd !important;
+}
+.stepper-wrapper .stepper-content button:disabled i {
+  color: #e0ccfc;
+}
+.stepper-wrapper .stepper-content .count {
+  min-width: 4.375rem;
+  text-align: center;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 150%;
+}
+@media (max-width: 991px) {
+  .stepper-wrapper .stepper-content .count {
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 150%;
+  }
+}
+.stepper-wrapper .helper {
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 120%;
+  color: #7b7b7b;
+}
+@media (max-width: 991px) {
+  .stepper-wrapper .helper {
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 120%;
   }
 }
 
@@ -2724,22 +2829,22 @@ body:has(#mobile-menu) {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
-#exchange .exchange-container .tab-container .pd-container .pd-card .pd-info .price {
+#exchange .exchange-container .tab-container .pd-container .pd-card .pd-info .points {
   color: #5100be;
   display: flex;
   gap: 0.5rem;
 }
-#exchange .exchange-container .tab-container .pd-container .pd-card .pd-info .price img {
+#exchange .exchange-container .tab-container .pd-container .pd-card .pd-info .points img {
   width: 1.5rem;
   height: 1.5rem;
 }
-#exchange .exchange-container .tab-container .pd-container .pd-card .pd-info .price h5 span {
+#exchange .exchange-container .tab-container .pd-container .pd-card .pd-info .points h5 span {
   font-size: 0.75rem;
   font-weight: 400;
   line-height: 120%;
 }
 @media (max-width: 991px) {
-  #exchange .exchange-container .tab-container .pd-container .pd-card .pd-info .price h5 span {
+  #exchange .exchange-container .tab-container .pd-container .pd-card .pd-info .points h5 span {
     font-size: 0.75rem;
     font-weight: 400;
     line-height: 120%;
@@ -3494,10 +3599,72 @@ ul.member-list li .value i {
   }
 }
 
-.product .product-info {
+.product .main-info {
   display: flex;
   gap: 2.5rem;
 }
+.product .main-info .product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  flex-grow: 1;
+}
+.product .main-info .product-info .name p {
+  color: #7b7b7b;
+  margin-bottom: 0.5rem;
+}
+.product .main-info .product-info .points {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.product .main-info .product-info .points img {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+.product .main-info .product-info .exchange {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+.product .main-info .product-info .exchange .counting {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.product .main-info .product-info .exchange button {
+  flex-grow: 1;
+}
+.product .details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media (max-width: 767px) {
+  .product .main-info {
+    flex-direction: column;
+  }
+  .product .main-info .product-info hr {
+    display: none;
+  }
+  .product .main-info .product-info .exchange {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    padding: 1rem;
+    background-color: #ffffff;
+    box-shadow: 0 -0.125rem 0.625rem rgba(0, 0, 0, 0.1);
+    z-index: 2;
+  }
+  .product .main-info .product-info .exchange .counting {
+    flex: 100%;
+    justify-content: space-between;
+  }
+}
+
 .regulations {
   gap: 1.5rem;
 }
@@ -3505,55 +3672,6 @@ ul.member-list li .value i {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-}
-.regulations ol {
-  counter-reset: list-counter;
-  list-style: none;
-  padding-left: 0;
-}
-.regulations ol > li {
-  counter-increment: list-counter;
-  position: relative;
-  padding-left: 1.75rem;
-}
-.regulations ol > li::before {
-  content: counters(list-counter, ".") " ";
-  position: absolute;
-  left: 0;
-  font-weight: 700;
-  width: 1.25rem;
-  text-align: right;
-}
-.regulations ol > li > ol {
-  counter-reset: list-counter;
-}
-.regulations ol > li > ol > li {
-  padding-left: 2rem;
-}
-.regulations ol > li > ol > li::before {
-  font-weight: 700;
-}
-.regulations ol > li > ol > li > ol {
-  padding-left: 1.25rem;
-  margin-bottom: 0;
-}
-.regulations ol > li > ol > li > ol > li {
-  padding-left: 0rem;
-  list-style-type: upper-alpha;
-}
-.regulations ol > li > ol > li > ol > li::before {
-  display: none;
-}
-.regulations ol > li > ol > li > ol > li > ol {
-  padding-left: 1.25rem;
-  margin-bottom: 0;
-}
-.regulations ol > li > ol > li > ol > li > ol > li {
-  padding-left: 0rem;
-  list-style-type: lower-alpha;
-}
-.regulations ol > li > ol > li > ol > li > ol > li::before {
-  display: none;
 }
 .regulations h6 {
   line-height: 150%;

@@ -7,67 +7,6 @@
     gap: spacing(24);
   }
 
-  ol {
-    counter-reset: list-counter;
-    list-style: none;
-    padding-left: 0;
-
-    > li {
-      counter-increment: list-counter;
-      position: relative;
-      padding-left: fontsize(28);
-
-      &::before {
-        content: counters(list-counter, ".") " ";
-        position: absolute;
-        left: 0;
-        font-weight: fontweight(Bold);
-        width: spacing(20);
-        text-align: right;
-      }
-
-      > ol {
-        counter-reset: list-counter;
-
-        > li {
-          padding-left: fontsize(32);
-
-          &::before {
-            font-weight: fontweight(Bold);
-          }
-
-          > ol {
-            padding-left: fontsize(20);
-            margin-bottom: 0;
-
-            > li {
-              padding-left: fontsize(0);
-              list-style-type: upper-alpha;
-
-              &::before {
-                display: none;
-              }
-
-              > ol {
-                padding-left: fontsize(20);
-                margin-bottom: 0;
-
-                > li {
-                  padding-left: fontsize(0);
-                  list-style-type: lower-alpha;
-
-                  &::before {
-                    display: none;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
   h6 {
     line-height: 150%;
   }
