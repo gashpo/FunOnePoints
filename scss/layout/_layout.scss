@@ -31,7 +31,6 @@ ul.breadcrumbs {
   align-items: center;
   margin: spacing(0) auto spacing(20);
   padding-top: spacing(130);
-  width: px(1200);
   @include fontRWD(caption);
 
   li {
@@ -73,10 +72,28 @@ ul.breadcrumbs {
     display: flex;
   }
 
+  @include max-to(desktop) {
+    &.show {
+      width: calc(100dvw - px(320));
+      min-width: px(720);
+    }
+  }
+
+  @include max-to(tablet) {
+    &.show {
+      width: calc(100dvw - px(272));
+    }
+  }
+
   @include max-to(mobile) {
     display: flex;
     padding-top: spacing(96);
     width: calc(100svw - px(32));
+
+    &.show {
+      width: calc(100dvw - px(32));
+      min-width: auto;
+    }
   }
 }
 

@@ -50,7 +50,7 @@
     </ul>
 
     <div class="container product">
-      <main>
+      <main id="product-info">
         <div class="main-info">
             <div class="product-photo">
                 <img src="images/product/product-01.png">
@@ -83,7 +83,9 @@
                             <span class="helper">總計：510 點</span>
                         </div>
                     </div>
-                    <button for="popup-login" class="btn-xl">立即兌換</button>
+                    <button for="popup-login" class="btn-xl">登入提醒</button>
+                    <button for="popup-insufficient" class="btn-xl">餘額不足</button>
+                    <button onclick="productConfirm()" class="btn-xl">立即兌換</button>
                 </div>
             </div>
         </div>
@@ -125,18 +127,137 @@
             </p>
         </div>
       </main>
+      <main id="product-confirm" style="display: none;">
+        <div class="confirm-title">
+            <h3>確認兌換商品</h3>
+            <p>完成兌換後將無法取消，請確認商品內容及數量是否正確。</p>
+        </div>
+        <div class="receipt">
+            <div class="confirm-product">
+                <div class="product-photo">
+                    <img src="images/product/product-01.png">
+                </div>
+                <div class="product-info">
+                    <div class="name">
+                        <p>商品編號：FP202501030027</p>
+                        <h4>Family mart 拿鐵熱咖啡(大)</h4>
+                    </div>
+                    <div class="points">
+                        <img src="images/Logo_Coin.svg">
+                        <h5>255 點</h5>
+                    </div>
+                </div>
+                <div class="quantity">
+                    <i class="material-symbols-outlined">confirmation_number</i>
+                    <h5>x2</h5>
+                </div>
+            </div>
+            <div class="confirm-detail">
+                <h5>兌換明細</h5>
+                <ul class="content">
+                    <li>
+                        <div class="label">訂單編號</div>
+                        <div class="value">FP123456789</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="checkbox-wrapper text-center">
+            <label>
+                <input type="checkbox" name="checkbox" id="agree">
+                我已閱讀並同意<a href="javascript:void(0);"><span>紅利規章</span></a>
+            </label>
+        </div>
+        <div class="actions">
+            <button onclick="productInfo()" class="btn-secondary btn-xl">返回修改</button>
+            <button onclick="productSuccess()" class="btn-xl" id="exchange-confirm" disabled>確認兌換</button>
+            <button onclick="productFailed()" class="btn-xl">兌換失敗</button>
+        </div>
+      </main>
+      <div id="exchange-failed" style="display: none;">
+        <div class="exchange-img"><img src="images/failed.svg"></div>
+        <div class="exchange-info">
+            <h4>兌換失敗</h4>
+            <p>兌換失敗，請稍後再試或聯絡客服信箱處理。</p>
+        </div>
+        <div class="exchange-action">
+            <button class="btn-secondary" onclick="location.href='index.html'">回到首頁</button>
+        </div>
+      </div>
+      <main id="exchange-success" style="display: none;">
+        <div class="success-info">
+            <div class="exchange-img"><img src="images/success.svg"></div>
+            <div class="exchange-info">
+                <h4>兌換成功</h4>
+                <p>兌換的商品已儲存至票夾，可立即使用。</p>
+            </div>
+        </div>
+        <div class="exchange-action">
+            <button onclick="productInfo()" class="btn-secondary btn-xl">繼續兌換</button>
+            <button onclick="location.href='myTickets.html'" class="btn-xl">查看票夾</button>
+        </div>
+        <div class="receipt">
+            <div class="confirm-product">
+                <div class="product-photo">
+                    <img src="images/product/product-01.png">
+                </div>
+                <div class="product-info">
+                    <div class="name">
+                        <p>商品編號：FP202501030027</p>
+                        <h4>Family mart 拿鐵熱咖啡(大)</h4>
+                    </div>
+                    <div class="points">
+                        <img src="images/Logo_Coin.svg">
+                        <h5>255 點</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="confirm-detail">
+                <h5>兌換明細</h5>
+                <ul class="content">
+                    <li>
+                        <div class="label">訂單編號</div>
+                        <div class="value">FP123456789</div>
+                    </li>
+                    <li>
+                        <div class="label">兌換時間</div>
+                        <div class="value">2025-01-22  15:20:14</div>
+                    </li>
+                    <li>
+                        <div class="label">兌換數量</div>
+                        <div class="value">2</div>
+                    </li>
+                    <li>
+                        <div class="label">本次兌換所需點數</div>
+                        <div class="value">510 點</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+      </main>
     </div>
 
     <footer id="footer-placeholder"></footer>
 
     <div class="popup" id="popup-login">
         <h4>請先登入會員</h4>
-        <div class="popup-container">
+        <div class="popup-container text-center">
             <p>立即登入即可使用您的點數兌換精選好禮。</p>
         </div>
         <div class="btns">
             <button class="btn-secondary">稍後再說</button>
-            <button>立即登入</button>
+            <button onclick="openToast()">立即登入</button>
+        </div>
+    </div>
+
+    <div class="popup" id="popup-insufficient">
+        <h4>點數餘額不足</h4>
+        <div class="popup-container text-center">
+            <p>目前您的點數餘額不足以兌換此商品。</p>
+        </div>
+        <div class="btns">
+            <button class="btn-secondary">關閉</button>
+            <button>如何獲得點數</button>
         </div>
     </div>
 
@@ -148,6 +269,54 @@
 
     <!-- jQuery -->
     <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        function openToast() {
+            $(".popup").removeClass('show');
+            $(".overlay").remove();
+            $("body").append(`
+                <div class="toast toast-success fadeout">
+                    <i class="material-symbols-outlined">check_circle</i>
+                    登入成功
+                </div>
+            `);
+            setTimeout(() => {
+                $(".toast.fadeout").remove();
+            }, 5000);
+        }
+
+        function productInfo() {
+            $("#exchange-failed").css("display", "none");
+            $(".breadcrumbs").css("display", "flex");
+            $("main").css("display", "none");
+            $("#product-info").css("display", "flex");
+        }
+
+        function productConfirm() {
+            $("#exchange-failed").css("display", "none");
+            $(".breadcrumbs").css("display", "flex");
+            $("main").css("display", "none");
+            $("#product-confirm").css("display", "flex");
+        }
+
+        function productSuccess() {
+            $("#exchange-failed").css("display", "none");
+            $(".breadcrumbs").css("display", "none");
+            $("main").css("display", "none");
+            $("#exchange-success").css("display", "flex");
+        }
+
+        function productFailed() {
+            $(".breadcrumbs").css("display", "none");
+            $("main").css("display", "none");
+            $("#exchange-failed").css("display", "flex");
+        }
+        
+        $(document).ready(function () {
+            $("#agree").change(function () {
+                $("#exchange-confirm").prop("disabled", !this.checked);
+            });
+        });
+    </script>
     
     <script src="js/layout.js"></script>
     <script src="js/popup.js"></script>

@@ -51,7 +51,197 @@
     gap: spacing(16);
   }
 
+  .confirm-title {
+    text-align: center;
+
+    p {
+      margin-top: spacing(16);
+      color: color(gray-500);
+    }
+  }
+
+  .receipt {
+    display: flex;
+    flex-direction: column;
+    gap: spacing(20);
+
+    .confirm-product, .confirm-detail {
+      display: flex;
+      padding: spacing(32);
+      background-color: color(gray-50);
+      @include rounded(16);
+    }
+
+    .confirm-product {
+      gap: spacing(40);
+      position: relative;
+  
+      .product-photo {
+        width: px(200);
+        height: px(200);
+        overflow: hidden;
+        @include rounded(16);
+      }
+  
+      .product-info {
+        display: flex;
+        flex-direction: column;
+        gap: spacing(40);
+        flex-grow: 1;
+  
+        .name {
+          p {
+            color: color(gray-500);
+            margin-bottom: spacing(8);
+          }
+        }
+  
+        .points {
+          display: flex;
+          align-items: center;
+          gap: spacing(8);
+  
+          img {
+            width: px(30);
+            height: px(30);
+          }
+        }
+      }
+  
+      .quantity {
+        position: absolute;
+        right: spacing(32);
+        bottom: spacing(32);
+        padding: spacing(8) spacing(16);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: spacing(4);
+        background-color: color(primary-50);
+        color: color(primary-500);
+        @include rounded(20);
+      }
+    }
+
+    .confirm-detail {
+      gap: spacing(16);
+      flex-direction: column;
+
+      .content {
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: spacing(8);
+
+          .label {
+            color: color(gray-500);
+          }
+        }
+      }
+    }
+  }
+
+  .actions {
+    display: flex;
+    gap: spacing(40);
+
+    button {
+      flex: 1;
+    }
+  }
+
+  #exchange-failed, #exchange-success {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: spacing(16);
+
+    .exchange-img, .exchange-info, .exchange-action {
+      text-align: center;
+    }
+
+    .exchange-info {
+      p {
+        color: color(gray-500);
+        margin-top: spacing(8);
+      }
+    }
+  }
+
+  #exchange-failed {
+    min-height: calc(100dvh - px(200));
+    width: 100%;
+    padding-top: spacing(130);
+
+    .exchange-img, .exchange-info, .exchange-action {
+      text-align: center;
+    }
+
+    .exchange-info {
+      p {
+        color: color(gray-500);
+        margin-top: spacing(8);
+      }
+    }
+
+    .exchange-action {
+      button {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  #exchange-success {
+    gap: spacing(40);
+    margin-top: spacing(130);
+
+    .success-info {
+      display: flex;
+      flex-direction: column;
+      gap: spacing(16);
+    }
+
+    .exchange-action {
+      display: flex;
+      justify-content: center;
+      gap: spacing(40);
+    }
+
+    .receipt {
+      gap: spacing(0);
+      overflow: hidden;
+      @include rounded(16);
+
+      .confirm-product, .confirm-detail {
+        @include rounded(0);
+      }
+    }
+  }
+
+  @include max-to(desktop) {
+    .main-info {
+      .product-info {
+        .exchange {
+          flex-wrap: wrap;
+          gap: spacing(20);
+
+          .counting {
+            flex: 100%;
+            justify-content: space-between;
+          }
+        }
+      }
+    }
+  }
+
   @include max-to(mobile) {
+    main {
+      gap: spacing(40);
+    }
+
     .main-info {
       flex-direction: column;
 
@@ -65,18 +255,51 @@
           right: 0;
           bottom: 0;
           left: 0;
-          flex-wrap: wrap;
-          gap: spacing(20);
           padding: spacing(16);
           background-color: color(gray-0);
           @include dropshadow(up);
           z-index: 2;
-
-          .counting {
-            flex: 100%;
-            justify-content: space-between;
-          }
         }
+      }
+    }
+
+    .receipt {
+      .confirm-product, .confirm-detail {
+        padding: spacing(32) spacing(16);
+      }
+
+      .confirm-product {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    .actions {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: color(gray-0);
+      z-index: 2;
+      padding: spacing(16);
+      gap: spacing(20);
+      @include dropshadow(up);
+
+      button {
+        padding: spacing(12) spacing(16);
+        @include fontRWD(body3);
+        @include rounded(20);
+      }
+    }
+
+    #exchange-failed {
+      padding-top: spacing(96);
+    }
+
+    #exchange-success {
+      .exchange-action {
+        flex-direction: column-reverse;
+        gap: spacing(20);
       }
     }
   }

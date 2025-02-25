@@ -41,18 +41,9 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
 
-  <body>
-    
-    <section>
-      <h5 class="color-primary-500">Toast</h5>
+  <body style="background-color: lavenderblush;">
+    <h2>以下所有樣式，使用時請移除「style="..."」</h2>
 
-      <div class="toast toast-success">
-        <i class="material-symbols-outlined">check_circle</i>
-      </div>
-    </section>
-
-    <hr>
-    
     <section>
       <h5 class="color-primary-500">Stepper</h5>
       <div class="stepper-wrapper">
@@ -72,8 +63,33 @@
     <hr>
     
     <section>
+      <h5 class="color-primary-500">Toast</h5>
+
+      <div class="toast toast-success" style="position: relative; top: auto; left: auto; transform: translateY(-120px);">
+        <i class="material-symbols-outlined">check_circle</i>
+        登入成功
+        <i class="material-symbols-outlined close">close</i>
+      </div>
+      <div class="toast toast-error" style="position: relative; top: auto; left: auto; transform: translateY(-120px);">
+        <i class="material-symbols-outlined">cancel</i>
+        登入失敗
+        <i class="material-symbols-outlined close">close</i>
+      </div>
+
+      <button onclick="openToast()" style="margin-top: 32px;">開啟toast</button>
+    </section>
+
+    <hr>
+    
+    <section>
       <h5 class="color-primary-500">Breadcrumbs</h5>
-      <p>Mobile only</p>
+      <p>[All devices]</p>
+      <ul class="breadcrumbs show" style="padding-top: 0;">
+        <li>會員中心</li>
+        <li>我的票夾</li>
+      </ul>
+
+      <p>[Mobile only]</p>
       <ul class="breadcrumbs">
         <li>會員中心</li>
         <li>我的票夾</li>
@@ -142,82 +158,8 @@
     
     <section>
       <h5 class="color-primary-500">Select</h5>
-      <div class="input-wrapper input-vertical">
-        <label for="input">Label</label>
-        <div class="input-content">
-          <div>
-            <div class="custom-select">
-              <select>
-                <option value="0">Select</option>
-                <option value="1">Audi</option>
-                <option value="2">BMW</option>
-                <option value="3">Citroen</option>
-                <option value="4">Ford</option>
-                <option value="5">Honda</option>
-                <option value="6">Jaguar</option>
-                <option value="7">Land Rover</option>
-                <option value="8">Mercedes</option>
-                <option value="9">Mini</option>
-                <option value="10">Nissan</option>
-                <option value="11">Toyota</option>
-                <option value="12">Volvo</option>
-              </select>
-            </div>
-            <span class="error-message">Error message</span>
-            <span class="helper">Helper text</span>
-          </div>
-        </div>
-      </div>
 
-      <div class="input-wrapper input-vertical">
-        <label>Label</label>
-        <div class="input-content">
-          <div>
-            <div class="select-wrapper">
-              <div class="select-dropdown">Select</div>
-              <div class="select-items">
-                <ul>
-                  <li>
-                    <i class="material-icons-outlined">settings</i>
-                    Item 01
-                  </li>
-                  <li>
-                    <i class="material-icons-outlined">settings</i>
-                    Item 02
-                  </li>
-                  <li>
-                    <i class="material-icons-outlined">settings</i>
-                    Item 03
-                  </li>
-                  <li>
-                    <i class="material-icons-outlined">settings</i>
-                    Item 04
-                  </li>
-                  <li>
-                    <i class="material-icons-outlined">settings</i>
-                    Item 05
-                  </li>
-                  <li>
-                    <i class="material-icons-outlined">settings</i>
-                    Item 06
-                  </li>
-                  <li>
-                    <i class="material-icons-outlined">settings</i>
-                    Item 07
-                  </li>
-                  <li>
-                    <i class="material-icons-outlined">settings</i>
-                    Item 08
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <span class="error-message">Error message</span>
-            <span class="helper">Helper text</span>
-          </div>
-        </div>
-      </div>
-
+      <h6>橫式</h6>
       <div class="input-wrapper">
         <label>Label</label>
         <div class="input-content">
@@ -266,8 +208,11 @@
           </div>
         </div>
       </div>
+      
+      <hr>
 
-      <div class="input-wrapper input-vertical">
+      <h6>橫式（小）</h6>
+      <div class="input-wrapper">
         <label>Label</label>
         <div class="input-content">
           <div>
@@ -316,7 +261,62 @@
         </div>
       </div>
 
-      <div class="input-wrapper">
+      <hr>
+
+      <h6>直式</h6>
+      <div class="input-wrapper input-vertical">
+        <label>Label</label>
+        <div class="input-content">
+          <div>
+            <div class="select-wrapper">
+              <div class="select-dropdown">Select</div>
+              <div class="select-items">
+                <ul>
+                  <li>
+                    <i class="material-icons-outlined">settings</i>
+                    Item 01
+                  </li>
+                  <li>
+                    <i class="material-icons-outlined">settings</i>
+                    Item 02
+                  </li>
+                  <li>
+                    <i class="material-icons-outlined">settings</i>
+                    Item 03
+                  </li>
+                  <li>
+                    <i class="material-icons-outlined">settings</i>
+                    Item 04
+                  </li>
+                  <li>
+                    <i class="material-icons-outlined">settings</i>
+                    Item 05
+                  </li>
+                  <li>
+                    <i class="material-icons-outlined">settings</i>
+                    Item 06
+                  </li>
+                  <li>
+                    <i class="material-icons-outlined">settings</i>
+                    Item 07
+                  </li>
+                  <li>
+                    <i class="material-icons-outlined">settings</i>
+                    Item 08
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <span class="error-message">Error message</span>
+            <span class="helper">Helper text</span>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <h6>直式（小）</h6>
+      <div class="input-wrapper input-vertical">
         <label>Label</label>
         <div class="input-content">
           <div>
@@ -625,8 +625,11 @@
 
     <!-- jQuery -->
     <script src="js/jquery-3.7.1.min.js"></script>
+
+    <script src="js/popup.js"></script>
     <script src="js/select.js"></script>
     <script src="js/stepper.js"></script>
+    <script src="js/toast.js"></script>
   
   </body>
 </html>
