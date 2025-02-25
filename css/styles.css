@@ -2358,6 +2358,20 @@ section {
 
 ul.breadcrumbs {
   display: none;
+  align-items: center;
+  margin: 0rem auto 1.25rem;
+  padding-top: 8.125rem;
+  width: 75rem;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 120%;
+}
+@media (max-width: 991px) {
+  ul.breadcrumbs {
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 120%;
+  }
 }
 ul.breadcrumbs li {
   position: relative;
@@ -2397,23 +2411,14 @@ ul.breadcrumbs li:last-child span {
 ul.breadcrumbs li:last-child:after {
   content: "";
 }
+ul.breadcrumbs.show {
+  display: flex;
+}
 @media (max-width: 767px) {
   ul.breadcrumbs {
     display: flex;
-    align-items: center;
     padding-top: 6rem;
-    margin: 0rem auto 1.25rem;
     width: calc(100svw - 2rem);
-    font-size: 0.75rem;
-    font-weight: 400;
-    line-height: 120%;
-  }
-}
-@media (max-width: 767px) and (max-width: 991px) {
-  ul.breadcrumbs {
-    font-size: 0.75rem;
-    font-weight: 400;
-    line-height: 120%;
   }
 }
 
@@ -3483,6 +3488,10 @@ ul.member-list li .value i {
   }
 }
 
+.product .product-info {
+  display: flex;
+  gap: 2.5rem;
+}
 .regulations {
   gap: 1.5rem;
 }

@@ -28,6 +28,11 @@ section {
 
 ul.breadcrumbs {
   display: none;
+  align-items: center;
+  margin: spacing(0) auto spacing(20);
+  padding-top: spacing(130);
+  width: px(1200);
+  @include fontRWD(caption);
 
   li {
     position: relative;
@@ -64,13 +69,14 @@ ul.breadcrumbs {
     }
   }
 
+  &.show {
+    display: flex;
+  }
+
   @include max-to(mobile) {
     display: flex;
-    align-items: center;
     padding-top: spacing(96);
-    margin: spacing(0) auto spacing(20);
     width: calc(100svw - px(32));
-    @include fontRWD(caption);
   }
 }
 
