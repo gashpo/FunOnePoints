@@ -4,6 +4,7 @@
   position: relative;
   margin-bottom: spacing(40);
   color: color(gray-0);
+  text-align: center;
 
   img {
     margin-top: 15%;
@@ -38,7 +39,7 @@
     overflow: hidden;
 
     img {
-      transform: scale(2.5);
+      transform: scale(2.3);
       margin-top: 25dvh;
     }
 
@@ -302,7 +303,7 @@
     position: absolute;
     content: "";
     background-color: color(primary-50);
-    top: 0;
+    top: px(-1);
     right: 0;
     left: 0;
     height: px(40);

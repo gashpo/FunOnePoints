@@ -2600,6 +2600,7 @@ body:has(#mobile-menu) {
   position: relative;
   margin-bottom: 2.5rem;
   color: #ffffff;
+  text-align: center;
 }
 .keyvision img {
   margin-top: 15%;
@@ -2631,7 +2632,7 @@ body:has(#mobile-menu) {
     overflow: hidden;
   }
   .keyvision img {
-    transform: scale(2.5);
+    transform: scale(2.3);
     margin-top: 25dvh;
   }
   .keyvision .title {
@@ -2865,7 +2866,7 @@ body:has(#mobile-menu) {
   position: absolute;
   content: "";
   background-color: #f0e5fd;
-  top: 0;
+  top: -0.0625rem;
   right: 0;
   left: 0;
   height: 2.5rem;
