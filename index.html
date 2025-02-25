@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <title id="pageTitle">我的紅利 ｜ FunOne Points</title>
+    <title id="pageTitle">FunOne Points</title>
     <meta name="description" content="用 FunOne Points 紅利點數，輕鬆兌換各大通路商品與票券！累積點數，享受超值回饋，讓每點紅利都更有價值。" />
     <meta name="keywords" content="FunOne Points, 紅利點數, 點數兌換, 商品兌換, 會員回饋, 紅利商城, 優惠兌換">
     
@@ -45,149 +45,401 @@
 <body class="loggedin">
     <header id="header-placeholder"></header>
 
-    <ul class="breadcrumbs">
-        <li>會員中心</li>
-        <li>我的紅利</li>
-    </ul>
+    <section class="keyvision">
+      <img src="images/keyvision.svg">
+      <div class="title">
+        <h2>將 GASH 點數累積 FunOne Points</h2>
+        <h5>
+          購買 GASH 點數直儲指定遊戲，暢玩同時 Points 同步累積。<br>
+          一鍵解鎖多元娛樂，從線上到線下，FunOne Points 讓你的每一分錢都發揮最大價值！
+        </h5>
+      </div>
+    </section>
 
-    <h3 class="page-title">會員中心</h3>
-
-    <div class="container">
-        <nav id="sidebar-placeholder">
-            <ul class="sidenav">
-                <li class="active" onclick="location.href='myPoints.html'"><i class="material-symbols-outlined">receipt_long</i>我的紅利</li>
-                <li onclick="location.href='myTickets.html'"><i class="material-symbols-outlined">folder_open</i>我的票夾</li>
-                <li class="divider"></li>
-                <li onclick="location.href='member.html'"><i class="material-symbols-rounded">person</i>會員資料</li>
-                <li class="logout"><i class="material-symbols-outlined">logout</i>登出</li>
+    <section class="exchange container">
+      <h2>你的 Points ，你的選擇</h2>
+      <div class="exchange-container">
+        <div class="tab-wrapper">
+          <ul class="tab">
+              <li class="tab-item active">7-ELEVEN</li>
+              <li class="tab-item">Family Mart</li>
+              <li class="tab-item">萊爾富</li>
+              <li class="tab-item">迷客夏</li>
+              <div class="tab-underline"></div>
+          </ul>
+          <div class="tab-scroll-left"><i class="material-symbols-outlined">chevron_left</i></div>
+          <div class="tab-scroll-right"><i class="material-symbols-outlined">chevron_right</i></div>
+        </div>
+        <div class="tab-container">
+          <div class="tab-content" style="display: block;">
+            <ul class="pd-container">
+              <li class="pd-card">
+                <div class="pd-img"><img src="images/product/product-04.png"></div>
+                <div class="pd-info">
+                  <h6>CITY CAFÉ 拿鐵熱咖啡(大)</h6>
+                  <div class="price">
+                    <img src="images/Logo_Coin.svg">
+                    <h5>9,999 <span>點</span></h5>
+                  </div>
+                </div>
+              </li>
+              <li class="pd-card">
+                <div class="pd-img"><img src="images/product/product-04.png"></div>
+                <div class="pd-info">
+                  <h6>CITY CAFÉ 拿鐵熱咖啡(大)</h6>
+                  <div class="price">
+                    <img src="images/Logo_Coin.svg">
+                    <h5>9,999 <span>點</span></h5>
+                  </div>
+                </div>
+              </li>
+              <li class="pd-card">
+                <div class="pd-img"><img src="images/product/product-04.png"></div>
+                <div class="pd-info">
+                  <h6>CITY CAFÉ 拿鐵熱咖啡(大)</h6>
+                  <div class="price">
+                    <img src="images/Logo_Coin.svg">
+                    <h5>9,999 <span>點</span></h5>
+                  </div>
+                </div>
+              </li>
+              <li class="pd-card">
+                <div class="pd-img"><img src="images/product/Product-default.png"></div>
+                <div class="pd-info">
+                  <h6>CITY CAFÉ</h6>
+                  <div class="price">
+                    <img src="images/Logo_Coin.svg">
+                    <h5>9,999 <span>點</span></h5>
+                  </div>
+                </div>
+              </li>
+              <li class="pd-card">
+                <div class="pd-img"><img src="images/product/product-04.png"></div>
+                <div class="pd-info">
+                  <h6>CITY CAFÉ 拿鐵熱咖啡(大) CITY CAFÉ 拿鐵熱咖啡(大)</h6>
+                  <div class="price">
+                    <img src="images/Logo_Coin.svg">
+                    <h5>9,999 <span>點</span></h5>
+                  </div>
+                </div>
+              </li>
+              <li class="pd-card">
+                <div class="pd-img"><img src="images/product/product-04.png"></div>
+                <div class="pd-info">
+                  <h6>CITY CAFÉ 拿鐵熱咖啡(大)</h6>
+                  <div class="price">
+                    <img src="images/Logo_Coin.svg">
+                    <h5>9,999 <span>點</span></h5>
+                  </div>
+                </div>
+              </li>
+              <li class="pd-card">
+                <div class="pd-img"><img src="images/product/product-04.png"></div>
+                <div class="pd-info">
+                  <h6>CITY CAFÉ 拿鐵熱咖啡(大)</h6>
+                  <div class="price">
+                    <img src="images/Logo_Coin.svg">
+                    <h5>9,999 <span>點</span></h5>
+                  </div>
+                </div>
+              </li>
             </ul>
-        </nav>
-        <main>
-            <h4 class="main-title">我的紅利</h4>
-            <div class="mypoints">
-                <div class="points">
-                    <img class="coin" src="images/Logo_Coin.svg">
-                    <div>9,999 <span>點</span></div>
+            <button>查看更多</button>
+          </div>
+          <div class="tab-content" style="display: none;">
+            <ul class="pd-container">
+              <li class="pd-card">
+                <div class="pd-img"><img src="images/product/product-01.png"></div>
+                <div class="pd-info">
+                  <h6>FAMI CAFÉ 拿鐵熱咖啡(大)</h6>
+                  <div class="price">
+                    <img src="images/Logo_Coin.svg">
+                    <h5>9,999 <span>點</span></h5>
+                  </div>
                 </div>
-                <div class="divider"></div>
-                <ul class="expired-info">
-                    <li>
-                        2025-12-31 到期
-                        <h6>5,000 點</h6>
-                    </li>
-                    <li class="divider vertical"></li>
-                    <li>
-                        2026-12-31 到期
-                        <h6>4,999 點</h6>
-                    </li>
-                </ul>
-            </div>
-            <div class="tab-wrapper">
-                <ul class="tab">
-                    <li class="tab-item active">空值畫面</li>
-                    <li class="tab-item">加點</li>
-                    <li class="tab-item">扣點</li>
-                    <div class="tab-underline"></div>
-                </ul>
-                <div class="tab-scroll-left"><i class="material-symbols-outlined">chevron_left</i></div>
-                <div class="tab-scroll-right"><i class="material-symbols-outlined">chevron_right</i></div>
-            </div>
-            <div class="tab-container">
-                <div class="tab-content" style="display: block;">
-                    <div class="empty">
-                        <img src="images/empty.png">
-                        <p>開始您的紅利兌換之旅！ 透過儲值與扣點累積紅利， 兌換各式專屬好禮。</p>
-                        <button>瞭解更多</button>
-                    </div>
+              </li>
+              <li class="pd-card">
+                <div class="pd-img"><img src="images/product/Product-default.png"></div>
+                <div class="pd-info">
+                  <h6>FAMI CAFÉ 拿鐵熱咖啡(大)</h6>
+                  <div class="price">
+                    <img src="images/Logo_Coin.svg">
+                    <h5>9,999 <span>點</span></h5>
+                  </div>
                 </div>
-                <div class="tab-content" style="display: none;">
-                    <ul class="list">
-                        <li>
-                            <div class="desc">
-                                <p>通路來源 $500</p>
-                                <span>2024-06-01</span>
-                            </div>
-                            <div class="coin"><img src="images/Logo_Coin.svg"> 29</div>
-                        </li>
-                        <li>
-                            <div class="desc">
-                                <p>通路來源 $1,000</p>
-                                <span>2024-06-01</span>
-                            </div>
-                            <div class="coin"><img src="images/Logo_Coin.svg"> 29</div>
-                        </li>
-                        <li>
-                            <div class="desc">
-                                <p>通路來源 $5,000</p>
-                                <span>2024-06-01</span>
-                            </div>
-                            <div class="coin"><img src="images/Logo_Coin.svg"> 29</div>
-                        </li>
-                        <li>
-                            <div class="desc">
-                                <p>通路來源 $100</p>
-                                <span>2024-06-01</span>
-                            </div>
-                            <div class="coin"><img src="images/Logo_Coin.svg"> 29</div>
-                        </li>
-                        <li>
-                            <div class="desc">
-                                <p>通路來源 $500</p>
-                                <span>2024-06-01</span>
-                            </div>
-                            <div class="coin"><img src="images/Logo_Coin.svg"> 29</div>
-                        </li>
-                    </ul>
-                    <button class="btn-tertiary">顯示更多 <i class="material-symbols-outlined">keyboard_arrow_down</i></button>
+              </li>
+              <li class="pd-card">
+                <div class="pd-img"><img src="images/product/product-01.png"></div>
+                <div class="pd-info">
+                  <h6>FAMI CAFÉ 拿鐵熱咖啡(大)</h6>
+                  <div class="price">
+                    <img src="images/Logo_Coin.svg">
+                    <h5>9,999 <span>點</span></h5>
+                  </div>
                 </div>
-                <div class="tab-content" style="display: none;">
-                    <ul class="list deduction">
-                        <li>
-                            <div class="desc">
-                                <p>兌換商品_星巴克美式咖啡（大）</p>
-                                <span>2024-06-01</span>
-                                <span>FP123456789</span>
-                            </div>
-                            <div class="coin"><img src="images/Logo_Coin.svg"> -10</div>
-                        </li>
-                        <li>
-                            <div class="desc">
-                                <p>兌換商品_星巴克美式咖啡（大）</p>
-                                <span>2024-06-01</span>
-                                <span>FP123456789</span>
-                            </div>
-                            <div class="coin"><img src="images/Logo_Coin.svg"> -6</div>
-                        </li>
-                        <li>
-                            <div class="desc">
-                                <p>點數到期</p>
-                                <span>2024-06-01</span>
-                            </div>
-                            <div class="coin"><img src="images/Logo_Coin.svg"> -20</div>
-                        </li>
-                        <li>
-                            <div class="desc">
-                                <p>點數到期</p>
-                                <span>2024-06-01</span>
-                            </div>
-                            <div class="coin"><img src="images/Logo_Coin.svg"> -7</div>
-                        </li>
-                        <li>
-                            <div class="desc">
-                                <p>兌換商品_星巴克美式咖啡（大）</p>
-                                <span>2024-06-01</span>
-                                <span>FP123456789</span>
-                            </div>
-                            <div class="coin"><img src="images/Logo_Coin.svg"> -5</div>
-                        </li>
-                    </ul>
-                    <button class="btn-tertiary">顯示更多 <i class="material-symbols-outlined">keyboard_arrow_down</i></button>
+              </li>
+              <li class="pd-card">
+                <div class="pd-img"><img src="images/product/product-01.png"></div>
+                <div class="pd-info">
+                  <h6>FAMI CAFÉ 拿鐵熱咖啡(大)</h6>
+                  <div class="price">
+                    <img src="images/Logo_Coin.svg">
+                    <h5>9,999 <span>點</span></h5>
+                  </div>
                 </div>
-            </div>
-        </main>
-    </div>
+              </li>
+              <li class="pd-card">
+                <div class="pd-img"><img src="images/product/product-01.png"></div>
+                <div class="pd-info">
+                  <h6>FAMI CAFÉ 拿鐵熱咖啡(大)</h6>
+                  <div class="price">
+                    <img src="images/Logo_Coin.svg">
+                    <h5>9,999 <span>點</span></h5>
+                  </div>
+                </div>
+              </li>
+              <li class="pd-card">
+                <div class="pd-img"><img src="images/product/product-01.png"></div>
+                <div class="pd-info">
+                  <h6>FAMI CAFÉ 拿鐵熱咖啡(大)</h6>
+                  <div class="price">
+                    <img src="images/Logo_Coin.svg">
+                    <h5>9,999 <span>點</span></h5>
+                  </div>
+                </div>
+              </li>
+              <li class="pd-card">
+                <div class="pd-img"><img src="images/product/product-01.png"></div>
+                <div class="pd-info">
+                  <h6>FAMI CAFÉ 拿鐵熱咖啡(大)</h6>
+                  <div class="price">
+                    <img src="images/Logo_Coin.svg">
+                    <h5>9,999 <span>點</span></h5>
+                  </div>
+                </div>
+              </li>
+              <li class="pd-card">
+                <div class="pd-img"><img src="images/product/product-01.png"></div>
+                <div class="pd-info">
+                  <h6>FAMI CAFÉ 拿鐵熱咖啡(大)</h6>
+                  <div class="price">
+                    <img src="images/Logo_Coin.svg">
+                    <h5>9,999 <span>點</span></h5>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-content" style="display: none;">
+            <ul class="pd-container">
+              <li class="pd-card">
+                <div class="pd-img"><img src="images/product/Product-default.png"></div>
+                <div class="pd-info">
+                  <h6>萊爾富 茶葉蛋</h6>
+                  <div class="price">
+                    <img src="images/Logo_Coin.svg">
+                    <h5>9,999 <span>點</span></h5>
+                  </div>
+                </div>
+              </li>
+              <li class="pd-card">
+                <div class="pd-img"><img src="images/product/product-02.png"></div>
+                <div class="pd-info">
+                  <h6>萊爾富 茶葉蛋</h6>
+                  <div class="price">
+                    <img src="images/Logo_Coin.svg">
+                    <h5>9,999 <span>點</span></h5>
+                  </div>
+                </div>
+              </li>
+              <li class="pd-card">
+                <div class="pd-img"><img src="images/product/product-02.png"></div>
+                <div class="pd-info">
+                  <h6>萊爾富 茶葉蛋</h6>
+                  <div class="price">
+                    <img src="images/Logo_Coin.svg">
+                    <h5>9,999 <span>點</span></h5>
+                  </div>
+                </div>
+              </li>
+              <li class="pd-card">
+                <div class="pd-img"><img src="images/product/product-02.png"></div>
+                <div class="pd-info">
+                  <h6>萊爾富 茶葉蛋</h6>
+                  <div class="price">
+                    <img src="images/Logo_Coin.svg">
+                    <h5>9,999 <span>點</span></h5>
+                  </div>
+                </div>
+              </li>
+              <li class="pd-card">
+                <div class="pd-img"><img src="images/product/product-02.png"></div>
+                <div class="pd-info">
+                  <h6>萊爾富 茶葉蛋</h6>
+                  <div class="price">
+                    <img src="images/Logo_Coin.svg">
+                    <h5>9,999 <span>點</span></h5>
+                  </div>
+                </div>
+              </li>
+              <li class="pd-card">
+                <div class="pd-img"><img src="images/product/product-02.png"></div>
+                <div class="pd-info">
+                  <h6>萊爾富 茶葉蛋</h6>
+                  <div class="price">
+                    <img src="images/Logo_Coin.svg">
+                    <h5>9,999 <span>點</span></h5>
+                  </div>
+                </div>
+              </li>
+              <li class="pd-card">
+                <div class="pd-img"><img src="images/product/product-02.png"></div>
+                <div class="pd-info">
+                  <h6>萊爾富 茶葉蛋</h6>
+                  <div class="price">
+                    <img src="images/Logo_Coin.svg">
+                    <h5>9,999 <span>點</span></h5>
+                  </div>
+                </div>
+              </li>
+              <li class="pd-card">
+                <div class="pd-img"><img src="images/product/product-02.png"></div>
+                <div class="pd-info">
+                  <h6>萊爾富 茶葉蛋</h6>
+                  <div class="price">
+                    <img src="images/Logo_Coin.svg">
+                    <h5>9,999 <span>點</span></h5>
+                  </div>
+                </div>
+              </li>
+              <li class="pd-card">
+                <div class="pd-img"><img src="images/product/product-02.png"></div>
+                <div class="pd-info">
+                  <h6>萊爾富 茶葉蛋</h6>
+                  <div class="price">
+                    <img src="images/Logo_Coin.svg">
+                    <h5>9,999 <span>點</span></h5>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-content" style="display: none;">
+            <ul class="pd-container">
+              <li class="pd-card">
+                <div class="pd-img"><img src="images/product/Product-default.png"></div>
+                <div class="pd-info">
+                  <h6>大正紅茶</h6>
+                  <div class="price">
+                    <img src="images/Logo_Coin.svg">
+                    <h5>9,999 <span>點</span></h5>
+                  </div>
+                </div>
+              </li>
+              <li class="pd-card">
+                <div class="pd-img"><img src="images/product/Product-default.png"></div>
+                <div class="pd-info">
+                  <h6>大正紅茶</h6>
+                  <div class="price">
+                    <img src="images/Logo_Coin.svg">
+                    <h5>9,999 <span>點</span></h5>
+                  </div>
+                </div>
+              </li>
+              <li class="pd-card">
+                <div class="pd-img"><img src="images/product/Product-default.png"></div>
+                <div class="pd-info">
+                  <h6>大正紅茶</h6>
+                  <div class="price">
+                    <img src="images/Logo_Coin.svg">
+                    <h5>9,999 <span>點</span></h5>
+                  </div>
+                </div>
+              </li>
+              <li class="pd-card">
+                <div class="pd-img"><img src="images/product/Product-default.png"></div>
+                <div class="pd-info">
+                  <h6>大正紅茶</h6>
+                  <div class="price">
+                    <img src="images/Logo_Coin.svg">
+                    <h5>9,999 <span>點</span></h5>
+                  </div>
+                </div>
+              </li>
+              <li class="pd-card">
+                <div class="pd-img"><img src="images/product/Product-default.png"></div>
+                <div class="pd-info">
+                  <h6>大正紅茶</h6>
+                  <div class="price">
+                    <img src="images/Logo_Coin.svg">
+                    <h5>9,999 <span>點</span></h5>
+                  </div>
+                </div>
+              </li>
+              <li class="pd-card">
+                <div class="pd-img"><img src="images/product/Product-default.png"></div>
+                <div class="pd-info">
+                  <h6>大正紅茶</h6>
+                  <div class="price">
+                    <img src="images/Logo_Coin.svg">
+                    <h5>9,999 <span>點</span></h5>
+                  </div>
+                </div>
+              </li>
+              <li class="pd-card">
+                <div class="pd-img"><img src="images/product/Product-default.png"></div>
+                <div class="pd-info">
+                  <h6>大正紅茶</h6>
+                  <div class="price">
+                    <img src="images/Logo_Coin.svg">
+                    <h5>9,999 <span>點</span></h5>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <footer id="footer-placeholder"></footer>
+    <section class="collect">
+      <div class="desc">
+        <h2>如何蒐集 Points</h2>
+        <p>凡購買 GASH 點數後直儲指定遊戲或參加限時活動，都能獲得 FunOne Points。</p>
+        <p>擁有 FunOne Points 就能輕鬆兌換多樣商品，隨時享受便利與樂趣，讓每份心動都即刻實現！</p>
+      </div>
+      <div>
+        <img class="desktop" src="images/slider.png">
+        <img class="mobile" src="images/slider_m.png">
+      </div>
+    </section>
+
+    <section class="direction">
+      <div class="direction-container">
+        <div class="desc">
+          <h2>當擁有了 Points 之後</h2>
+          <p>FunOne Point 平台是由多家供應商提供專屬的點數兌換平台。</p>
+          <p>即 FunOne Point 會員可在平台內使用點數兌換各式商品，兌換後可立即前往實體門市使用，體驗電子票券便利及樂趣。</p>
+        </div>
+        <div>
+          <img src="images/direction.png">
+        </div>
+        <div class="decoration">
+          <img src="images/mascot.svg">
+          <div>
+            <img src="images/Gash_Coin.svg">
+            <img src="images/Gash_Coin.svg">
+            <img src="images/Gash_Coin.svg">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer-placeholder" class="index-footer"></footer>
+
+    <div id="go-top">
+      <i class="material-symbols-outlined">north</i>
+    </div>
 
 
 
@@ -199,8 +451,8 @@
     <script src="js/jquery-3.7.1.min.js"></script>
     
     <script src="js/layout.js"></script>
+    <script src="js/index.js"></script>
     <script src="js/tab.js"></script>
-    <script src="js/sidebar.js"></script>
 </body>
 
 </html>
