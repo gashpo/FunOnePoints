@@ -2573,6 +2573,7 @@ section {
 }
 
 ul.breadcrumbs {
+  width: 75rem;
   display: none;
   align-items: center;
   margin: 0rem auto 1.25rem;
