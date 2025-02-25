@@ -2935,6 +2935,12 @@ header.hide ~ #exchange .exchange-container .tab-wrapper {
   border-radius: 4rem;
   cursor: pointer;
 }
+@media (max-width: 767px) {
+  #go-top {
+    right: 1rem;
+    bottom: 1rem;
+  }
+}
 
 .mypoints {
   background-color: #191919;
