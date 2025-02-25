@@ -73,3 +73,13 @@ $(document).ready(function () {
     }
   });
 });
+
+function goToExchange() {
+  sessionStorage.setItem("scrollToExchange", "true");
+  window.location.href = "index.html";
+}
+
+function goToCollect() {
+  sessionStorage.setItem("scrollToCollect", "true");
+  window.location.href = "index.html";
+}

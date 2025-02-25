@@ -43,40 +43,7 @@
 </head>
 
 <body class="loggedin">
-  <header id="header-placeholder">
-    <div class="menu">
-      <div class="menu-toggle"><i></i></div>
-      <div class="logo"><a href="#"><img src="images/Logo-white.svg"></a></div>
-      <ul class="navigation">
-        <li class="nav-item">蒐集 Points</li>
-        <li class="nav-item">Points 兌換</li>
-      </ul>
-    </div>
-    <div class="action">
-      <!-- 目前無其他語系，暫時隱藏切換功能 -->
-      <!-- <div class="footer-selector" id="language">繁體中文</div> -->
-      <div class="footer-selector" id="login">
-        <i class="material-symbols-rounded">person</i>
-        <span>登入</span>
-      </div>
-      <div class="header-dropdown" id="user">
-        <div class="point">
-          <img src="images/Logo_Coin.svg">
-          <span>9,999</span>
-          <i class="material-symbols-outlined">keyboard_arrow_down</i>
-        </div>
-        <div class="select">
-          <ul>
-            <li onclick="location.href='myPoints.html'"><i class="material-symbols-outlined">receipt_long</i>我的紅利</li>
-            <li onclick="location.href='myTickets.html'"><i class="material-symbols-outlined">folder_open</i>我的票夾</li>
-            <li class="divider"></li>
-            <li onclick="location.href='member.html'"><i class="material-symbols-rounded">person</i>會員資料</li>
-            <li id="logout"><i class="material-symbols-outlined">logout</i>登出</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </header>
+  <header id="header-placeholder"></header>
 
     <section class="keyvision">
       <img src="images/keyvision.svg">
@@ -89,7 +56,7 @@
       </div>
     </section>
 
-    <section class="exchange container">
+    <section id="exchange" class="container">
       <h2>你的 Points ，你的選擇</h2>
       <div class="exchange-container">
         <div class="tab-wrapper">
@@ -435,7 +402,7 @@
       </div>
     </section>
 
-    <section class="collect">
+    <section id="collect">
       <div class="desc">
         <h2>如何蒐集 Points</h2>
         <p>凡購買 GASH 點數後直儲指定遊戲或參加限時活動，都能獲得 FunOne Points。</p>
@@ -468,17 +435,7 @@
       </div>
     </section>
 
-    <footer id="footer-placeholder" class="index-footer">
-      <div class="info">
-        <div class="logo"><a href="index.html"><img src="images/Logo-white.svg"></a></div>
-        <ul class="menu">
-          <li class="footer-textlink">隱私權政策</li>
-          <li class="footer-textlink">服務條款</li>
-          <li class="footer-textlink">紅利規章</li>
-        </ul>
-      </div>
-      <copyright>2025 GASH POINT Co., Ltd. All Rights Reserved.</copyright>
-    </footer>
+    <footer id="footer-placeholder" class="index-footer"></footer>
 
     <div id="go-top">
       <i class="material-symbols-outlined">north</i>
@@ -492,6 +449,26 @@
 
     <!-- jQuery -->
     <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        if (sessionStorage.getItem("scrollToExchange") === "true") {
+          sessionStorage.removeItem("scrollToExchange"); // 清除標記，避免重複觸發
+          $("html, body").animate(
+            { scrollTop: $("#exchange").offset().top },
+            600 // 600ms 平滑滾動
+          );
+        }
+
+        if (sessionStorage.getItem("scrollToCollect") === "true") {
+          sessionStorage.removeItem("scrollToCollect"); // 清除標記，避免重複觸發
+          $("html, body").animate(
+            { scrollTop: $("#collect").offset().top - 40},
+            600 // 600ms 平滑滾動
+          );
+        }
+      });
+    </script>
+    
     
     <script src="js/header.js"></script>
     <script src="js/index.js"></script>
