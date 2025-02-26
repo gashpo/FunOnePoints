@@ -1697,17 +1697,22 @@ input[type=text] {
     bottom: 0;
     left: 0;
     width: 100dvw;
-    height: auto;
-    max-height: 0dvh;
+    height: 100dvh;
     border-radius: 0;
-    transform: none;
-    transition: max-height 0.3s ease-in-out;
   }
   .popup.full.show {
-    max-height: 100dvh;
+    animation: full-popup-show 0.5s ease-in-out both;
   }
 }
 
+@keyframes full-popup-show {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 #registration .popup-container {
   overflow: visible;
 }

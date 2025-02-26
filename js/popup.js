@@ -6,8 +6,18 @@ $(document).ready(function () {
 
     // 開啟 popup
     let actionValue = $(this).attr("for");
-    $(".popup").removeClass("show");
-    $("#" + actionValue).addClass("show");
+
+    if ($("body").find(".popup.show").length > 0) {
+      console.log("yes");
+      $(".popup").removeClass("show");
+
+      setTimeout(() => {
+        $("#" + actionValue).addClass("show");
+      }, 300);
+    } else {
+      $(".popup").removeClass("show");
+      $("#" + actionValue).addClass("show");
+    }
   });
 
   // 關閉 popup
