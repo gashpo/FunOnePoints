@@ -1306,9 +1306,6 @@ input {
     line-height: 150%;
   }
 }
-input::-moz-placeholder {
-  color: #b0b0b0;
-}
 input::placeholder {
   color: #b0b0b0;
 }
@@ -1475,9 +1472,7 @@ input[type=text] {
 .checkbox-wrapper label input[type=checkbox], .checkbox-wrapper label input[type=radio],
 .radio-wrapper label input[type=checkbox],
 .radio-wrapper label input[type=radio] {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   width: 1.5rem;
   height: 1.5rem;
   cursor: pointer;
@@ -1733,9 +1728,7 @@ input[type=text] {
 .select-wrapper .select-items {
   color: #191919;
   background-color: #ffffff;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
   border-radius: 1.25rem;
 }
 .select-wrapper .select-dropdown {
@@ -1822,7 +1815,6 @@ input[type=text] {
 }
 .select-wrapper.open .select-items {
   padding: 0.5rem 0.25rem 0.5rem 0.5rem;
-  min-width: -moz-max-content;
   min-width: max-content;
 }
 .select-wrapper.open .select-items ul {
@@ -1968,7 +1960,6 @@ input[type=text] {
   color: #959595;
   cursor: pointer;
   width: 5.625rem;
-  min-width: -moz-max-content;
   min-width: max-content;
   transition: color 0.3s ease-in-out;
   text-align: center;
@@ -2339,7 +2330,6 @@ header .action .header-dropdown .select {
   top: calc(100% + 0.5rem);
   right: 0;
   width: 100%;
-  min-width: -moz-max-content;
   min-width: max-content;
 }
 header .action .header-dropdown .select.active {
@@ -2759,7 +2749,6 @@ main {
   padding: 1rem;
   border-radius: 1.5rem;
   flex: 100%;
-  height: -moz-fit-content;
   height: fit-content;
   flex-grow: 0;
   display: flex;
@@ -2935,6 +2924,7 @@ body:has(#mobile-menu) {
   display: flex;
   align-items: center;
   justify-content: center;
+  aspect-ratio: 1;
 }
 #exchange .exchange-container .tab-container .pd-container .pd-card .pd-img + .pd-info {
   background-image: url("../images/divider_h.svg");
@@ -3171,6 +3161,8 @@ header.hide ~ #exchange .exchange-container .tab-wrapper {
   #go-top {
     right: 1rem;
     bottom: 1rem;
+    width: 3.25rem;
+    height: 3.25rem;
   }
 }
 
@@ -3982,4 +3974,4 @@ ul.member-list li .value i {
 }
 .regulations h6 {
   line-height: 150%;
-}/*# sourceMappingURL=styles.css.map */
+}
