@@ -65,7 +65,8 @@
     flex-direction: column;
     gap: spacing(20);
 
-    .confirm-product, .confirm-detail {
+    .confirm-product,
+    .confirm-detail {
       display: flex;
       padding: spacing(32);
       background-color: color(gray-50);
@@ -75,39 +76,39 @@
     .confirm-product {
       gap: spacing(40);
       position: relative;
-  
+
       .product-photo {
         width: px(200);
         height: px(200);
         overflow: hidden;
         @include rounded(16);
       }
-  
+
       .product-info {
         display: flex;
         flex-direction: column;
         gap: spacing(40);
         flex-grow: 1;
-  
+
         .name {
           p {
             color: color(gray-500);
             margin-bottom: spacing(8);
           }
         }
-  
+
         .points {
           display: flex;
           align-items: center;
           gap: spacing(8);
-  
+
           img {
             width: px(30);
             height: px(30);
           }
         }
       }
-  
+
       .quantity {
         position: absolute;
         right: spacing(32);
@@ -151,7 +152,8 @@
     }
   }
 
-  #exchange-failed, #exchange-success {
+  #exchange-failed,
+  #exchange-success {
     display: flex;
     flex-direction: column;
     align-self: center;
@@ -159,7 +161,9 @@
     flex-wrap: wrap;
     gap: spacing(16);
 
-    .exchange-img, .exchange-info, .exchange-action {
+    .exchange-img,
+    .exchange-info,
+    .exchange-action {
       text-align: center;
     }
 
@@ -176,7 +180,9 @@
     width: 100%;
     padding-top: spacing(130);
 
-    .exchange-img, .exchange-info, .exchange-action {
+    .exchange-img,
+    .exchange-info,
+    .exchange-action {
       text-align: center;
     }
 
@@ -215,7 +221,8 @@
       overflow: hidden;
       @include rounded(16);
 
-      .confirm-product, .confirm-detail {
+      .confirm-product,
+      .confirm-detail {
         @include rounded(0);
       }
     }
@@ -259,12 +266,17 @@
           background-color: color(gray-0);
           @include dropshadow(up);
           z-index: 2;
+
+          button.btn-xl {
+            @include button(l);
+          }
         }
       }
     }
 
     .receipt {
-      .confirm-product, .confirm-detail {
+      .confirm-product,
+      .confirm-detail {
         padding: spacing(32) spacing(16);
       }
 

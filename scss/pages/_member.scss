@@ -6,6 +6,10 @@ ul.member-list {
     gap: spacing(24);
     padding: spacing(24) spacing(0);
 
+    &:not(:last-child) {
+      border-bottom: px(1) solid color(gray-150);
+    }
+
     .label {
       max-width: calc(50% - px(12));
 

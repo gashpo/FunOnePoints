@@ -1210,7 +1210,7 @@ a.link-noline span,
 }
 @media (max-width: 767px) {
   .datepicker-container {
-    height: 31.25rem;
+    height: 33.75rem;
   }
   .datepicker-container .datepicker {
     padding-bottom: 4.375rem;
@@ -1653,7 +1653,6 @@ input[type=text] {
     transform: translate(0, 0);
     padding: 0rem;
     transition: bottom 0.3s ease-in-out;
-    min-height: calc(100dvh - 16.75rem);
   }
   .popup.bottom_sheet .action {
     height: 3.75rem;
@@ -3243,7 +3242,7 @@ header.hide ~ #exchange .exchange-container .tab-wrapper {
   }
 }
 
-ul.list > li {
+ul.point-list > li {
   padding: 1.25rem 0rem;
   display: flex;
   align-items: center;
@@ -3251,19 +3250,19 @@ ul.list > li {
   gap: 2rem;
   border-bottom: 0.0625rem solid #d7d7d7;
 }
-ul.list > li .desc p {
+ul.point-list > li .desc p {
   font-size: 1rem;
   font-weight: 400;
   line-height: 150%;
 }
 @media (max-width: 991px) {
-  ul.list > li .desc p {
+  ul.point-list > li .desc p {
     font-size: 1rem;
     font-weight: 400;
     line-height: 150%;
   }
 }
-ul.list > li .desc span {
+ul.point-list > li .desc span {
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 150%;
@@ -3271,17 +3270,17 @@ ul.list > li .desc span {
   position: relative;
 }
 @media (max-width: 991px) {
-  ul.list > li .desc span {
+  ul.point-list > li .desc span {
     font-size: 0.875rem;
     font-weight: 400;
     line-height: 150%;
   }
 }
-ul.list > li .desc span + span {
+ul.point-list > li .desc span + span {
   padding-left: 1rem;
   margin-left: -0.375rem;
 }
-ul.list > li .desc span + span::before {
+ul.point-list > li .desc span + span::before {
   position: absolute;
   content: "";
   display: block;
@@ -3292,7 +3291,7 @@ ul.list > li .desc span + span::before {
   left: 0.5rem;
   transform: translateY(-50%);
 }
-ul.list > li .coin {
+ul.point-list > li .coin {
   height: 1.5rem;
   display: flex;
   align-items: center;
@@ -3302,16 +3301,16 @@ ul.list > li .coin {
   line-height: 120%;
 }
 @media (max-width: 991px) {
-  ul.list > li .coin {
+  ul.point-list > li .coin {
     font-size: 1rem;
     font-weight: 700;
     line-height: 120%;
   }
 }
-ul.list.deduction li .coin {
+ul.point-list.deduction li .coin {
   color: #c13515;
 }
-ul.list + button {
+ul.point-list + button {
   width: 100%;
   text-align: center;
   margin-top: 1rem;
@@ -3647,6 +3646,9 @@ ul.member-list li {
   gap: 1.5rem;
   padding: 1.5rem 0rem;
 }
+ul.member-list li:not(:last-child) {
+  border-bottom: 0.0625rem solid #d7d7d7;
+}
 ul.member-list li .label {
   max-width: calc(50% - 0.75rem);
 }
@@ -3772,7 +3774,8 @@ ul.member-list li .value i {
   flex-direction: column;
   gap: 1.25rem;
 }
-.product .receipt .confirm-product, .product .receipt .confirm-detail {
+.product .receipt .confirm-product,
+.product .receipt .confirm-detail {
   display: flex;
   padding: 2rem;
   background-color: #f9f9f9;
@@ -3840,7 +3843,8 @@ ul.member-list li .value i {
 .product .actions button {
   flex: 1;
 }
-.product #exchange-failed, .product #exchange-success {
+.product #exchange-failed,
+.product #exchange-success {
   display: flex;
   flex-direction: column;
   align-self: center;
@@ -3848,10 +3852,16 @@ ul.member-list li .value i {
   flex-wrap: wrap;
   gap: 1rem;
 }
-.product #exchange-failed .exchange-img, .product #exchange-failed .exchange-info, .product #exchange-failed .exchange-action, .product #exchange-success .exchange-img, .product #exchange-success .exchange-info, .product #exchange-success .exchange-action {
+.product #exchange-failed .exchange-img,
+.product #exchange-failed .exchange-info,
+.product #exchange-failed .exchange-action,
+.product #exchange-success .exchange-img,
+.product #exchange-success .exchange-info,
+.product #exchange-success .exchange-action {
   text-align: center;
 }
-.product #exchange-failed .exchange-info p, .product #exchange-success .exchange-info p {
+.product #exchange-failed .exchange-info p,
+.product #exchange-success .exchange-info p {
   color: #7b7b7b;
   margin-top: 0.5rem;
 }
@@ -3860,7 +3870,9 @@ ul.member-list li .value i {
   width: 100%;
   padding-top: 8.125rem;
 }
-.product #exchange-failed .exchange-img, .product #exchange-failed .exchange-info, .product #exchange-failed .exchange-action {
+.product #exchange-failed .exchange-img,
+.product #exchange-failed .exchange-info,
+.product #exchange-failed .exchange-action {
   text-align: center;
 }
 .product #exchange-failed .exchange-info p {
@@ -3889,7 +3901,8 @@ ul.member-list li .value i {
   overflow: hidden;
   border-radius: 1rem;
 }
-.product #exchange-success .receipt .confirm-product, .product #exchange-success .receipt .confirm-detail {
+.product #exchange-success .receipt .confirm-product,
+.product #exchange-success .receipt .confirm-detail {
   border-radius: 0rem;
 }
 @media (max-width: 1279px) {
@@ -3922,7 +3935,24 @@ ul.member-list li .value i {
     box-shadow: 0 -0.125rem 0.625rem rgba(0, 0, 0, 0.1);
     z-index: 2;
   }
-  .product .receipt .confirm-product, .product .receipt .confirm-detail {
+  .product .main-info .product-info .exchange button.btn-xl {
+    padding: 0.75rem 1rem;
+    border-radius: 1.25rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 150%;
+  }
+}
+@media (max-width: 767px) and (max-width: 991px) {
+  .product .main-info .product-info .exchange button.btn-xl {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 150%;
+  }
+}
+@media (max-width: 767px) {
+  .product .receipt .confirm-product,
+  .product .receipt .confirm-detail {
     padding: 2rem 1rem;
   }
   .product .receipt .confirm-product {

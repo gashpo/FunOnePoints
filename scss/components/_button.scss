@@ -192,3 +192,19 @@ a,
     }
   }
 }
+
+@mixin button($size: null) {
+  @if $size == l {
+    padding: spacing(12) spacing(16);
+    @include rounded(20);
+    @include fontRWD(body3);
+  } @else if $size == xl {
+    padding: spacing(16) spacing(40);
+    @include rounded(24);
+    @include fontRWD(body3);
+  } @else {
+    padding: spacing(8) spacing(16);
+    @include rounded(16);
+    @include fontRWD(body4);
+  }
+}
