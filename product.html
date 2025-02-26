@@ -70,6 +70,7 @@
                     <div class="counting">
                         <span class="label">數量</span>
                         <div class="stepper-wrapper">
+                            <!-- 預設為1，且不可低於1 -->
                             <div class="stepper-content">
                               <button class="step-minus" disabled>
                                   <i class="material-symbols-outlined">remove</i>
@@ -79,7 +80,7 @@
                                   <i class="material-symbols-outlined">add</i>
                               </button>
                             </div>
-                            <!-- 數量=0時，不顯示.helper -->
+                            <!-- 數量<=1時，不顯示.helper -->
                             <span class="helper" style="display: none;">總計：<span>510</span> 點</span>
                         </div>
                     </div>
