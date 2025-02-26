@@ -14,6 +14,9 @@ $(document).ready(function () {
       setTimeout(() => {
         $("#" + actionValue).addClass("show");
       }, 300);
+    } else if ($("body").find(".popup.full").length > 0) {
+      $(".popup").removeClass("show");
+      $("#" + actionValue).addClass("show");
     } else {
       $(".popup").removeClass("show");
       $("#" + actionValue).addClass("show");

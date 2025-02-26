@@ -66,38 +66,6 @@
 
     <footer id="footer-placeholder"></footer>
 
-    <div class="popup full" id="verify">
-        <div class="action">
-            <i class="material-symbols-outlined" action="back">chevron_left</i>
-        </div>
-        <h4>驗證</h4>
-        <div class="popup-container reminder">
-            <p>請輸入我們傳送至 +886 91*****78 的驗證碼。</p>
-            <!-- 請協助設定：一格只能輸入一個數字，並於輸入完後自動focus到下一格 -->
-            <div class="otp-wrapper error">
-                <input type="number">
-                <input type="number">
-                <input type="number">
-                <input type="number">
-                <input type="number">
-                <span class="error-message">驗證碼已過期，請重新傳送驗證碼。</span>
-            </div>
-            <p>在 <span class="color-error-500">60</span> 秒後，您可以重新傳送驗證碼</p>
-            <p><a class="link-secondary" href="#"><span>重新傳送驗證碼</span></a></p>
-        </div>
-    </div>
-
-    <div class="popup full" id="remind">
-        <div class="action">
-            <i class="material-symbols-outlined" action="back">chevron_left</i>
-        </div>
-        <h4>貼心提醒</h4>
-        <div class="popup-container reminder">
-            <p>+886 912345678 已綁定其他 FunOne Points 帳號，請重新確認其他 Google 帳號。</p>
-            <button class="btn-secondary btn-l"><img src="images/google.svg">使用其他 Google 帳號登入</button>
-        </div>
-    </div>
-
     <div class="popup full" id="registration">
         <h4>完成註冊</h4>
         <div class="popup-container reminder">
@@ -133,7 +101,39 @@
             </div>
         </div>
         <div class="btns">
-            <button id="phone-save" disabled>傳送驗證碼</button>
+            <button class="btn-l" id="phone-save" for="verify" disabled>傳送驗證碼</button>
+        </div>
+    </div>
+
+    <div class="popup full" id="verify">
+        <div class="action">
+            <i class="material-symbols-outlined" action="back">chevron_left</i>
+        </div>
+        <h4>驗證</h4>
+        <div class="popup-container reminder">
+            <p>請輸入我們傳送至 +886 91*****78 的驗證碼。</p>
+            <!-- 請協助設定：一格只能輸入一個數字，並於輸入完後自動focus到下一格 -->
+            <div class="otp-wrapper error">
+                <input type="number">
+                <input type="number">
+                <input type="number">
+                <input type="number">
+                <input type="number">
+                <span class="error-message">驗證碼已過期，請重新傳送驗證碼。</span>
+            </div>
+            <p>在 <span class="color-error-500">60</span> 秒後，您可以重新傳送驗證碼</p>
+            <p><a class="link-secondary" href="#"><span>重新傳送驗證碼</span></a></p>
+        </div>
+    </div>
+
+    <div class="popup full" id="remind">
+        <div class="action">
+            <i class="material-symbols-outlined" action="back">chevron_left</i>
+        </div>
+        <h4>貼心提醒</h4>
+        <div class="popup-container reminder">
+            <p>+886 912345678 已綁定其他 FunOne Points 帳號，請重新確認其他 Google 帳號。</p>
+            <button class="btn-secondary btn-l"><img src="images/google.svg">使用其他 Google 帳號登入</button>
         </div>
     </div>
 

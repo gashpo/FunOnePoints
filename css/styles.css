@@ -1697,22 +1697,15 @@ input[type=text] {
     bottom: 0;
     left: 0;
     width: 100dvw;
-    height: 100dvh;
+    height: 0;
     border-radius: 0;
+    transform: none;
   }
   .popup.full.show {
-    animation: full-popup-show 0.5s ease-in-out both;
+    height: 100dvh;
   }
 }
 
-@keyframes full-popup-show {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
 #registration .popup-container {
   overflow: visible;
 }
@@ -1843,6 +1836,9 @@ input[type=text] {
     max-height: 0;
     transition: max-height 0.3s ease-in-out;
     padding: 0rem 1rem;
+  }
+  .select-wrapper.bottom_sheet .select-items ul li {
+    border-radius: 0rem;
   }
   .select-wrapper.bottom_sheet .select-items ul li:not(:last-child) {
     border-bottom: 0.0625rem solid #e5e5e5;

@@ -124,8 +124,12 @@
           @include transition(max-height);
           padding: spacing(0) spacing(16);
 
-          li:not(:last-child) {
-            border-bottom: px(1) solid color(gray-100);
+          li {
+            @include rounded(0);
+
+            &:not(:last-child) {
+              border-bottom: px(1) solid color(gray-100);
+            }
           }
         }
       }
@@ -152,7 +156,7 @@
             top: spacing(16);
             right: spacing(16);
           }
-          
+
           ul {
             max-height: px(440);
             margin-top: spacing(60);
