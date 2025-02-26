@@ -52,7 +52,7 @@
     <div class="container product">
       <main id="product-info">
         <div class="main-info">
-            <div class="product-photo">
+            <div class="product-img">
                 <img src="images/product/product-01.png">
             </div>
             <div class="product-info">
@@ -63,12 +63,12 @@
                 <hr>
                 <div class="points">
                     <img src="images/Logo_Coin.svg">
-                    <h5>255 點</h5>
+                    <h5><span>255</span> 點</h5>
                 </div>
                 <hr>
                 <div class="exchange">
                     <div class="counting">
-                        <span>數量</span>
+                        <span class="label">數量</span>
                         <div class="stepper-wrapper">
                             <div class="stepper-content">
                               <button class="step-minus" disabled>
@@ -80,7 +80,7 @@
                               </button>
                             </div>
                             <!-- 數量=0時，不顯示.helper -->
-                            <span class="helper">總計：510 點</span>
+                            <span class="helper" style="display: none;">總計：<span>510</span> 點</span>
                         </div>
                     </div>
                     <button for="popup-login" class="btn-xl">登入提醒</button>
@@ -134,7 +134,7 @@
         </div>
         <div class="receipt">
             <div class="confirm-product">
-                <div class="product-photo">
+                <div class="product-img">
                     <img src="images/product/product-01.png">
                 </div>
                 <div class="product-info">
@@ -156,8 +156,8 @@
                 <h5>兌換明細</h5>
                 <ul class="content">
                     <li>
-                        <div class="label">訂單編號</div>
-                        <div class="value">FP123456789</div>
+                        <div class="label">本次兌換所需點數</div>
+                        <div class="value">510 點</div>
                     </li>
                 </ul>
             </div>
@@ -186,19 +186,19 @@
       </div>
       <main id="exchange-success" style="display: none;">
         <div class="success-info">
-            <div class="exchange-img"><img src="images/success.svg"></div>
+            <div class="exchange-img" id="lottie-success"></div>
             <div class="exchange-info">
                 <h4>兌換成功</h4>
                 <p>兌換的商品已儲存至票夾，可立即使用。</p>
             </div>
         </div>
         <div class="exchange-action">
-            <button onclick="productInfo()" class="btn-secondary btn-xl">繼續兌換</button>
+            <button onclick="goToExchange()" class="btn-secondary btn-xl">繼續兌換</button>
             <button onclick="location.href='myTickets.html'" class="btn-xl">查看票夾</button>
         </div>
         <div class="receipt">
             <div class="confirm-product">
-                <div class="product-photo">
+                <div class="product-img">
                     <img src="images/product/product-01.png">
                 </div>
                 <div class="product-info">

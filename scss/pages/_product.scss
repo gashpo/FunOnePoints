@@ -3,6 +3,11 @@
     display: flex;
     gap: spacing(40);
 
+    .product-img {
+      min-width: px(430);
+      aspect-ratio: 1;
+    }
+
     .product-info {
       display: flex;
       flex-direction: column;
@@ -24,6 +29,12 @@
         img {
           width: px(30);
           height: px(30);
+        }
+
+        h5 {
+          span {
+            @include fontRWD(h5);
+          }
         }
       }
 
@@ -77,9 +88,10 @@
       gap: spacing(40);
       position: relative;
 
-      .product-photo {
+      .product-img {
+        flex-shrink: 0;
         width: px(200);
-        height: px(200);
+        aspect-ratio: 1;
         overflow: hidden;
         @include rounded(16);
       }
@@ -167,6 +179,12 @@
       text-align: center;
     }
 
+    .exchange-img {
+      width: px(100);
+      aspect-ratio: 1;
+      margin: auto;
+    }
+
     .exchange-info {
       p {
         color: color(gray-500);
@@ -251,6 +269,11 @@
 
     .main-info {
       flex-direction: column;
+
+      .product-img {
+        // min-width: calc(100dvw - px(60));
+        min-width: auto;
+      }
 
       .product-info {
         hr {

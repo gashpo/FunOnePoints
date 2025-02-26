@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   gap: spacing(4);
+  position: relative;
 
   .stepper-content {
     display: flex;
@@ -39,5 +40,9 @@
   .helper {
     @include fontRWD(caption);
     color: color(gray-500);
+    position: absolute;
+    top: calc(100% + px(4));
+    left: 50%;
+    transform: translateX(-50%);
   }
 }

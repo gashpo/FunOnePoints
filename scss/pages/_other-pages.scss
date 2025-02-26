@@ -1,0 +1,36 @@
+.other-pages {
+  align-items: center;
+  justify-content: space-between;
+  width: px(720);
+  max-width: calc(100dvw - px(40));
+  min-height: calc(100dvh - px(243));
+
+  .desc {
+    display: flex;
+    flex-direction: column;
+    gap: spacing(20);
+    flex: 1;
+    color: color(gray-600);
+
+    h3,
+    h4 {
+      color: color(gray-900);
+      margin-bottom: spacing(8);
+    }
+
+    ul {
+      margin: spacing(-20) spacing(0) spacing(0) spacing(20);
+      list-style-type: disc;
+    }
+  }
+
+  @include max-to(mobile) {
+    .desc {
+      flex: 100%;
+    }
+
+    .error-img {
+      display: none;
+    }
+  }
+}

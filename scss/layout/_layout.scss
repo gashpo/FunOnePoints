@@ -156,3 +156,20 @@ body:has(#mobile-menu) {
 .text-right {
   text-align: right;
 }
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
