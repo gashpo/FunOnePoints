@@ -3755,7 +3755,6 @@ ul.member-list li .value i {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  flex: 1;
   color: #626262;
 }
 .other-pages .desc h3,
@@ -3767,9 +3766,25 @@ ul.member-list li .value i {
   margin: -1.25rem 0rem 0rem 1.25rem;
   list-style-type: disc;
 }
+.other-pages .denied {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  color: #626262;
+  flex: 1;
+}
+.other-pages .denied h3,
+.other-pages .denied h4 {
+  color: #191919;
+  margin-bottom: 0.5rem;
+}
 @media (max-width: 767px) {
   .other-pages .desc {
-    flex: 100%;
+    flex: 1;
+    padding-top: 5rem;
+  }
+  .other-pages .denied {
+    padding-top: 5rem;
   }
   .other-pages .error-img {
     display: none;
