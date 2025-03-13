@@ -2990,6 +2990,7 @@ body:has(#mobile-menu) {
   }
   .keyvision #keyvision-img {
     transform: scale(1);
+    margin: 25dvh -12.5rem 0 -12.5rem;
   }
   .keyvision .title p {
     font-size: 1rem;
