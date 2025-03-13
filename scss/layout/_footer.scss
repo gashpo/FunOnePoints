@@ -35,6 +35,18 @@ footer {
     }
   }
 
+  @include max-to(tablet) {
+    padding: spacing(104) spacing(20);
+
+    .info {
+      gap: spacing(20);
+
+      .menu {
+        gap: spacing(12);
+      }
+    }
+  }
+
   @include max-to(mobile) {
     flex-direction: column;
     gap: spacing(64);
@@ -76,4 +88,29 @@ footer {
 
 copyright {
   @include fontRWD(caption);
+}
+
+#go-top {
+  position: fixed;
+  right: spacing(36);
+  bottom: spacing(36);
+  z-index: 3;
+  color: color(gray-0);
+  background-color: color(primary-900);
+  width: px(64);
+  height: px(64);
+  font-size: fontsize(24);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: px(1) solid color(gray-0);
+  @include rounded(64);
+  cursor: pointer;
+
+  @include max-to(mobile) {
+    right: spacing(16);
+    bottom: spacing(16);
+    width: px(52);
+    height: px(52);
+  }
 }

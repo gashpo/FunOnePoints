@@ -9,10 +9,10 @@
     <meta name="keywords" content="FunOne Points, 紅利點數, 點數兌換, 商品兌換, 會員回饋, 紅利商城, 優惠兌換">
     
     <!-- 瀏覽器 icon -->
-    <link rel="shortcut icon" href="images/Logo_Coin.svg" type="image/x-icon" sizes="any" />
+    <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon" sizes="any" />
     
     <!-- 網站在瀏覽器標簽欄和書簽中顯示的圖標 -->
-    <meta property="og:image" content="絕對路徑" />
+    <meta property="og:image" content="https://points.funone.io/images/og-image.png" />
     
     <!-- 分享網頁時會顯示的縮圖 -->
     <meta name="mobile-web-app-capable" content="yes" />
@@ -21,7 +21,7 @@
     <!-- iOS Safari Set Up -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <!-- iOS 捷徑 icon -->
-    <link rel="apple-touch-icon" href="images/Logo_Coin.svg" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
     
     <!-- 新增到桌面時 開啟後 上方狀態欄顯示顏色  -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -37,6 +37,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     
     <!-- 樣式表 -->
     <link rel="stylesheet" href="css/styles.css" />
@@ -46,13 +49,14 @@
   <header id="header-placeholder"></header>
 
     <section class="keyvision">
-      <img src="images/keyvision.svg">
+      <!-- <img src="images/keyvision.svg"> -->
+      <div id="keyvision-img"></div>
       <div class="title">
         <h2>將 GASH 點數累積 FunOne Points</h2>
-        <h5>
+        <p>
           購買 GASH 點數直儲指定遊戲，暢玩同時 Points 同步累積。<br>
           一鍵解鎖多元娛樂，從線上到線下，FunOne Points 讓你的每一分錢都發揮最大價值！
-        </h5>
+        </p>
       </div>
     </section>
 
@@ -145,8 +149,18 @@
                   </div>
                 </div>
               </li>
+              <li class="pd-card" onclick="location.href='product.html'">
+                <div class="pd-img"><img src="images/product/product-04.png"></div>
+                <div class="pd-info">
+                  <h6>CITY CAFÉ 拿鐵熱咖啡(大)</h6>
+                  <div class="points">
+                    <img src="images/Logo_Coin.svg">
+                    <h5>9,999 <span>點</span></h5>
+                  </div>
+                </div>
+              </li>
             </ul>
-            <button class="btn-l">查看更多</button>
+            <button>查看更多</button>
           </div>
           <div class="tab-content" style="display: none;">
             <ul class="pd-container">
@@ -405,14 +419,38 @@
     </section>
 
     <section id="collect">
-      <div class="desc">
-        <h2>如何蒐集 Points</h2>
-        <p>凡購買 GASH 點數後直儲指定遊戲或參加限時活動，都能獲得 FunOne Points。</p>
-        <p>擁有 FunOne Points 就能輕鬆兌換多樣商品，隨時享受便利與樂趣，讓每份心動都即刻實現！</p>
-      </div>
-      <div>
-        <img class="desktop" src="images/slider.png">
-        <img class="mobile" src="images/slider_m.png">
+      <div class="collect-container">
+        <div class="desc">
+          <h2>如何蒐集 Points</h2>
+          <p>凡購買 GASH 點數後直儲指定遊戲或參加限時活動，都能獲得 FunOne Points。</p>
+          <p>擁有 FunOne Points 就能輕鬆兌換多樣商品，隨時享受便利與樂趣，讓每份心動都即刻實現！</p>
+        </div>
+        <div class="swiper collect-swiper">
+          <div class="navigation">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/index-card_01.svg">
+              <div class="card-bottom">
+                <h4>遊戲橘子直儲遊戲</h4>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="images/index-card_02.svg">
+              <div class="card-bottom">
+                <h4>星城遊戲儲值</h4>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="images/index-card_03.svg">
+              <div class="card-bottom">
+                <h4>GASH 錢包扣點</h4>
+              </div></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
       </div>
     </section>
 
@@ -423,23 +461,28 @@
           <p>FunOne Point 平台是由多家供應商提供專屬的點數兌換平台。</p>
           <p>即 FunOne Point 會員可在平台內使用點數兌換各式商品，兌換後可立即前往實體門市使用，體驗電子票券便利及樂趣。</p>
         </div>
-        <div>
-          <img src="images/direction.png">
+        <div id="particle-animate">
+          <div class="logo-simple"><img src="images/Logo-Simple.svg"></div>
         </div>
-        <div class="decoration">
-          <img src="images/mascot.svg">
-          <div>
-            <img src="images/Gash_Coin.svg">
-            <img src="images/Gash_Coin.svg">
-            <img src="images/Gash_Coin.svg">
-          </div>
-        </div>
+        <div id="decorate"></div>
       </div>
     </section>
 
     <footer id="footer-placeholder" class="index-footer"></footer>
 
 
+    
+    <!-- Lottie -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
+    <script src="js/lottie-images.js"></script>
+
+    <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/swiper.js"></script>
+
+    <!-- Matter.js -->
+    <script src="js/matter.min.js"></script>
+    <script src="js/particle-animate.js"></script>
 
     <!-- jQuery -->
     <script src="js/jquery-3.7.1.min.js"></script>
@@ -462,9 +505,6 @@
         }
       });
     </script>
-    
-    
-
     <script src="js/layout.js"></script>
     <script src="js/tab.js"></script>
 </body>

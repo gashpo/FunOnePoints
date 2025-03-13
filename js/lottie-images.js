@@ -19,3 +19,17 @@ var success = lottie.loadAnimation({
   autoplay: true,
   path: "images/Success.json",
 });
+var kvimg = lottie.loadAnimation({
+  container: document.getElementById("keyvision-img"),
+  renderer: "svg",
+  loop: true,
+  autoplay: true,
+  path: "images/KV.json",
+});
+var decorate = lottie.loadAnimation({
+  container: document.getElementById("decorate"),
+  renderer: "svg",
+  loop: true,
+  autoplay: true,
+  path: "images/decorate.json",
+});

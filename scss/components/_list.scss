@@ -1,59 +1,87 @@
+ul {
+  &.disc {
+    padding-left: px(24);
+    list-style-type: disc;
+  }
+}
+
 ol {
   counter-reset: list-counter;
   list-style: none;
   padding-left: 0;
+  margin-bottom: 0;
 
   > li {
     counter-increment: list-counter;
     position: relative;
-    padding-left: fontsize(28);
+    display: flex;
+    gap: spacing(8);
 
     &::before {
-      content: counters(list-counter, ".") " ";
-      position: absolute;
-      left: 0;
-      font-weight: fontweight(Bold);
-      width: spacing(20);
+      content: counters(list-counter, ".") ". ";
+      @include fontRWD(h5);
       text-align: right;
     }
 
-    > ol {
-      counter-reset: list-counter;
+    &:not(:last-child) {
+      margin-bottom: spacing(20);
+    }
+  }
 
-      > li {
-        padding-left: fontsize(32);
+  &.ol-secondary {
+    counter-reset: list-counter;
+    margin-top: spacing(4);
 
-        &::before {
-          font-weight: fontweight(Bold);
-        }
+    > li {
+      &::before {
+        @include fontRWD(h6);
+      }
 
-        > ol {
-          padding-left: fontsize(20);
-          margin-bottom: 0;
+      &:not(:last-child) {
+        margin-bottom: spacing(4);
+      }
+    }
+  }
 
-          > li {
-            padding-left: fontsize(0);
-            list-style-type: upper-alpha;
+  &.ol-tertiary {
+    counter-reset: list-counter;
+    margin-top: spacing(4);
 
-            &::before {
-              display: none;
-            }
+    > li {
+      &:not(:last-child) {
+        margin-bottom: spacing(4);
+      }
+    }
+  }
 
-            > ol {
-              padding-left: fontsize(20);
-              margin-bottom: 0;
+  &.ol-upperalpha {
+    counter-reset: list-counter;
 
-              > li {
-                padding-left: fontsize(0);
-                list-style-type: lower-alpha;
+    > li {
+      &::before {
+        content: counter(list-counter, upper-alpha) ". ";
+        @include fontRWD(h6);
+        text-align: right;
+      }
 
-                &::before {
-                  display: none;
-                }
-              }
-            }
-          }
-        }
+      &:not(:last-child) {
+        margin-bottom: spacing(4);
+      }
+    }
+  }
+
+  &.ol-loweralpha {
+    counter-reset: list-counter;
+
+    > li {
+      &::before {
+        content: counter(list-counter, lower-alpha) ". ";
+        @include fontRWD(h6);
+        text-align: right;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: spacing(4);
       }
     }
   }

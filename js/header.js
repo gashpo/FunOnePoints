@@ -30,7 +30,7 @@ $(document).ready(function () {
 
             <footer>
               <div class="info">
-                <div class="logo"><a href="index.html"><img src="images/Logo-white.svg"></a></div>
+                <div class="logo"><a href="index.html"><img src="images/Logo-dark.svg"></a></div>
                 <ul class="menu">
                   <li class="footer-textlink">隱私權政策</li>
                   <li class="footer-textlink">服務條款</li>
