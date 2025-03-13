@@ -28,8 +28,7 @@
 
   @include max-to(tablet) {
     #keyvision-img {
-      transform: scale(1.5);
-      margin-top: 25dvh;
+      margin: 25dvh spacing(-200) 0 spacing(-200);
     }
 
     .title {
@@ -39,11 +38,6 @@
 
   @include max-to(mobile) {
     overflow: hidden;
-
-    #keyvision-img {
-      transform: scale(1);
-      margin: 25dvh spacing(-200) 0 spacing(-200);
-    }
 
     .title {
       p {
@@ -449,7 +443,7 @@ header {
     background-color: color(primary-400);
     background-image: url("../images/Vector.svg");
     background-repeat: no-repeat;
-    background-position: top px(-1) left px(-1);
+    background-position: top px(-2) left px(-2);
     padding: spacing(72) spacing(60);
     position: relative;
     color: color(gray-0);

@@ -2977,8 +2977,7 @@ body:has(#mobile-menu) {
 }
 @media (max-width: 991px) {
   .keyvision #keyvision-img {
-    transform: scale(1.5);
-    margin-top: 25dvh;
+    margin: 25dvh -12.5rem 0 -12.5rem;
   }
   .keyvision .title {
     margin-top: 15dvh;
@@ -2987,10 +2986,6 @@ body:has(#mobile-menu) {
 @media (max-width: 767px) {
   .keyvision {
     overflow: hidden;
-  }
-  .keyvision #keyvision-img {
-    transform: scale(1);
-    margin: 25dvh -12.5rem 0 -12.5rem;
   }
   .keyvision .title p {
     font-size: 1rem;
@@ -3348,7 +3343,7 @@ header.hide ~ #exchange .exchange-container .tab-wrapper {
   background-color: #8433f1;
   background-image: url("../images/Vector.svg");
   background-repeat: no-repeat;
-  background-position: top -0.0625rem left -0.0625rem;
+  background-position: top -0.125rem left -0.125rem;
   padding: 4.5rem 3.75rem;
   position: relative;
   color: #ffffff;
