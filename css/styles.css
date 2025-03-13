@@ -834,6 +834,15 @@ h6 {
   scroll-behavior: smooth;
 }
 
+/* 反白選取樣式 */
+::-moz-selection {
+  background-color: rgba(193, 153, 248, 0.8);
+}
+
+::selection {
+  background-color: rgba(193, 153, 248, 0.8);
+}
+
 ::-webkit-scrollbar {
   width: 0.3125rem;
   background-color: #ffffff;
