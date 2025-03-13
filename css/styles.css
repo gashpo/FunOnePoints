@@ -2989,7 +2989,7 @@ body:has(#mobile-menu) {
     overflow: hidden;
   }
   .keyvision #keyvision-img {
-    transform: scale(2.8);
+    transform: scale(1);
   }
   .keyvision .title p {
     font-size: 1rem;
