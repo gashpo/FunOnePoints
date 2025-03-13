@@ -318,9 +318,14 @@ header {
         }
       }
 
+      .swiper-wrapper {
+        align-items: center;
+      }
+
       .swiper-slide {
         width: px(280);
-        height: px(400);
+        // height: px(400);
+        aspect-ratio: 10/7;
         background-color: color(primary-400);
         color: color(gray-0);
         @include rounded(20);
@@ -351,6 +356,33 @@ header {
         right: 0;
         bottom: 0;
         left: 0;
+      }
+    }
+  }
+
+  @include max-to(desktop) {
+    .collect-container {
+      padding: spacing(54);
+
+      .collect-swiper {
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: spacing(100);
+
+        .swiper-pagination {
+          flex: 1;
+          writing-mode: initial;
+          text-orientation: initial;
+          text-align: left;
+        }
+
+        .navigation {
+          order: 3;
+          flex: 1;
+          flex-direction: row;
+          justify-content: flex-end;
+          gap: spacing(16);
+        }
       }
     }
   }
@@ -388,25 +420,18 @@ header {
         align-items: center;
         padding: spacing(0) spacing(20);
         gap: spacing(40);
-        margin-bottom: spacing(100);
-
-        .swiper-pagination {
-          flex: 1;
-          writing-mode: initial;
-          text-orientation: initial;
-          text-align: left;
-        }
-
-        .navigation {
-          order: 3;
-          flex: 1;
-          flex-direction: row;
-          justify-content: flex-end;
-          gap: spacing(16);
-        }
+        height: px(340);
 
         .swiper-wrapper {
           align-items: center;
+        }
+
+        .swiper-slide {
+          width: px(240);
+
+          .card-bottom {
+            bottom: spacing(-14);
+          }
         }
       }
     }

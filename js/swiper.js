@@ -4,14 +4,19 @@ var swiper = new Swiper(".collect-swiper", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+    type: "fraction",
   },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  pagination: {
-    el: ".swiper-pagination",
-    type: "fraction",
-  },
+  grabCursor: false,
+  allowTouchMove: false,
   spaceBetween: 30,
+  breakpoints: {
+    768: {
+      grabCursor: true,
+      allowTouchMove: true,
+    },
+  },
 });

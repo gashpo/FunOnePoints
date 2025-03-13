@@ -105,7 +105,7 @@ async function createImageObject(img) {
 async function initialize() {
   try {
     // 確保圖片載入完成
-    const img = await loadImage("./images/Logo_Coin.svg");
+    const img = await loadImage("../images/Logo_Coin.svg");
 
     // 創建所有物件（等待所有物件生成完成）
     const objects = await Promise.all(
