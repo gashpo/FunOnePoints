@@ -10,6 +10,9 @@ const {
   Events,
 } = Matter;
 
+// 全局宣告 mouseConstraint（解決作用域問題）
+let mouseConstraint;
+
 // 找到 #particle-animate 容器
 const container = document.getElementById("particle-animate");
 
@@ -105,7 +108,7 @@ async function createImageObject(img) {
 async function initialize() {
   try {
     // 確保圖片載入完成
-    const img = await loadImage("./images/Logo_Coin.svg");
+    const img = await loadImage("../images/Logo_Coin.svg");
 
     // 創建所有物件（等待所有物件生成完成）
     const objects = await Promise.all(
@@ -117,7 +120,7 @@ async function initialize() {
 
     // 增加滑鼠拖曳互動
     const mouse = Mouse.create(render.canvas);
-    let mouseConstraint = MouseConstraint.create(engine, {
+    mouseConstraint = MouseConstraint.create(engine, {
       mouse: mouse,
       constraint: {
         stiffness: 0.1,
@@ -136,7 +139,7 @@ async function initialize() {
             x: Math.random() * canvasWidth,
             y: -50,
           });
-          Matter.Body.setVelocity(obj, { x: 0, y: 0 }); // 重置速度
+          Matter.Body.setVelocity(obj, { x: 0, y: 0 });
         }
 
         // 如果物件超出左邊界，反彈
@@ -182,7 +185,7 @@ async function initialize() {
       (entries) => {
         if (entries[0].isIntersecting) {
           startDropEffect();
-          observer.unobserve(container); // 觀察完成後停止觀察
+          observer.unobserve(container);
         }
       },
       { threshold: 0.5 }
@@ -205,13 +208,17 @@ initialize();
 
 // 監聽滑鼠離開事件
 container.addEventListener("mouseout", function () {
-  // 移除滑鼠約束
-  World.remove(world, mouseConstraint);
+  if (mouseConstraint) {
+    World.remove(world, mouseConstraint);
+  }
 });
 
 // 監聽滑鼠進入事件，以便在滑鼠進入時重新添加約束
 container.addEventListener("mouseover", function () {
-  // 重新添加滑鼠約束
+  if (mouseConstraint) {
+    World.remove(world, mouseConstraint);
+  }
+  const mouse = Mouse.create(render.canvas);
   mouseConstraint = MouseConstraint.create(engine, {
     mouse: mouse,
     constraint: {

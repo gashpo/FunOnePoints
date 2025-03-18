@@ -42,7 +42,7 @@
   </head>
 
   <body style="background-color: lavenderblush;">
-    <h2>以下所有樣式，使用時請移除「style="..."」</h2>
+    <!-- <h2>以下所有樣式，使用時請移除「style="..."」</h2> -->
 
     <section>
       <h5 class="color-primary-500">Stepper</h5>
@@ -64,7 +64,7 @@
     
     <section>
       <h5 class="color-primary-500">Toast</h5>
-
+      <h6>使用時請移除style中的樣式</h6>
       <div class="toast toast-success" style="position: relative; top: auto; left: auto; transform: translateY(-120px);">
         <i class="material-symbols-outlined">check_circle</i>
         登入成功
@@ -83,6 +83,7 @@
     
     <section>
       <h5 class="color-primary-500">Breadcrumbs</h5>
+      <h6>使用時請移除style中的樣式</h6>
       <p>[All devices]</p>
       <ul class="breadcrumbs show" style="padding-top: 0;">
         <li>會員中心</li>
@@ -100,6 +101,7 @@
 
     <section>
       <h5 class="color-primary-500">Pop up</h5>
+      <h6>使用時請移除style中的樣式</h6>
       <div class="popup bottom_sheet show" id="popup-name" style="position: relative; margin-top: 12px; left: auto; transform: none;">
         <div class="action">
           <i class="material-symbols-outlined" action="back">chevron_left</i>
@@ -420,6 +422,27 @@
     </section>
 
     <hr>
+
+    <section>
+      <h5 class="color-primary-500">tabs</h5>
+      <div class="tab-wrapper">
+        <ul class="tab">
+            <li class="tab-item active">頁籤一</li>
+            <li class="tab-item">頁籤二</li>
+            <li class="tab-item">頁籤三</li>
+            <div class="tab-underline"></div>
+        </ul>
+        <div class="tab-scroll-left"><i class="material-symbols-outlined">chevron_left</i></div>
+        <div class="tab-scroll-right"><i class="material-symbols-outlined">chevron_right</i></div>
+      </div>
+      <div class="tab-container">
+        <div class="tab-content" style="display: block;">頁籤一的內容</div>
+        <div class="tab-content" style="display: none;">頁籤二的內容</div>
+        <div class="tab-content" style="display: none;">頁籤三的內容</div>
+      </div>
+    </section>
+
+    <hr>
     
     <section>
       <h5 class="color-primary-500">A link</h5>
@@ -451,6 +474,7 @@
     
     <section>
       <h5 class="color-primary-500">Buttons</h5>
+      <h6>使用時請移除style中的樣式</h6>
       <div style="padding: 20px 0; display: flex; gap: 20px; flex-wrap: wrap;">
         <div style="width:100svw; display: flex; gap: 8px;">
           <button class="icon-only">
@@ -607,6 +631,7 @@
     <script src="js/popup.js"></script>
     <script src="js/select.js"></script>
     <script src="js/stepper.js"></script>
+    <script src="js/tab.js"></script>
     <script src="js/toast.js"></script>
   
   </body>
