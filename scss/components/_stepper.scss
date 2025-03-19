@@ -44,5 +44,6 @@
     top: calc(100% + px(4));
     left: 50%;
     transform: translateX(-50%);
+    min-width: max-content;
   }
 }

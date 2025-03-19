@@ -101,6 +101,7 @@
         flex-direction: column;
         gap: spacing(40);
         flex-grow: 1;
+        word-break: break-all;
 
         .name {
           p {
@@ -182,7 +183,7 @@
     .exchange-img {
       width: px(100);
       aspect-ratio: 1;
-      margin: auto;
+      margin: 0 auto;
     }
 
     .exchange-info {
@@ -271,7 +272,6 @@
       flex-direction: column;
 
       .product-img {
-        // min-width: calc(100dvw - px(60));
         min-width: auto;
       }
 
@@ -289,6 +289,7 @@
           background-color: color(gray-0);
           @include dropshadow(up);
           z-index: 2;
+          gap: spacing(36);
 
           button.btn-xl {
             @include button(l);
