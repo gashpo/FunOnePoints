@@ -3027,6 +3027,9 @@ body:has(#mobile-menu) {
   z-index: 2;
   transition: top 0.3s ease-in-out;
 }
+#exchange .exchange-container .tab-container {
+  width: 100%;
+}
 #exchange .exchange-container .tab-container .pd-container {
   display: flex;
   flex-wrap: wrap;
