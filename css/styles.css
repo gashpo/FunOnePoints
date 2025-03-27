@@ -3800,9 +3800,9 @@ ul.point-list + button {
 .product-content .product-code,
 .product-content .product-info {
   background-color: #ffffff;
-  display: flex;
 }
 .product-content .product-code {
+  display: flex;
   padding: 1.25rem 1rem;
   justify-content: center;
   flex-wrap: wrap;
@@ -3839,9 +3839,10 @@ ul.point-list + button {
 }
 .product-content .product-info {
   padding: 2rem 1rem;
-  gap: 0.5rem;
-  flex-wrap: wrap;
   position: relative;
+}
+.product-content .product-info .tab-wrapper {
+  margin-bottom: 1rem;
 }
 .product-content .product-info .product-title {
   display: flex;
@@ -3874,7 +3875,7 @@ ul.point-list + button {
   padding: 0.75rem 0rem;
   border-bottom: 0.0625rem solid #d7d7d7;
 }
-.product-content .product-info.product-details ul li span {
+.product-content .product-info.product-details ul li .title {
   color: #7b7b7b;
 }
 .product-content .product-info.product-details ul li:last-child {

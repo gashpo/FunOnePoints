@@ -148,11 +148,11 @@
   .product-code,
   .product-info {
     background-color: color(gray-0);
-    display: flex;
   }
 
   .product-code {
     // min-height: px(240);
+    display: flex;
     padding: spacing(20) spacing(16);
     justify-content: center;
     flex-wrap: wrap;
@@ -193,9 +193,11 @@
 
   .product-info {
     padding: spacing(32) spacing(16);
-    gap: spacing(8);
-    flex-wrap: wrap;
     position: relative;
+
+    .tab-wrapper {
+      margin-bottom: spacing(16);
+    }
 
     .product-title {
       display: flex;
@@ -231,7 +233,7 @@
           padding: spacing(12) spacing(0);
           border-bottom: px(1) solid color(gray-150);
 
-          span {
+          .title {
             color: color(gray-500);
           }
 
