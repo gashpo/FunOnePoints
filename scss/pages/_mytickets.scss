@@ -195,8 +195,23 @@
     padding: spacing(32) spacing(16);
     position: relative;
 
-    .tab-wrapper {
-      margin-bottom: spacing(16);
+    .tab-container {
+      margin-top: spacing(16);
+    }
+
+    ol {
+      padding-left: spacing(8);
+
+      > li {
+        margin-bottom: 0;
+        gap: spacing(4);
+
+        &::before {
+          font-size: inherit;
+          font-weight: inherit;
+          line-height: inherit;
+        }
+      }
     }
 
     .product-title {

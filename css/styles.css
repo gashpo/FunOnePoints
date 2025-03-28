@@ -3841,8 +3841,20 @@ ul.point-list + button {
   padding: 2rem 1rem;
   position: relative;
 }
-.product-content .product-info .tab-wrapper {
-  margin-bottom: 1rem;
+.product-content .product-info .tab-container {
+  margin-top: 1rem;
+}
+.product-content .product-info ol {
+  padding-left: 0.5rem;
+}
+.product-content .product-info ol > li {
+  margin-bottom: 0;
+  gap: 0.25rem;
+}
+.product-content .product-info ol > li::before {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
 }
 .product-content .product-info .product-title {
   display: flex;
