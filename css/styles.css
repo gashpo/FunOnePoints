@@ -3386,7 +3386,7 @@ header.hide ~ #exchange .exchange-container .tab-wrapper {
   overflow: hidden;
   /*
   &::after {
-    content: url("../images/Logo-Simple.svg");
+    content: url("../images/Logo-light.svg");
     position: absolute;
     top: px(36);
     right: px(36);
@@ -3397,11 +3397,10 @@ header.hide ~ #exchange .exchange-container .tab-wrapper {
   }
   */
 }
-.direction .direction-container #particle-animate .logo-simple {
+.direction .direction-container #particle-animate .Logo-light {
   position: absolute;
   top: 2.25rem;
   right: 2.25rem;
-  height: 3.25rem;
   background-color: #f9f9f9;
   border: 0.125rem solid #5100be;
   padding: 1rem 1.5rem;
@@ -3410,9 +3409,8 @@ header.hide ~ #exchange .exchange-container .tab-wrapper {
   align-items: center;
   justify-content: center;
 }
-.direction .direction-container #particle-animate .logo-simple img {
-  max-height: 100%;
-  max-width: 100%;
+.direction .direction-container #particle-animate .Logo-light img {
+  height: 1.25rem;
 }
 .direction .direction-container #decorate {
   position: absolute;
@@ -3446,12 +3444,14 @@ header.hide ~ #exchange .exchange-container .tab-wrapper {
     }
     */
   }
-  .direction .direction-container #particle-animate .logo-simple {
+  .direction .direction-container #particle-animate .Logo-light {
     top: 1rem;
     right: 1rem;
     padding: 0.5rem 0.75rem;
-    height: 1.625rem;
     border: 0.0625rem solid #5100be;
+  }
+  .direction .direction-container #particle-animate .Logo-light img {
+    height: 1rem;
   }
 }
 @media (max-width: 767px) {
