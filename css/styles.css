@@ -1464,7 +1464,6 @@ input[type=text] {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 0.25rem;
 }
 .otp-wrapper .error-message {
   flex: 100%;
@@ -1482,8 +1481,8 @@ input[type=text] {
   }
 }
 .otp-wrapper input {
-  height: 3.375rem;
-  width: 3.375rem;
+  height: 3.25rem;
+  width: 3.25rem;
   transition: border-color 0.3s ease-in-out;
   text-align: center;
   font-size: 1.125rem;

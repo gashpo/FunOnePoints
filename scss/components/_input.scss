@@ -89,7 +89,6 @@ input {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: spacing(4);
 
   .error-message {
     flex: 100%;
@@ -99,8 +98,8 @@ input {
   }
 
   input {
-    height: px(54);
-    width: px(54);
+    height: px(52);
+    width: px(52);
     @include transition(border-color);
     text-align: center;
     @include fontRWD(body2);
