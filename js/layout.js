@@ -17,4 +17,5 @@ $(document).ready(function () {
   });
   // $("#sidebar-placeholder").load("layout/sidebar.html");
   $("#footer-placeholder").load("layout/footer.html");
+  $("#cookie-placeholder").load("layout/cookie.html");
 });

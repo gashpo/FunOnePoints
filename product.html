@@ -1,33 +1,27 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <title id="pageTitle">Family mart 拿鐵熱咖啡(大) ｜ FunOne Points</title>
-    <meta name="description" content="用 FunOne Points 紅利點數，輕鬆兌換各大通路商品與票券！累積點數，享受超值回饋，讓每點紅利都更有價值。"/>
+    <meta name="description" content="用 FunOne Points 紅利點數，輕鬆兌換各大通路商品與票券！累積點數，享受超值回饋，讓每點紅利都更有價值。" />
     <meta name="keywords" content="FunOne Points, 紅利點數, 點數兌換, 商品兌換, 會員回饋, 紅利商城, 優惠兌換">
-    
     <!-- 瀏覽器 icon -->
     <link rel="shortcut icon" href="images/Logo_Coin.svg" type="image/x-icon" sizes="any" />
-    
     <!-- 網站在瀏覽器標簽欄和書簽中顯示的圖標 -->
     <meta property="og:image" content="絕對路徑" />
-
     <!-- 分享網頁時會顯示的縮圖 -->
     <meta name="mobile-web-app-capable" content="yes" />
-
     <!-- 是否使用全屏顯示 -->
     <!-- iOS Safari Set Up -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <!-- iOS 捷徑 icon -->
     <link rel="apple-touch-icon" href="images/Logo_Coin.svg" />
-
     <!-- 新增到桌面時 開啟後 上方狀態欄顯示顏色  -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
-
     <!-- 防止手機版電話號碼出現撥號連結 -->
     <meta name="format-detection" content="telephone=no" />
-
     <!-- Google Material Symbols & Icons -->
     <!-- Google Material Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -36,223 +30,230 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
-
     <!-- 樣式表 -->
     <link rel="stylesheet" href="css/styles.css" />
-  </head>
+</head>
 
-  <body class="loggedin">
+<body class="loggedin">
     <header id="header-placeholder"></header>
 
     <ul class="breadcrumbs show">
-      <li>首頁</li>
-      <li>Family mart 拿鐵熱咖啡(大)</li>
+        <li>首頁</li>
+        <li>Family mart 拿鐵熱咖啡(大)</li>
     </ul>
 
     <div class="container product">
-      <main id="product-info">
-        <div class="main-info">
-            <div class="product-img">
-                <img src="images/product/product-01.png">
-            </div>
-            <div class="product-info">
-                <div class="name">
-                    <p>商品編號：FP202501030027</p>
-                    <h4>Family mart 拿鐵熱咖啡(大)</h4>
+        <main id="product-info">
+            <div class="main-info">
+                <div class="product-img">
+                    <img src="images/product/product-01.png">
                 </div>
-                <hr>
-                <div class="points">
-                    <img src="images/Logo_Coin.svg">
-                    <h5><span>255</span> 點</h5>
-                </div>
-                <hr>
-                <div class="exchange">
-                    <div class="counting">
-                        <span class="label">數量</span>
-                        <div class="stepper-wrapper">
-                            <!-- 預設為1，且不可低於1 -->
-                            <div class="stepper-content">
-                              <button class="step-minus" disabled>
-                                  <i class="material-symbols-outlined">remove</i>
-                              </button>
-                              <span class="count">1</span>
-                              <button class="step-plus">
-                                  <i class="material-symbols-outlined">add</i>
-                              </button>
+                <div class="product-info">
+                    <div class="name">
+                        <p>商品編號：FP202501030027</p>
+                        <h4>Family mart 拿鐵熱咖啡(大)</h4>
+                    </div>
+                    <hr>
+                    <div class="points">
+                        <img src="images/Logo_Coin.svg">
+                        <h5><span>255</span> 點</h5>
+                    </div>
+                    <hr>
+                    <div class="exchange">
+                        <div class="counting">
+                            <span class="label">數量</span>
+                            <div class="stepper-wrapper">
+                                <!-- 預設為1，且不可低於1 -->
+                                <div class="stepper-content">
+                                    <button class="step-minus" disabled>
+                                        <i class="material-symbols-outlined">remove</i>
+                                    </button>
+                                    <span class="count">1</span>
+                                    <button class="step-plus">
+                                        <i class="material-symbols-outlined">add</i>
+                                    </button>
+                                </div>
+                                <!-- 數量<=1時，不顯示.helper -->
+                                <span class="helper" style="display: none;">總計：<span>510</span> 點</span>
                             </div>
-                            <!-- 數量<=1時，不顯示.helper -->
-                            <span class="helper" style="display: none;">總計：<span>510</span> 點</span>
+                        </div>
+                        <button for="popup-login" class="btn-xl">登入提醒</button>
+                        <button for="popup-insufficient" class="btn-xl">餘額不足</button>
+                        <button onclick="productConfirm()" class="btn-xl">立即兌換</button>
+                    </div>
+                </div>
+            </div>
+            <div class="details">
+                <div class="tab-wrapper">
+                    <ul class="tab">
+                        <li class="tab-item active">
+                            <h5>注意事項</h5>
+                        </li>
+                        <li class="tab-item">
+                            <h5>頁籤二</h5>
+                        </li>
+                        <div class="tab-underline"></div>
+                    </ul>
+                    <div class="tab-scroll-left"><i class="material-symbols-outlined">chevron_left</i></div>
+                    <div class="tab-scroll-right"><i class="material-symbols-outlined">chevron_right</i></div>
+                </div>
+                <div class="tab-container">
+                    <div class="tab-content" style="display: block;">
+                        <p>
+                            使用本券須先下載OPEN POINT APP並完成註冊，才可將7-ELEVEN數位商品禮券歸戶至OPEN POINT APP，並開啟OPEN POINT APP進行消費使用。<br><br>
+                            OPEN POINT APP 歸戶流程<br>
+                            STEP1:前往EasyWallet票匣>點擊｢使用｣按鈕 >複製一維條碼下方16碼之票券序號至序號輸入頁面: <a class="link-secondary link-noline" href="https://systexticket.azurewebsites.net/" target="_blank"><span>https://systexticket.azurewebsites.net/</span></a>。(此頁面一維條碼無法使用於門市。)<br>
+                            STEP2:輸入票券序號點擊「歸戶 OPEN POINT APP」。(點擊後訂單無法再取消。)<br>
+                            STEP3:導連至 OPEN POINT APP，並點選確認完成歸戶。<br>
+                            STEP4:開啟 OPEN POINT APP >服務(下方按鈕) >熱門服務 >數位禮券。開啟已歸戶的數位禮券於指定門市出示條碼使用。<br><br>
+                            7-ELEVEN 50元數位商品禮券，可跨統一集團通路使用。<br><br>
+                            商品規格：<br>
+                            面額50元。<br><br>
+                        </p>
+                        <p>注意事項：</p>
+                        <ol>
+                            <li>上方一維條碼無法於門市使用，請先複製一維條碼下方之16碼電子票券序號。</li>
+                            <li>
+                                <p>使用本券須先下載OPEN POINT APP並完成註冊，才可將數位商品禮券歸戶至OPEN POINT APP，並開啟OPEN POINT APP進行消費使用。序號輸入頁面： <a class="link-secondary link-noline" href="https://systexticket.azurewebsites.net/" target="_blank"><span>https://systexticket.azurewebsites.net/</span></a></p>
+                            </li>
+                            <li>於序號輸入頁面輸入或貼上本券序號後，點選兌換歸戶，頁面將自動導連至OPEN POINT APP內並完成數位商品禮券歸戶，可於OPEN POINT APP→下方按鈕(服務)→熱門服務→數位禮券中確認已歸戶之數位商品禮券。</li>
+                            <li>7-ELEVEN數位商品禮券可於以下通路兌換商品或等值服務：統一超商、星巴克、統一多拿滋、康是美、21世紀風味館、夢時代購物中心、統一時代百貨、酷聖石冰淇淋、聖娜多堡、聖德科斯、統一渡假村、BEING spa、統一健身俱樂部、速邁樂加油中心、ibon售票系統網-線上訂房。</li>
+                            <li>至通路門市兌換商品或等值服務時，請出示OPEN POINT APP內數位禮券→我的卡片頁面使用。</li>
+                            <li>凡非開立統一超商與本券使用通路之統一發票者及代收業務及服務事項者，本券無法使用。</li>
+                            <li>7-ELEVEN數位商品禮券不可兌換現金及依據菸害防制法規定，恕於門市無法使用7-ELEVEN數位商品禮券購買菸品。</li>
+                            <li>7-ELEVEN數位商品禮券無使用期限，可分次及併券使用，惟無法重複儲值。</li>
+                            <li>7-ELEVEN數位商品禮券採無記名方式發行，包括已使用、被竊、遭盜用、遺失、手機故障等致條碼及卡號無法辨識之情形，恕無法退現、掛失止付或補發。</li>
+                            <li>本券一經歸戶，相關責任及權利義務即移轉至統一超商股份有限公司及安源資訊股份有限公司。7-ELEVEN數位商品禮券券面記載之金額，已由澳商澳盛銀行集團股分有限公司台北分公司提供足額履約保證，保證期間屆滿，自動解除全部保證責任。惟逾保證期間，發行人仍因自負履約責任。</li>
+                            <li>7-ELEVEN數位商品禮券售出時已開立統一發票，至門市兌換商品時開立零值交易明細。</li>
+                            <li>本券如有偽造變造等違反法令或使用規定之行為，相關單位將依法究責。</li>
+                            <li>本券之兌換期為兌換當日起算之60天。</li>
+                            <li>若兌換時有任何問題，請聯絡精誠資訊顧客服務專線(02)8798-6963（服務時間：星期一至五，早上九點至下午六點，不含國定假日與政府機關公佈之停止上班日）。</li>
+                        </ol>
+                        <p>發行商資訊：<br>
+                            精誠資訊股份有限公司/ 統一編號：97311466/ 地址：臺北市瑞光路318號/ 負責人：林隆奮/ 實收資本額：2,693,933,040 元(至2021/01/05)。<br><br>
+                            履約保障：<br>
+                            本服務所發行的電子禮券皆自發行日起存入發行人於玉山銀行開立之信託帳戶，專款專用，信託期間至少一年。
+                        </p>
+                    </div>
+                    <div class="tab-content" style="display: none;">
+                        頁籤二的內容
+                    </div>
+                </div>
+            </div>
+        </main>
+        <main id="product-confirm" style="display: none;">
+            <div class="confirm-title">
+                <h3>確認兌換商品</h3>
+                <p>完成兌換後將無法取消，請確認商品內容及數量是否正確。</p>
+            </div>
+            <div class="receipt">
+                <div class="confirm-product">
+                    <div class="product-img">
+                        <img src="images/product/product-01.png">
+                    </div>
+                    <div class="product-info">
+                        <div class="name">
+                            <p>商品編號：FP202501030027</p>
+                            <h4>Family mart 拿鐵熱咖啡(大)</h4>
+                        </div>
+                        <div class="points">
+                            <img src="images/Logo_Coin.svg">
+                            <h5>255 點</h5>
                         </div>
                     </div>
-                    <button for="popup-login" class="btn-xl">登入提醒</button>
-                    <button for="popup-insufficient" class="btn-xl">餘額不足</button>
-                    <button onclick="productConfirm()" class="btn-xl">立即兌換</button>
-                </div>
-            </div>
-        </div>
-        <div class="details">
-            <div class="tab-wrapper">
-                <ul class="tab">
-                    <li class="tab-item active"><h5>注意事項</h5></li>
-                    <li class="tab-item"><h5>頁籤二</h5></li>
-                    <div class="tab-underline"></div>
-                </ul>
-                <div class="tab-scroll-left"><i class="material-symbols-outlined">chevron_left</i></div>
-                <div class="tab-scroll-right"><i class="material-symbols-outlined">chevron_right</i></div>
-              </div>
-              <div class="tab-container">
-                <div class="tab-content" style="display: block;">
-                    <p>
-                        使用本券須先下載OPEN POINT APP並完成註冊，才可將7-ELEVEN數位商品禮券歸戶至OPEN POINT APP，並開啟OPEN POINT APP進行消費使用。<br><br>
-                        OPEN POINT APP 歸戶流程<br>
-                        STEP1:前往EasyWallet票匣>點擊｢使用｣按鈕 >複製一維條碼下方16碼之票券序號至序號輸入頁面: <a class="link-secondary link-noline" href="https://systexticket.azurewebsites.net/" target="_blank"><span>https://systexticket.azurewebsites.net/</span></a>。(此頁面一維條碼無法使用於門市。)<br>
-                        STEP2:輸入票券序號點擊「歸戶 OPEN POINT APP」。(點擊後訂單無法再取消。)<br>
-                        STEP3:導連至 OPEN POINT APP，並點選確認完成歸戶。<br>
-                        STEP4:開啟 OPEN POINT APP >服務(下方按鈕) >熱門服務 >數位禮券。開啟已歸戶的數位禮券於指定門市出示條碼使用。<br><br>
-                        7-ELEVEN 50元數位商品禮券，可跨統一集團通路使用。<br><br>
-                        商品規格：<br>
-                        面額50元。<br><br>
-                    </p>
-                    <p>注意事項：</p>
-                    <ol>
-                        <li>上方一維條碼無法於門市使用，請先複製一維條碼下方之16碼電子票券序號。</li>
-                        <li><p>使用本券須先下載OPEN POINT APP並完成註冊，才可將數位商品禮券歸戶至OPEN POINT APP，並開啟OPEN POINT APP進行消費使用。序號輸入頁面： <a class="link-secondary link-noline" href="https://systexticket.azurewebsites.net/" target="_blank"><span>https://systexticket.azurewebsites.net/</span></a></p></li>
-                        <li>於序號輸入頁面輸入或貼上本券序號後，點選兌換歸戶，頁面將自動導連至OPEN POINT APP內並完成數位商品禮券歸戶，可於OPEN POINT APP→下方按鈕(服務)→熱門服務→數位禮券中確認已歸戶之數位商品禮券。</li>
-                        <li>7-ELEVEN數位商品禮券可於以下通路兌換商品或等值服務：統一超商、星巴克、統一多拿滋、康是美、21世紀風味館、夢時代購物中心、統一時代百貨、酷聖石冰淇淋、聖娜多堡、聖德科斯、統一渡假村、BEING spa、統一健身俱樂部、速邁樂加油中心、ibon售票系統網-線上訂房。</li>
-                        <li>至通路門市兌換商品或等值服務時，請出示OPEN POINT APP內數位禮券→我的卡片頁面使用。</li>
-                        <li>凡非開立統一超商與本券使用通路之統一發票者及代收業務及服務事項者，本券無法使用。</li>
-                        <li>7-ELEVEN數位商品禮券不可兌換現金及依據菸害防制法規定，恕於門市無法使用7-ELEVEN數位商品禮券購買菸品。</li>
-                        <li>7-ELEVEN數位商品禮券無使用期限，可分次及併券使用，惟無法重複儲值。</li>
-                        <li>7-ELEVEN數位商品禮券採無記名方式發行，包括已使用、被竊、遭盜用、遺失、手機故障等致條碼及卡號無法辨識之情形，恕無法退現、掛失止付或補發。</li>
-                        <li>本券一經歸戶，相關責任及權利義務即移轉至統一超商股份有限公司及安源資訊股份有限公司。7-ELEVEN數位商品禮券券面記載之金額，已由澳商澳盛銀行集團股分有限公司台北分公司提供足額履約保證，保證期間屆滿，自動解除全部保證責任。惟逾保證期間，發行人仍因自負履約責任。</li>
-                        <li>7-ELEVEN數位商品禮券售出時已開立統一發票，至門市兌換商品時開立零值交易明細。</li>
-                        <li>本券如有偽造變造等違反法令或使用規定之行為，相關單位將依法究責。</li>
-                        <li>本券之兌換期為兌換當日起算之60天。</li>
-                        <li>若兌換時有任何問題，請聯絡精誠資訊顧客服務專線(02)8798-6963（服務時間：星期一至五，早上九點至下午六點，不含國定假日與政府機關公佈之停止上班日）。</li>
-                    </ol>
-                    <p>發行商資訊：<br>
-                        精誠資訊股份有限公司/ 統一編號：97311466/ 地址：臺北市瑞光路318號/ 負責人：林隆奮/ 實收資本額：2,693,933,040 元(至2021/01/05)。<br><br>
-                        履約保障：<br>
-                        本服務所發行的電子禮券皆自發行日起存入發行人於玉山銀行開立之信託帳戶，專款專用，信託期間至少一年。
-                    </p>
-                </div>
-                <div class="tab-content" style="display: none;">
-                    頁籤二的內容
-                </div>
-              </div>
-        </div>
-      </main>
-      <main id="product-confirm" style="display: none;">
-        <div class="confirm-title">
-            <h3>確認兌換商品</h3>
-            <p>完成兌換後將無法取消，請確認商品內容及數量是否正確。</p>
-        </div>
-        <div class="receipt">
-            <div class="confirm-product">
-                <div class="product-img">
-                    <img src="images/product/product-01.png">
-                </div>
-                <div class="product-info">
-                    <div class="name">
-                        <p>商品編號：FP202501030027</p>
-                        <h4>Family mart 拿鐵熱咖啡(大)</h4>
-                    </div>
-                    <div class="points">
-                        <img src="images/Logo_Coin.svg">
-                        <h5>255 點</h5>
+                    <div class="quantity">
+                        <i class="material-symbols-outlined">confirmation_number</i>
+                        <h5>x2</h5>
                     </div>
                 </div>
-                <div class="quantity">
-                    <i class="material-symbols-outlined">confirmation_number</i>
-                    <h5>x2</h5>
+                <div class="confirm-detail">
+                    <h5>兌換明細</h5>
+                    <ul class="content">
+                        <li>
+                            <div class="label">本次兌換所需點數</div>
+                            <div class="value">510 點</div>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="confirm-detail">
-                <h5>兌換明細</h5>
-                <ul class="content">
-                    <li>
-                        <div class="label">本次兌換所需點數</div>
-                        <div class="value">510 點</div>
-                    </li>
-                </ul>
+            <div class="checkbox-wrapper text-center">
+                <label>
+                    <input type="checkbox" name="checkbox" id="agree">
+                    我已閱讀並同意<a href="javascript:void(0);"><span>紅利規章</span></a>
+                </label>
             </div>
-        </div>
-        <div class="checkbox-wrapper text-center">
-            <label>
-                <input type="checkbox" name="checkbox" id="agree">
-                我已閱讀並同意<a href="javascript:void(0);"><span>紅利規章</span></a>
-            </label>
-        </div>
-        <div class="actions">
-            <button onclick="productInfo()" class="btn-secondary btn-xl">返回修改</button>
-            <button onclick="productSuccess()" class="btn-xl" id="exchange-confirm" disabled>確認兌換</button>
-            <button onclick="productFailed()" class="btn-xl">兌換失敗</button>
-        </div>
-      </main>
-      <div id="exchange-failed" style="display: none;">
-        <div class="exchange-img"><img src="images/failed.svg"></div>
-        <div class="exchange-info">
-            <h4>兌換失敗</h4>
-            <p>兌換失敗，請稍後再試或聯絡客服信箱處理。</p>
-        </div>
-        <div class="exchange-action">
-            <button class="btn-secondary" onclick="location.href='index.html'">回到首頁</button>
-        </div>
-      </div>
-      <main id="exchange-success" style="display: none;">
-        <div class="success-info">
-            <div class="exchange-img" id="lottie-success"></div>
+            <div class="actions">
+                <button onclick="productInfo()" class="btn-secondary btn-xl">返回修改</button>
+                <button onclick="productSuccess()" class="btn-xl" id="exchange-confirm" disabled>確認兌換</button>
+                <button onclick="productFailed()" class="btn-xl">兌換失敗</button>
+            </div>
+        </main>
+        <div id="exchange-failed" style="display: none;">
+            <div class="exchange-img"><img src="images/failed.svg"></div>
             <div class="exchange-info">
-                <h4>兌換成功</h4>
-                <p>兌換的商品已儲存至票夾，可立即使用。</p>
+                <h4>兌換失敗</h4>
+                <p>兌換失敗，請稍後再試或聯絡客服信箱處理。</p>
+            </div>
+            <div class="exchange-action">
+                <button class="btn-secondary" onclick="location.href='index.html'">回到首頁</button>
             </div>
         </div>
-        <div class="exchange-action">
-            <button onclick="goToExchange()" class="btn-secondary btn-xl">繼續兌換</button>
-            <button onclick="location.href='myTickets.html'" class="btn-xl">查看票夾</button>
-        </div>
-        <div class="receipt">
-            <div class="confirm-product">
-                <div class="product-img">
-                    <img src="images/product/product-01.png">
-                </div>
-                <div class="product-info">
-                    <div class="name">
-                        <p>商品編號：FP202501030027</p>
-                        <h4>Family mart 拿鐵熱咖啡(大)</h4>
-                    </div>
-                    <div class="points">
-                        <img src="images/Logo_Coin.svg">
-                        <h5>255 點</h5>
-                    </div>
+        <main id="exchange-success" style="display: none;">
+            <div class="success-info">
+                <div class="exchange-img" id="lottie-success"></div>
+                <div class="exchange-info">
+                    <h4>兌換成功</h4>
+                    <p>兌換的商品已儲存至票夾，可立即使用。</p>
                 </div>
             </div>
-            <div class="confirm-detail">
-                <h5>兌換明細</h5>
-                <ul class="content">
-                    <li>
-                        <div class="label">訂單編號</div>
-                        <div class="value">FP123456789</div>
-                    </li>
-                    <li>
-                        <div class="label">兌換時間</div>
-                        <div class="value">2025-01-22  15:20:14</div>
-                    </li>
-                    <li>
-                        <div class="label">兌換數量</div>
-                        <div class="value">2</div>
-                    </li>
-                    <li>
-                        <div class="label">本次兌換所需點數</div>
-                        <div class="value">510 點</div>
-                    </li>
-                </ul>
+            <div class="exchange-action">
+                <button onclick="goToExchange()" class="btn-secondary btn-xl">繼續兌換</button>
+                <button onclick="location.href='myTickets.html'" class="btn-xl">查看票夾</button>
             </div>
-        </div>
-      </main>
+            <div class="receipt">
+                <div class="confirm-product">
+                    <div class="product-img">
+                        <img src="images/product/product-01.png">
+                    </div>
+                    <div class="product-info">
+                        <div class="name">
+                            <p>商品編號：FP202501030027</p>
+                            <h4>Family mart 拿鐵熱咖啡(大)</h4>
+                        </div>
+                        <div class="points">
+                            <img src="images/Logo_Coin.svg">
+                            <h5>255 點</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="confirm-detail">
+                    <h5>兌換明細</h5>
+                    <ul class="content">
+                        <li>
+                            <div class="label">訂單編號</div>
+                            <div class="value">FP123456789</div>
+                        </li>
+                        <li>
+                            <div class="label">兌換時間</div>
+                            <div class="value">2025-01-22 15:20:14</div>
+                        </li>
+                        <li>
+                            <div class="label">兌換數量</div>
+                            <div class="value">2</div>
+                        </li>
+                        <li>
+                            <div class="label">本次兌換所需點數</div>
+                            <div class="value">510 點</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
     </div>
 
     <footer id="footer-placeholder"></footer>
+
+    <div id="cookie-placeholder" class="cookie"></div>
 
     <div class="popup" id="popup-login">
         <h4>請先登入會員</h4>
@@ -277,65 +278,64 @@
     </div>
 
 
-
+    
     <!-- Lottie -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
     <script src="js/lottie-images.js"></script>
-
     <!-- jQuery -->
     <script src="js/jquery-3.7.1.min.js"></script>
     <script>
-        function openToast() {
-            $(".popup").removeClass('show');
-            $(".overlay").remove();
-            $("body").append(`
+    function openToast() {
+        $(".popup").removeClass('show');
+        $(".overlay").remove();
+        $("body").append(`
                 <div class="toast toast-success fadeout">
                     <i class="material-symbols-outlined">check_circle</i>
                     登入成功
                 </div>
             `);
-            setTimeout(() => {
-                $(".toast.fadeout").remove();
-            }, 5000);
-        }
+        setTimeout(() => {
+            $(".toast.fadeout").remove();
+        }, 5000);
+    }
 
-        function productInfo() {
-            $("#exchange-failed").css("display", "none");
-            $(".breadcrumbs").css("display", "flex");
-            $("main").css("display", "none");
-            $("#product-info").css("display", "flex");
-        }
+    function productInfo() {
+        $("#exchange-failed").css("display", "none");
+        $(".breadcrumbs").css("display", "flex");
+        $("main").css("display", "none");
+        $("#product-info").css("display", "flex");
+    }
 
-        function productConfirm() {
-            $("#exchange-failed").css("display", "none");
-            $(".breadcrumbs").css("display", "flex");
-            $("main").css("display", "none");
-            $("#product-confirm").css("display", "flex");
-        }
+    function productConfirm() {
+        $("#exchange-failed").css("display", "none");
+        $(".breadcrumbs").css("display", "flex");
+        $("main").css("display", "none");
+        $("#product-confirm").css("display", "flex");
+    }
 
-        function productSuccess() {
-            $("#exchange-failed").css("display", "none");
-            $(".breadcrumbs").css("display", "none");
-            $("main").css("display", "none");
-            $("#exchange-success").css("display", "flex");
-        }
+    function productSuccess() {
+        $("#exchange-failed").css("display", "none");
+        $(".breadcrumbs").css("display", "none");
+        $("main").css("display", "none");
+        $("#exchange-success").css("display", "flex");
+    }
 
-        function productFailed() {
-            $(".breadcrumbs").css("display", "none");
-            $("main").css("display", "none");
-            $("#exchange-failed").css("display", "flex");
-        }
-        
-        $(document).ready(function () {
-            $("#agree").change(function () {
-                $("#exchange-confirm").prop("disabled", !this.checked);
-            });
+    function productFailed() {
+        $(".breadcrumbs").css("display", "none");
+        $("main").css("display", "none");
+        $("#exchange-failed").css("display", "flex");
+    }
+
+    $(document).ready(function() {
+        $("#agree").change(function() {
+            $("#exchange-confirm").prop("disabled", !this.checked);
         });
+    });
     </script>
-    
     <script src="js/layout.js"></script>
     <script src="js/popup.js"></script>
     <script src="js/stepper.js"></script>
     <script src="js/tab.js"></script>
-  </body>
+</body>
+
 </html>
