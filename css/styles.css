@@ -4380,7 +4380,7 @@ ul.member-list li .value i {
     flex-direction: column;
   }
   .product .main-info .product-img {
-    min-width: auto;
+    max-width: calc(100dvw - 4rem);
   }
   .product .main-info .product-info hr {
     display: none;

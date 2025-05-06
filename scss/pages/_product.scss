@@ -275,7 +275,7 @@
       flex-direction: column;
 
       .product-img {
-        min-width: auto;
+        max-width: calc(100dvw - spacing(64));
       }
 
       .product-info {
