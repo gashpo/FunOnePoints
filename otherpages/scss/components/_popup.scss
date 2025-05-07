@@ -1,0 +1,178 @@
+.popup {
+  display: none;
+  flex-direction: column;
+  gap: spacing(24);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: spacing(32) spacing(32) spacing(24);
+  @include rounded(24);
+  background-color: color(gray-0);
+  @include dropshadow;
+  z-index: 5;
+  width: px(400);
+
+  .action {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: spacing(12);
+
+    i {
+      width: px(32);
+      height: px(32);
+      font-size: fontsize(24);
+      @include rounded(100);
+      background-color: color(gray-50);
+      color: color(gray-500);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      position: absolute;
+      top: px(12);
+
+      &[action="back"] {
+        left: px(12);
+      }
+
+      &[action="close"] {
+        right: px(12);
+      }
+    }
+  }
+
+  h4 {
+    text-align: center;
+    padding: spacing(0) spacing(16);
+  }
+
+  .popup-container {
+    max-height: calc(100dvh - px(240));
+    overflow-y: auto;
+
+    &.reminder {
+      display: flex;
+      flex-direction: column;
+      gap: spacing(24);
+      text-align: center;
+    }
+  }
+
+  .btns {
+    display: flex;
+    gap: spacing(20);
+
+    button {
+      flex: 1;
+    }
+  }
+
+  &.show {
+    display: flex;
+  }
+
+  @include max-to(mobile) {
+    width: calc(100dvw - spacing(40));
+
+    &.bottom_sheet {
+      display: flex;
+      gap: spacing(0);
+      width: 100dvw;
+      top: auto;
+      right: 0;
+      bottom: -100%;
+      left: 0;
+      border-radius: px(24) px(24) 0 0;
+      transform: translate(0, 0);
+      padding: spacing(0);
+      @include transition(bottom);
+      min-height: calc(100dvh - px(140));
+
+      .action {
+        height: px(60);
+
+        i {
+          top: px(15);
+
+          &[action="back"] {
+            left: px(16);
+          }
+
+          &[action="close"] {
+            right: px(16);
+          }
+        }
+
+        ~ .popup-container {
+          border-top: px(1) solid color(gray-150);
+        }
+      }
+
+      h4 {
+        line-height: px(60);
+      }
+
+      .popup-container {
+        max-height: calc(100dvh - px(112));
+        padding: spacing(32) spacing(16);
+        flex-grow: 1;
+      }
+
+      .btns {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: color(gray-0);
+        padding: spacing(16);
+        @include dropshadow(up);
+      }
+
+      &.show {
+        bottom: 0;
+      }
+    }
+
+    &.full {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100dvw;
+      height: 0;
+      border-radius: 0;
+      transform: none;
+
+      &.show {
+        height: 100dvh;
+      }
+    }
+  }
+}
+
+#registration {
+  .popup-container {
+    overflow: visible;
+
+    > div {
+      display: flex;
+      gap: px(16);
+    }
+  }
+
+  @include min-to(mobile) {
+    .select-wrapper {
+      &.open {
+        .select-items {
+          ul {
+            max-height: px(240);
+          }
+        }
+      }
+    }
+  }
+}

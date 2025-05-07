@@ -1,0 +1,41 @@
+.cookie {
+    position: fixed;
+    z-index: 2;
+    right: spacing(16);
+    bottom: spacing(20);
+    left: spacing(16);
+    background-color: color(gray-0);
+    @include rounded(24);
+    padding: spacing(24);
+    display: flex;
+    gap: spacing(24);
+    align-items: center;
+    justify-content: center;
+    animation: fade-in 0.8s forwards;
+
+    &.fade-out {
+        animation: fade-out 0.8s forwards;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        transform: translate(0, spacing(20));
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(0, spacing(20));
+        opacity: 0;
+    }
+}

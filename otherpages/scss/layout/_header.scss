@@ -1,0 +1,350 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  padding: spacing(40) spacing(20);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: spacing(20);
+  pointer-events: none;
+  @include transition(top);
+
+  .menu {
+    padding: spacing(10) spacing(28);
+    background-color: color(primary-900);
+    border: px(1) solid color(gray-0);
+    color: color(gray-0);
+    @include rounded(48);
+    display: flex;
+    align-items: center;
+    gap: spacing(32);
+    height: px(50);
+    pointer-events: all;
+    position: relative;
+
+    .menu-toggle {
+      display: none;
+      flex-shrink: 0;
+    }
+
+    .logo {
+      height: px(25);
+      cursor: pointer;
+    }
+
+    .navigation {
+      display: flex;
+      align-items: center;
+      gap: spacing(32);
+
+      .nav-item {
+        padding: spacing(8) spacing(16);
+        @include fontRWD(body3);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .action {
+    display: inline-flex;
+    align-items: center;
+    gap: spacing(20);
+    pointer-events: all;
+
+    #login,
+    #user {
+      @include transition(top);
+    }
+
+    #login {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      i {
+        display: none;
+      }
+    }
+
+    .header-dropdown {
+      position: relative;
+
+      .point {
+        padding: spacing(0) spacing(20) spacing(0) spacing(28);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: spacing(8);
+        cursor: pointer;
+        background-color: color(primary-900);
+        border: px(1) solid color(gray-0);
+        color: color(gray-0);
+        @include rounded(64);
+        height: px(50);
+        min-width: px(160);
+
+        img {
+          max-width: px(30);
+          max-height: px(30);
+        }
+
+        span {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: spacing(8);
+        }
+
+        i {
+          @include transition(transform);
+        }
+      }
+
+      .select {
+        position: absolute;
+        top: calc(100% + spacing(8));
+        right: 0;
+        width: 100%;
+        min-width: max-content;
+
+        &.active {
+          overflow-y: hidden;
+        }
+      }
+    }
+  }
+
+  .select {
+    padding: spacing(0) spacing(4) spacing(0) spacing(8);
+    height: auto;
+    @include rounded(20);
+    @include dropshadow;
+    background-color: color(gray-0);
+    max-height: px(0);
+    color: color(gray-900);
+    @include transition(all);
+    overflow: hidden;
+  
+    ul {
+      padding-right: spacing(4);
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+  
+      li {
+        display: flex;
+        align-items: center;
+        padding: spacing(16);
+        gap: spacing(8);
+        @include rounded(20);
+        cursor: pointer;
+        @include transition(all);
+  
+        i {
+          color: color(gray-500);
+        }
+  
+        &:hover {
+          background-color: color(primary-50);
+          color: color(primary-500);
+  
+          i {
+            color: color(primary-500);
+          }
+        }
+  
+        &.divider {
+          cursor: default;
+          background-color: color(gray-0);
+        }
+      }
+    }
+  
+    &.active {
+      max-height: px(300);
+      padding: spacing(8) spacing(4) spacing(8) spacing(8);
+      overflow-y: auto;
+    }
+  }
+
+  &.hide {
+    top: -100%;
+  }
+
+  @include max-to(tablet) {
+    padding: spacing(16);
+    gap: spacing(12);
+
+    .menu {
+      background-color: transparent;
+      border-color: transparent;
+      flex: 1;
+      gap: spacing(12);
+      
+
+      .logo {
+        flex-grow: 1;
+        background-color: color(primary-900);
+        border: px(1) solid color(primary-0);
+        padding: spacing(10) spacing(20);
+        height: px(50);
+        @include rounded(64);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include transition(all);
+      }
+
+      .navigation {
+        position: absolute;
+        top: px(82);
+        left: 0;
+        right: 0;
+        padding: spacing(0) spacing(12);
+        flex-direction: column;
+        gap: spacing(0);
+        align-items: flex-start;
+        display: none;
+
+        .nav-item {
+          padding: spacing(16) spacing(0);
+        }
+      }
+    }
+
+    .action {
+      #login {
+        padding: spacing(8);
+        width: px(50);
+        height: px(50);
+
+        i {
+          display: inline;
+        }
+
+        span {
+          display: none;
+        }
+      }
+
+      #language {
+        display: none;
+      }
+
+      .header-dropdown {
+        .point {
+          padding: spacing(8) spacing(16);
+          min-width: auto;
+
+          span {
+            display: none;
+          }
+        }
+
+        img {
+          max-width: px(50);
+          max-height: px(50);
+        }
+
+        span {
+          display: none;
+        }
+      }
+    }
+
+    &.open {
+      background-color: color(primary-900);
+      bottom: 0;
+      align-items: flex-start;
+      gap: spacing(0);
+
+      .menu {
+        flex: 1;
+
+        .menu-toggle {
+          i::before {
+            content: "\e5cd";
+          }
+        }
+
+        .logo {
+          border: px(1) solid color(gray-0);
+          flex-grow: 1;
+        }
+
+        .navigation {
+          display: inline;
+        }
+
+        &::after {
+          flex: 0;
+        }
+      }
+
+      .action {
+        #language {
+          display: inline;
+          position: absolute;
+          bottom: spacing(16);
+          left: spacing(32);
+        }
+
+        #login,
+        #user {
+          display: none;
+        }
+      }
+    }
+
+    &.hide {
+      .action {
+        #login,
+        #user {
+          top: calc(-100% - px(32));
+        }
+      }
+    }
+  }
+
+  @include max-to(mobile) {
+    padding: spacing(16);
+    @include transition(top);
+
+    .menu {
+      padding: spacing(0);
+    }
+  }
+}
+
+#user {
+  display: none;
+}
+
+body {
+  &.loggedin {
+    #user {
+      display: inline;
+    }
+
+    #login {
+      display: none;
+    }
+  }
+
+  &:has(header.open) {
+    overflow: hidden;
+  }
+
+  &:has(#mobile-menu) {
+    #user {
+      .point {
+        i {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}

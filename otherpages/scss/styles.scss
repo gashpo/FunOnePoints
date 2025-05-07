@@ -1,0 +1,59 @@
+@import "reset";
+@import "variable/variable";
+
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Varela&display=swap");
+* {
+  font-family: "Noto Sans TC", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* 反白選取樣式 */
+::-moz-selection {
+  background-color: rgba(color(primary-200), 0.8);
+}
+
+::selection {
+  background-color: rgba(color(primary-200), 0.8);
+}
+
+::-webkit-scrollbar {
+  width: px(5);
+  background-color: color(gray-0);
+  @include rounded(100);
+}
+
+::-webkit-scrollbar-thumb {
+  width: px(5);
+  background-color: color(gray-150);
+  @include rounded(100);
+}
+
+body {
+  color: color(gray-900);
+  background-color: color(primary-50);
+
+  &:has(.overlay) {
+    overflow: hidden;
+  }
+}
+
+@import "components/button";
+@import "components/badge";
+@import "components/datepicker";
+@import "components/divider";
+@import "components/list";
+@import "components/input";
+@import "components/overlay";
+@import "components/popup";
+@import "components/select";
+@import "components/stepper";
+@import "components/tab";
+@import "components/toast";
+
+@import "layout/footer";
+@import "layout/header";
+@import "layout/layout";
+@import "layout/main";
+@import "layout/mobile-menu";
+@import "layout/sidebar";
+@import "layout/cookie";
