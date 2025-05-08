@@ -71,6 +71,7 @@ ul.point-list {
         @include fontRWD(body4);
         color: color(gray-400);
         position: relative;
+        display: inline-block;
 
         + span {
           padding-left: spacing(16);
@@ -93,6 +94,7 @@ ul.point-list {
 
     .coin {
       height: px(24);
+      min-width: fit-content;
       display: flex;
       align-items: center;
       gap: spacing(8);

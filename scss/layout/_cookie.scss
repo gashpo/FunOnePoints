@@ -12,9 +12,18 @@
     align-items: center;
     justify-content: center;
     animation: fade-in 0.8s forwards;
+    @include dropshadow;
 
     &.fade-out {
         animation: fade-out 0.8s forwards;
+    }
+
+    @include max-to(mobile) {
+        flex-direction: column;
+        
+        button {
+            align-self: stretch;
+        }
     }
 }
 

@@ -2341,7 +2341,7 @@ header {
   transition: top 0.3s ease-in-out;
 }
 header .menu {
-  padding: 0rem 1.75rem;
+  padding: 0.625rem 1.75rem;
   background-color: #140030;
   border: 0.0625rem solid #ffffff;
   color: #ffffff;
@@ -2496,31 +2496,12 @@ header.hide {
     border-color: transparent;
     flex: 1;
     gap: 0.75rem;
-    padding: 0;
-  }
-  header .menu .menu-toggle {
-    width: 3.125rem;
-    height: 3.125rem;
-    border-radius: 4rem;
-    background-color: #140030;
-    color: #ffffff;
-    border: 0.0625rem solid #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-  }
-  header .menu .menu-toggle i::before {
-    font-family: "Material Icons";
-    content: "\e5d2";
-    font-size: 1.5rem !important;
-    font-style: normal;
   }
   header .menu .logo {
     flex-grow: 1;
     background-color: #140030;
     border: 0.0625rem solid;
-    padding: 0rem 1.25rem;
+    padding: 0.625rem 1.25rem;
     height: 3.125rem;
     border-radius: 4rem;
     display: flex;
@@ -2958,6 +2939,43 @@ body:has(#mobile-menu) {
 }
 .cookie.fade-out {
   animation: fade-out 0.8s forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    transform: translate(0, 1.25rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 1.25rem);
+    opacity: 0;
+  }
+}5rem;
+  align-items: center;
+  justify-content: center;
+  animation: fade-in 0.8s forwards;
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
+}
+.cookie.fade-out {
+  animation: fade-out 0.8s forwards;
+}
+@media (max-width: 767px) {
+  .cookie {
+    flex-direction: column;
+  }
+  .cookie button {
+    align-self: stretch;
+  }
 }
 
 @keyframes fade-in {
@@ -3638,6 +3656,7 @@ ul.point-list > li .desc span {
   line-height: 150%;
   color: #959595;
   position: relative;
+  display: inline-block;
 }
 @media (max-width: 991px) {
   ul.point-list > li .desc span {
@@ -3663,6 +3682,7 @@ ul.point-list > li .desc span + span::before {
 }
 ul.point-list > li .coin {
   height: 1.5rem;
+  min-width: fit-content;
   display: flex;
   align-items: center;
   gap: 0.5rem;
