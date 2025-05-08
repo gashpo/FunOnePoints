@@ -34,6 +34,9 @@
   }
 
   @include max-to(tablet) {
+    margin-top: spacing(80);
+    min-height: calc(100dvh - spacing(256));
+
     .announcement {
       flex-direction: column-reverse;
       gap: spacing(5);

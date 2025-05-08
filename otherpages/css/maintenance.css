@@ -726,6 +726,10 @@ h6 {
   padding: 5rem 2rem;
 }
 @media (max-width: 991px) {
+  .other-pages {
+    margin-top: 5rem;
+    min-height: calc(100dvh - 16rem);
+  }
   .other-pages .announcement {
     flex-direction: column-reverse;
     gap: 0.3125rem;
