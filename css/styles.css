@@ -4484,6 +4484,9 @@ ul.member-list li .value i {
   flex-direction: column;
   gap: 1.5rem;
 }
+.regulations h5 {
+  margin-bottom: 0.5rem;
+}
 .regulations h6 {
   line-height: 150%;
 }
