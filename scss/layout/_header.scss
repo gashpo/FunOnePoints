@@ -33,6 +33,14 @@ header {
     .logo {
       height: px(25);
       cursor: pointer;
+
+      a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: px(220);
+      }
     }
 
     .navigation {
@@ -209,13 +217,17 @@ header {
         flex-grow: 1;
         background-color: color(primary-900);
         border: px(1) solid color(primary-0);
-        padding: spacing(0) spacing(20);
+        padding: spacing(8) spacing(20);
         height: px(50);
         @include rounded(64);
         display: flex;
         align-items: center;
         justify-content: center;
         @include transition(all);
+
+        a {
+          width: 100%;
+        }
       }
 
       .navigation {
