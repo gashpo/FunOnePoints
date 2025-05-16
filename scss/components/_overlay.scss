@@ -6,6 +6,7 @@
   left: 0;
   background-color: rgba(color(gray-1000), 0.75);
   z-index: 4;
+  backdrop-filter: blur(spacing(2));
 
   &.on-popup {
     // display: none;

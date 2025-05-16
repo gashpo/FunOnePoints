@@ -255,6 +255,11 @@
 
     <div id="cookie-placeholder" class="cookie"></div>
 
+    <div class="loading">
+        <div id="lottie-loading"></div>
+        <span>loading...</span>
+    </div>
+
     <div class="popup" id="popup-login">
         <h4>請先登入會員</h4>
         <div class="popup-container text-center">
@@ -276,62 +281,69 @@
             <button>如何獲得點數</button>
         </div>
     </div>
-
-
     
     <!-- Lottie -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
     <script src="js/lottie-images.js"></script>
+
     <!-- jQuery -->
     <script src="js/jquery-3.7.1.min.js"></script>
     <script>
-    function openToast() {
-        $(".popup").removeClass('show');
-        $(".overlay").remove();
-        $("body").append(`
-                <div class="toast toast-success fadeout">
-                    <i class="material-symbols-outlined">check_circle</i>
-                    登入成功
-                </div>
-            `);
-        setTimeout(() => {
-            $(".toast.fadeout").remove();
-        }, 5000);
-    }
+        function openToast() {
+            $(".popup").removeClass('show');
+            $(".overlay").remove();
+            $("body").append(`
+                    <div class="toast toast-success fadeout">
+                        <i class="material-symbols-outlined">check_circle</i>
+                        登入成功
+                    </div>
+                `);
+            setTimeout(() => {
+                $(".toast.fadeout").remove();
+            }, 5000);
+        }
 
-    function productInfo() {
-        $("#exchange-failed").css("display", "none");
-        $(".breadcrumbs").css("display", "flex");
-        $("main").css("display", "none");
-        $("#product-info").css("display", "flex");
-    }
+        function productInfo() {
+            $("#exchange-failed").css("display", "none");
+            $(".breadcrumbs").css("display", "flex");
+            $("main").css("display", "none");
+            $("#product-info").css("display", "flex");
+        }
 
-    function productConfirm() {
-        $("#exchange-failed").css("display", "none");
-        $(".breadcrumbs").css("display", "flex");
-        $("main").css("display", "none");
-        $("#product-confirm").css("display", "flex");
-    }
+        function productConfirm() {
+            $("#exchange-failed").css("display", "none");
+            $(".breadcrumbs").css("display", "flex");
+            $("main").css("display", "none");
+            $("#product-confirm").css("display", "flex");
+        }
 
-    function productSuccess() {
-        $("#exchange-failed").css("display", "none");
-        $(".breadcrumbs").css("display", "none");
-        $("main").css("display", "none");
-        $("#exchange-success").css("display", "flex");
-    }
+        function productSuccess() {
+            $("body").append('<div class="overlay"></div>');
+            $(".loading").addClass("show");
 
-    function productFailed() {
-        $(".breadcrumbs").css("display", "none");
-        $("main").css("display", "none");
-        $("#exchange-failed").css("display", "flex");
-    }
+            setTimeout(() => {
+                $("#exchange-failed").css("display", "none");
+                $(".breadcrumbs").css("display", "none");
+                $("main").css("display", "none");
+                $("#exchange-success").css("display", "flex");
+                $(".overlay").remove();
+                $(".loading").removeClass("show");
+            }, 3000);
+        }
 
-    $(document).ready(function() {
-        $("#agree").change(function() {
-            $("#exchange-confirm").prop("disabled", !this.checked);
+        function productFailed() {
+            $(".breadcrumbs").css("display", "none");
+            $("main").css("display", "none");
+            $("#exchange-failed").css("display", "flex");
+        }
+
+        $(document).ready(function() {
+            $("#agree").change(function() {
+                $("#exchange-confirm").prop("disabled", !this.checked);
+            });
         });
-    });
     </script>
+
     <script src="js/layout.js"></script>
     <script src="js/popup.js"></script>
     <script src="js/stepper.js"></script>

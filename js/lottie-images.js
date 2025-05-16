@@ -12,6 +12,13 @@ var loadingGray = lottie.loadAnimation({
   autoplay: true,
   path: "images/Loading_gray.json",
 });
+var loading = lottie.loadAnimation({
+  container: document.getElementById("lottie-loading"),
+  renderer: "svg",
+  loop: true,
+  autoplay: true,
+  path: "images/loading.json",
+});
 var success = lottie.loadAnimation({
   container: document.getElementById("lottie-success"),
   renderer: "svg",
