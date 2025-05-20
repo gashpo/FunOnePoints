@@ -8,6 +8,16 @@
   @return calc($key / 16 * 1rem);
 }
 
+// dvh設定
+@function dvh($key) {
+  @return calc(var(--vh, 1vh) * #{$key});
+}
+
+// dvw設定
+@function dvw($key) {
+  @return calc(var(--vw, 1vw) * #{$key});
+}
+
 // 導圓角
 @mixin rounded($key) {
   border-radius: px($key);

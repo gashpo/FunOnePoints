@@ -3,22 +3,22 @@
   margin: auto;
   display: flex;
   gap: spacing(16);
-  min-height: calc(100dvh - px(390));
+  min-height: calc(dvh(100) - px(390));
 
   @include max-to(desktop) {
-    width: calc(100dvw - px(320));
+    width: calc(dvw(100) - px(320));
     min-width: px(720);
   }
 
   @include max-to(tablet) {
-    width: calc(100dvw - px(272));
-    min-height: calc(100dvh - px(382));
+    width: calc(dvw(100) - px(272));
+    min-height: calc(dvh(100) - px(382));
   }
 
   @include max-to(mobile) {
-    width: calc(100dvw - px(32));
+    width: calc(dvw(100) - px(32));
     min-width: auto;
-    min-height: calc(100dvh - px(472));
+    min-height: calc(dvh(100) - px(472));
   }
 }
 
@@ -75,14 +75,14 @@ ul.breadcrumbs {
 
   @include max-to(desktop) {
     &.show {
-      width: calc(100dvw - px(320));
+      width: calc(dvw(100) - px(320));
       min-width: px(720);
     }
   }
 
   @include max-to(tablet) {
     &.show {
-      width: calc(100dvw - px(272));
+      width: calc(dvw(100) - px(272));
     }
   }
 
@@ -92,7 +92,7 @@ ul.breadcrumbs {
     width: calc(100svw - px(32));
 
     &.show {
-      width: calc(100dvw - px(32));
+      width: calc(dvw(100) - px(32));
       min-width: auto;
     }
   }
@@ -141,7 +141,7 @@ main {
 
 body:has(#mobile-menu) {
   .container {
-    min-height: calc(100dvh - px(340));
+    min-height: calc(dvh(100) - px(340));
   }
 }
 

@@ -2,8 +2,8 @@
   align-items: center;
   justify-content: space-between;
   width: px(720);
-  max-width: calc(100dvw - px(40));
-  min-height: calc(100dvh - px(243));
+  max-width: calc(dvw(100) - px(40));
+  min-height: calc(dvh(100) - px(243));
 
   .desc {
     display: flex;

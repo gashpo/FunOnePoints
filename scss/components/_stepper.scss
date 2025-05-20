@@ -31,9 +31,17 @@
     }
 
     .count {
-      min-width: px(70);
+      width: px(70);
+      height: px(38);
       text-align: center;
+      border-color: transparent;
       @include fontRWD(body2);
+
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
     }
   }
 

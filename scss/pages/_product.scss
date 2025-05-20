@@ -198,7 +198,7 @@
   }
 
   #exchange-failed {
-    min-height: calc(100dvh - px(200));
+    min-height: calc(dvh(100) - px(200));
     width: 100%;
     padding-top: spacing(130);
 
@@ -275,7 +275,7 @@
       flex-direction: column;
 
       .product-img {
-        max-width: calc(100dvw - spacing(64));
+        max-width: calc(dvw(100) - spacing(64));
       }
 
       .product-info {

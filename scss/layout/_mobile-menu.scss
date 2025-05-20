@@ -9,7 +9,7 @@
 
   .container {
     flex-direction: column;
-    min-height: calc(100dvh - px(340));
+    min-height: calc(dvh(100) - px(340));
   }
 
   .balance {

@@ -6,39 +6,44 @@ $(document).ready(function () {
     const $count = $wrapper.find(".count");
     const $helper = $wrapper.find(".helper");
     const $helperPoints = $helper.find("span");
-    const $points = $(".points h5 span"); // 取得單價點數
+
+    const $productInfo = $wrapper.closest(".product-info");
+    const $points = $productInfo.find(".points h5 span");
+
+    const unitPoints = parseInt($points.text().replace(/,/g, ""), 10); // 去除原始千分位格式
 
     function updateHelper() {
-      let unitPoints = parseInt($points.text()); // 單價點數
-      let quantity = parseInt($count.text()); // 數量
-      let totalPoints = unitPoints * quantity; // 計算總點數
+      let quantity = parseInt($count.val(), 10);
+      if (isNaN(quantity) || quantity < 1) {
+        quantity = 1;
+        $count.val(quantity);
+      }
 
-      // 更新 .helper 內的數值
-      $helperPoints.text(totalPoints);
-
-      // 當數量 > 1 顯示 .helper，否則隱藏
+      const totalPoints = unitPoints * quantity;
+      $helperPoints.text(totalPoints.toLocaleString()); // ✅ 顯示千分位格式
       $helper.toggle(quantity > 1);
+      $minus.prop("disabled", quantity <= 1);
     }
 
     function updateCount(change) {
-      let value = parseInt($count.text()) + change;
-      if (value < 1) return; // 確保不會低於 1
-      $count.text(value);
-      $minus.prop("disabled", value <= 1);
+      let quantity = parseInt($count.val(), 10) + change;
+      if (quantity < 1) quantity = 1;
+      $count.val(quantity);
       updateHelper();
     }
 
-    // 增加數字
     $plus.click(function () {
       updateCount(1);
     });
 
-    // 減少數字
     $minus.click(function () {
       updateCount(-1);
     });
 
-    // 頁面載入時執行一次
+    $count.on("input change", function () {
+      updateHelper();
+    });
+
     updateHelper();
   });
 });

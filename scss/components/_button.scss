@@ -1,6 +1,7 @@
 button,
 .btn,
 input[type="submit"] {
+  box-sizing: border-box;
   padding: spacing(8) spacing(16);
   @include rounded(16);
   display: flex;

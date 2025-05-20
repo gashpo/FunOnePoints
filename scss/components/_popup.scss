@@ -50,7 +50,7 @@
   }
 
   .popup-container {
-    max-height: calc(100dvh - px(240));
+    max-height: calc(dvh(100) - px(240));
     overflow-y: auto;
 
     &.reminder {
@@ -75,12 +75,12 @@
   }
 
   @include max-to(mobile) {
-    width: calc(100dvw - spacing(40));
+    width: calc(dvw(100) - spacing(40));
 
     &.bottom_sheet {
       display: flex;
       gap: spacing(0);
-      width: 100dvw;
+      width: dvw(100);
       top: auto;
       right: 0;
       bottom: -100%;
@@ -89,7 +89,7 @@
       transform: translate(0, 0);
       padding: spacing(0);
       @include transition(bottom);
-      min-height: calc(100dvh - px(140));
+      min-height: calc(dvh(100) - px(140));
 
       .action {
         height: px(60);
@@ -116,7 +116,7 @@
       }
 
       .popup-container {
-        max-height: calc(100dvh - px(112));
+        max-height: calc(dvh(100) - px(112));
         padding: spacing(32) spacing(16);
         flex-grow: 1;
       }
@@ -142,13 +142,13 @@
       right: 0;
       bottom: 0;
       left: 0;
-      width: 100dvw;
+      width: dvw(100);
       height: 0;
       border-radius: 0;
       transform: none;
 
       &.show {
-        height: 100dvh;
+        height: dvh(100);
       }
     }
   }

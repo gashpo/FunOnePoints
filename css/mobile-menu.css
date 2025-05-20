@@ -655,7 +655,7 @@ input[type=text] {
   padding: 0rem 1rem;
 }
 .popup .popup-container {
-  max-height: calc(100dvh - 15rem);
+  max-height: calc(dvh(100) - 15rem);
   overflow-y: auto;
 }
 .popup .btns {
@@ -694,7 +694,7 @@ input[type=text] {
     right: 1rem;
   }
   .popup .popup-container {
-    max-height: calc(100dvh - 7rem);
+    max-height: calc(dvh(100) - 7rem);
     border-top: 0.0625rem solid #d7d7d7;
   }
   .popup.show {

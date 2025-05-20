@@ -3,8 +3,11 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title id="pageTitle">Family mart 拿鐵熱咖啡(大) ｜ FunOne Points</title>
+
     <meta name="description" content="用 FunOne Points 紅利點數，輕鬆兌換各大通路商品與票券！累積點數，享受超值回饋，讓每點紅利都更有價值。" />
     <meta name="keywords" content="FunOne Points, 紅利點數, 點數兌換, 商品兌換, 會員回饋, 紅利商城, 優惠兌換">
     <!-- 瀏覽器 icon -->
@@ -68,7 +71,8 @@
                                     <button class="step-minus" disabled>
                                         <i class="material-symbols-outlined">remove</i>
                                     </button>
-                                    <span class="count">1</span>
+                                    <!-- <span class="count">1</span> -->
+                                    <input type="number" class="count" value="1" min="1">
                                     <button class="step-plus">
                                         <i class="material-symbols-outlined">add</i>
                                     </button>
@@ -77,8 +81,8 @@
                                 <span class="helper" style="display: none;">總計：<span>510</span> 點</span>
                             </div>
                         </div>
-                        <!-- <button for="popup-login" class="btn-xl">登入提醒</button> -->
-                        <!-- <button for="popup-insufficient" class="btn-xl">餘額不足</button> -->
+                        <button for="popup-login" class="btn-xl">登入提醒</button>
+                        <button for="popup-insufficient" class="btn-xl">餘額不足</button>
                         <button onclick="productConfirm()" class="btn-xl">立即兌換</button>
                     </div>
                 </div>
@@ -189,7 +193,7 @@
             <div class="actions">
                 <button onclick="productInfo()" class="btn-secondary btn-xl">返回修改</button>
                 <button onclick="productSuccess()" class="btn-xl" id="exchange-confirm" disabled>確認兌換</button>
-                <!-- <button onclick="productFailed()" class="btn-xl">兌換失敗</button> -->
+                <button onclick="productFailed()" class="btn-xl">兌換失敗</button>
             </div>
         </main>
         <div id="exchange-failed" style="display: none;">
@@ -257,7 +261,7 @@
 
     <footer id="footer-placeholder"></footer>
 
-    <!-- <div id="cookie-placeholder" class="cookie"></div> -->
+    <div id="cookie-placeholder" class="cookie"></div>
 
     <div class="loading">
         <div id="lottie-loading"></div>
@@ -352,6 +356,7 @@
     <script src="js/popup.js"></script>
     <script src="js/stepper.js"></script>
     <script src="js/tab.js"></script>
+    <!-- <script src="js/sizeReset.js"></script> -->
 </body>
 
 </html>
