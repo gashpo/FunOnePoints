@@ -62,7 +62,7 @@
                         <h5><span>255</span> 點</h5>
                     </div>
                     <hr>
-                    <div class="exchange">
+                    <div class="exchange bottom-sheet">
                         <div class="counting">
                             <span class="label">數量</span>
                             <div class="stepper-wrapper">
@@ -190,7 +190,7 @@
                     我已閱讀並同意<a href="javascript:void(0);"><span>紅利規章</span></a>
                 </label>
             </div>
-            <div class="actions">
+            <div class="actions bottom-sheet">
                 <button onclick="productInfo()" class="btn-secondary btn-xl">返回修改</button>
                 <button onclick="productSuccess()" class="btn-xl" id="exchange-confirm" disabled>確認兌換</button>
                 <button onclick="productFailed()" class="btn-xl">兌換失敗</button>
@@ -296,6 +296,12 @@
 
     <!-- jQuery -->
     <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/stepper.js"></script>
+    <script src="js/tab.js"></script>
+    <!-- <script src="js/sizeReset.js"></script> -->
+
     <script>
         function openToast() {
             $(".popup").removeClass('show');
@@ -316,6 +322,7 @@
             $(".breadcrumbs").css("display", "flex");
             $("main").css("display", "none");
             $("#product-info").css("display", "flex");
+            adjustGoTopPosition();
         }
 
         function productConfirm() {
@@ -323,6 +330,7 @@
             $(".breadcrumbs").css("display", "flex");
             $("main").css("display", "none");
             $("#product-confirm").css("display", "flex");
+            adjustGoTopPosition();
         }
 
         function productSuccess() {
@@ -336,6 +344,7 @@
                 $("#exchange-success").css("display", "flex");
                 $(".overlay").remove();
                 $(".loading").removeClass("show");
+                adjustGoTopPosition();
             }, 3000);
         }
 
@@ -343,6 +352,7 @@
             $(".breadcrumbs").css("display", "none");
             $("main").css("display", "none");
             $("#exchange-failed").css("display", "flex");
+            adjustGoTopPosition();
         }
 
         $(document).ready(function() {
@@ -351,12 +361,6 @@
             });
         });
     </script>
-
-    <script src="js/layout.js"></script>
-    <script src="js/popup.js"></script>
-    <script src="js/stepper.js"></script>
-    <script src="js/tab.js"></script>
-    <!-- <script src="js/sizeReset.js"></script> -->
 </body>
 
 </html>

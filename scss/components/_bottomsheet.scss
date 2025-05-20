@@ -1,0 +1,11 @@
+@include max-to(mobile) {
+    .bottom-sheet {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: spacing(16);
+        @include dropshadow(up);
+        z-index: 2;
+    }
+}
