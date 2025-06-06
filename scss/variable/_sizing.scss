@@ -3,11 +3,6 @@
   @return calc($key / 16 * 1rem);
 }
 
-// 間距設定
-@function spacing($key) {
-  @return calc($key / 16 * 1rem);
-}
-
 // dvh設定
 @function dvh($key) {
   @return calc(var(--vh, 1vh) * #{$key});

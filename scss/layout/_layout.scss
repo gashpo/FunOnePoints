@@ -2,7 +2,7 @@
   width: px(1200);
   margin: auto;
   display: flex;
-  gap: spacing(16);
+  gap: px(16);
   min-height: calc(dvh(100) - px(390));
 
   @include max-to(desktop) {
@@ -23,24 +23,24 @@
 }
 
 section {
-  padding: spacing(20);
+  padding: px(20);
 }
 
 ul.breadcrumbs {
   width: px(1200);
   display: none;
   align-items: center;
-  margin: spacing(0) auto spacing(20);
-  padding-top: spacing(130);
+  margin: px(0) auto px(20);
+  padding-top: px(130);
   @include fontRWD(caption);
 
   li {
     position: relative;
-    margin-right: spacing(12);
+    margin-right: px(12);
 
     span {
       cursor: pointer;
-      padding: spacing(0) spacing(4);
+      padding: px(0) px(4);
       @include fontRWD(caption);
     }
 
@@ -53,7 +53,7 @@ ul.breadcrumbs {
       position: absolute;
       top: 50%;
       left: 100%;
-      transform: translate(0, calc(-50% + spacing(2)));
+      transform: translate(0, calc(-50% + px(2)));
     }
 
     &:last-child {
@@ -88,7 +88,7 @@ ul.breadcrumbs {
 
   @include max-to(mobile) {
     display: flex;
-    padding-top: spacing(96);
+    padding-top: px(96);
     width: calc(100svw - px(32));
 
     &.show {
@@ -99,9 +99,9 @@ ul.breadcrumbs {
 }
 
 .page-title {
-  padding-top: spacing(130);
+  padding-top: px(130);
   width: px(1200);
-  margin: spacing(0) auto spacing(20);
+  margin: px(0) auto px(20);
 
   @include max-to(desktop) {
     width: calc(100svw - px(320));

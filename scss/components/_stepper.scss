@@ -2,16 +2,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: spacing(4);
+  gap: px(4);
   position: relative;
 
   .stepper-content {
     display: flex;
     align-items: center;
-    gap: spacing(8);
+    gap: px(8);
 
     button {
-      padding: spacing(8);
+      padding: px(8);
       background-color: color(primary-50);
       min-width: auto;
       @include rounded(16);

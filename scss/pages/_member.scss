@@ -3,8 +3,8 @@ ul.member-list {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: spacing(24);
-    padding: spacing(24) spacing(0);
+    gap: px(24);
+    padding: px(24) px(0);
 
     &:not(:last-child) {
       border-bottom: px(1) solid color(gray-150);
@@ -30,7 +30,7 @@ ul.member-list {
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      gap: spacing(8);
+      gap: px(8);
       cursor: pointer;
       color: color(gray-500);
 
@@ -55,7 +55,7 @@ ul.member-list {
 }
 
 .popup-slot {
-  padding: spacing(12) spacing(16);
+  padding: px(12) px(16);
   background-color: color(gray-50);
   @include rounded(20);
   border: px(1) solid color(gray-150);

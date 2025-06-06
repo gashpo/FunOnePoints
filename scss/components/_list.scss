@@ -15,7 +15,7 @@ ol {
     counter-increment: list-counter;
     position: relative;
     display: flex;
-    gap: spacing(8);
+    gap: px(8);
 
     &::before {
       content: counters(list-counter, ".") ". ";
@@ -24,13 +24,13 @@ ol {
     }
 
     &:not(:last-child) {
-      margin-bottom: spacing(20);
+      margin-bottom: px(20);
     }
   }
 
   &.ol-secondary {
     counter-reset: list-counter;
-    margin-top: spacing(4);
+    margin-top: px(4);
 
     > li {
       &::before {
@@ -38,18 +38,18 @@ ol {
       }
 
       &:not(:last-child) {
-        margin-bottom: spacing(4);
+        margin-bottom: px(4);
       }
     }
   }
 
   &.ol-tertiary {
     counter-reset: list-counter;
-    margin-top: spacing(4);
+    margin-top: px(4);
 
     > li {
       &:not(:last-child) {
-        margin-bottom: spacing(4);
+        margin-bottom: px(4);
       }
     }
   }
@@ -65,7 +65,7 @@ ol {
       }
 
       &:not(:last-child) {
-        margin-bottom: spacing(4);
+        margin-bottom: px(4);
       }
     }
   }
@@ -81,7 +81,7 @@ ol {
       }
 
       &:not(:last-child) {
-        margin-bottom: spacing(4);
+        margin-bottom: px(4);
       }
     }
   }

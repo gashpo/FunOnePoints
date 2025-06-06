@@ -14,14 +14,14 @@ input {
 
   &[type="text"] {
     height: px(48);
-    padding: spacing(12) spacing(46) spacing(12) spacing(16);
+    padding: px(12) px(46) px(12) px(16);
     width: 100%;
   }
 }
 
 .input-wrapper {
   display: inline-flex;
-  gap: spacing(16);
+  gap: px(16);
   width: 100%;
 
   label {
@@ -31,12 +31,12 @@ input {
 
   .input-content {
     display: inline-flex;
-    gap: spacing(4);
+    gap: px(4);
     width: 100%;
 
     > div {
       display: inline-flex;
-      gap: spacing(4);
+      gap: px(4);
       flex-direction: column;
       position: relative;
       width: 100%;
@@ -49,8 +49,8 @@ input {
 
     i {
       position: absolute;
-      right: spacing(16);
-      top: spacing(12);
+      right: px(16);
+      top: px(12);
       font-size: fontsize(22) !important;
       color: color(gray-500);
     }
@@ -70,13 +70,13 @@ input {
     label::before {
       content: "*";
       color: color(error-500);
-      margin-right: spacing(2);
+      margin-right: px(2);
     }
   }
 
   &.input-vertical {
     flex-direction: column;
-    gap: spacing(8);
+    gap: px(8);
 
     label {
       line-height: 150%;
@@ -129,7 +129,7 @@ input {
   label {
     display: inline-flex;
     align-items: center;
-    gap: spacing(8);
+    gap: px(8);
     @include fontRWD(body3);
     min-width: px(150);
     cursor: pointer;
@@ -212,8 +212,8 @@ input {
 
         &::before {
           content: "";
-          height: spacing(12);
-          width: spacing(12);
+          height: px(12);
+          width: px(12);
           background-color: color(gray-0);
           @include rounded(20);
           position: absolute;

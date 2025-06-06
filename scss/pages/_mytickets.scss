@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  gap: spacing(16);
+  gap: px(16);
 
   li {
     @include rounded(20);
@@ -35,15 +35,15 @@
         background-image: url("../images/divider_v.svg");
         background-position: left;
         background-repeat: repeat-y;
-        padding: spacing(16);
+        padding: px(16);
         display: flex;
         flex-direction: column;
-        gap: spacing(16);
+        gap: px(16);
 
         dl {
           display: flex;
           flex-wrap: wrap;
-          gap: spacing(4) spacing(16);
+          gap: px(4) px(16);
           @include fontRWD(body4);
 
           dt {
@@ -71,7 +71,7 @@
     }
 
     .ticket-stamp {
-      padding-right: spacing(16);
+      padding-right: px(16);
       flex: px(116);
       max-width: px(116);
     }
@@ -99,7 +99,7 @@
   + button {
     width: 100%;
     text-align: center;
-    margin-top: spacing(16);
+    margin-top: px(16);
   }
 
   @include max-to(mobile) {
@@ -120,11 +120,11 @@
       .ticket-stamp {
         width: px(100);
         height: px(100);
-        padding: spacing(0);
+        padding: px(0);
         position: absolute;
         top: 50%;
         // left: dvw(65);
-        right: spacing(-12);
+        right: px(-12);
         transform: translateY(-50%);
       }
     }
@@ -143,7 +143,7 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  gap: spacing(16);
+  gap: px(16);
 
   .product-code,
   .product-info {
@@ -153,10 +153,10 @@
   .product-code {
     // min-height: px(240);
     display: flex;
-    padding: spacing(20) spacing(16);
+    padding: px(20) px(16);
     justify-content: center;
     flex-wrap: wrap;
-    gap: spacing(64);
+    gap: px(64);
 
     .barcode {
       width: 100%;
@@ -165,14 +165,14 @@
       align-items: center;
       justify-content: center;
       flex-wrap: wrap;
-      gap: spacing(2);
+      gap: px(2);
       cursor: pointer;
 
       span {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        gap: spacing(2);
+        gap: px(2);
 
         &::after {
           font-family: "Material Icons";
@@ -192,19 +192,19 @@
   }
 
   .product-info {
-    padding: spacing(32) spacing(16);
+    padding: px(32) px(16);
     position: relative;
 
     .tab-container {
-      margin-top: spacing(16);
+      margin-top: px(16);
     }
 
     ol {
-      padding-left: spacing(8);
+      padding-left: px(8);
 
       > li {
         margin-bottom: 0;
-        gap: spacing(4);
+        gap: px(4);
 
         &::before {
           font-size: inherit;
@@ -216,7 +216,7 @@
 
     .product-title {
       display: flex;
-      gap: spacing(16);
+      gap: px(16);
       align-items: center;
       height: px(100);
       flex: 100%;
@@ -237,15 +237,15 @@
 
     &.product-details {
       justify-content: center;
-      gap: spacing(16);
+      gap: px(16);
 
       ul {
         flex: 100%;
 
         li {
           display: flex;
-          gap: spacing(16);
-          padding: spacing(12) spacing(0);
+          gap: px(16);
+          padding: px(12) px(0);
           border-bottom: px(1) solid color(gray-150);
 
           .title {
@@ -293,12 +293,12 @@
   left: 0;
   background-color: color(gray-0);
   z-index: 5;
-  padding: spacing(92) spacing(120) spacing(60);
+  padding: px(92) px(120) px(60);
   display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: spacing(64);
+  gap: px(64);
 
   .barcode {
     display: flex;
@@ -346,10 +346,10 @@
 .popup-ticket {
   @include max-to(mobile) {
     &.bottom_sheet {
-      padding: spacing(60) spacing(0) spacing(0);
+      padding: px(60) px(0) px(0);
 
       .popup-container {
-        padding: spacing(0);
+        padding: px(0);
       }
 
       &.show {

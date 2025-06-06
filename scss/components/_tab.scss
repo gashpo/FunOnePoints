@@ -32,7 +32,7 @@
     }
 
     .tab-item {
-      padding: spacing(16);
+      padding: px(16);
       @include fontRWD(body3);
       color: color(gray-400);
       cursor: pointer;

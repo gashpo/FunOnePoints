@@ -1,22 +1,22 @@
 main {
-  padding: spacing(32);
+  padding: px(32);
   @include rounded(24);
   background-color: color(gray-0);
   display: flex;
   flex-direction: column;
-  gap: spacing(40);
+  gap: px(40);
   align-self: flex-start;
 
   @include max-to(mobile) {
-    padding: spacing(32) spacing(16);
-    gap: spacing(16);
+    padding: px(32) px(16);
+    gap: px(16);
   }
 }
 
 .main-title {
   display: flex;
   align-items: center;
-  gap: spacing(8);
+  gap: px(8);
 
   &::before {
     content: "";

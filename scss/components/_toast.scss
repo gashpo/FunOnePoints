@@ -2,8 +2,8 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    gap: spacing(8);
-    padding: spacing(8) spacing(16);
+    gap: px(8);
+    padding: px(8) px(16);
     background-color: color(gray-900);
     color: color(gray-0);
     @include rounded(16);
@@ -38,30 +38,30 @@
 
 @keyframes toast-show {
     0% {
-        top: spacing(120);
+        top: px(120);
         opacity: 0;
     }
     100% {
-        top: spacing(140);
+        top: px(140);
         opacity: 1;
     }
 }
 
 @keyframes toast-fadeout {
     0% {
-        top: spacing(120);
+        top: px(120);
         opacity: 0;
     }
     10% {
-        top: spacing(140);
+        top: px(140);
         opacity: 1;
     }
     90% {
-        top: spacing(140);
+        top: px(140);
         opacity: 1;
     }
     100% {
-        top: spacing(140);
+        top: px(140);
         opacity: 0;
     }
 }
@@ -69,30 +69,30 @@
 @include max-to(mobile) {
     @keyframes toast-show {
         0% {
-            top: spacing(80);
+            top: px(80);
             opacity: 0;
         }
         100% {
-            top: spacing(100);
+            top: px(100);
             opacity: 1;
         }
     }
     
     @keyframes toast-fadeout {
         0% {
-            top: spacing(80);
+            top: px(80);
             opacity: 0;
         }
         10% {
-            top: spacing(120);
+            top: px(120);
             opacity: 1;
         }
         90% {
-            top: spacing(120);
+            top: px(120);
             opacity: 1;
         }
         100% {
-            top: spacing(120);
+            top: px(120);
             opacity: 0;
         }
     }

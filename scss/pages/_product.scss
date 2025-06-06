@@ -1,7 +1,7 @@
 .product {
   .main-info {
     display: flex;
-    gap: spacing(40);
+    gap: px(40);
 
     .product-img {
       width: px(430);
@@ -14,20 +14,20 @@
     .product-info {
       display: flex;
       flex-direction: column;
-      gap: spacing(40);
+      gap: px(40);
       flex-grow: 1;
 
       .name {
         p {
           color: color(gray-500);
-          margin-bottom: spacing(8);
+          margin-bottom: px(8);
         }
       }
 
       .points {
         display: flex;
         align-items: center;
-        gap: spacing(8);
+        gap: px(8);
 
         img {
           width: px(30);
@@ -44,12 +44,12 @@
       .exchange {
         display: flex;
         align-items: center;
-        gap: spacing(40);
+        gap: px(40);
 
         .counting {
           display: flex;
           align-items: center;
-          gap: spacing(16);
+          gap: px(16);
         }
 
         button {
@@ -62,14 +62,14 @@
   .details {
     display: flex;
     flex-direction: column;
-    gap: spacing(16);
+    gap: px(16);
   }
 
   .confirm-title {
     text-align: center;
 
     p {
-      margin-top: spacing(16);
+      margin-top: px(16);
       color: color(gray-500);
     }
   }
@@ -77,18 +77,18 @@
   .receipt {
     display: flex;
     flex-direction: column;
-    gap: spacing(20);
+    gap: px(20);
 
     .confirm-product,
     .confirm-detail {
       display: flex;
-      padding: spacing(32);
+      padding: px(32);
       background-color: color(gray-50);
       @include rounded(16);
     }
 
     .confirm-product {
-      gap: spacing(40);
+      gap: px(40);
       position: relative;
 
       .product-img {
@@ -102,21 +102,21 @@
       .product-info {
         display: flex;
         flex-direction: column;
-        gap: spacing(40);
+        gap: px(40);
         flex-grow: 1;
         word-break: break-all;
 
         .name {
           p {
             color: color(gray-500);
-            margin-bottom: spacing(8);
+            margin-bottom: px(8);
           }
         }
 
         .points {
           display: flex;
           align-items: center;
-          gap: spacing(8);
+          gap: px(8);
 
           img {
             width: px(30);
@@ -127,13 +127,13 @@
 
       .quantity {
         position: absolute;
-        right: spacing(32);
-        bottom: spacing(32);
-        padding: spacing(8) spacing(16);
+        right: px(32);
+        bottom: px(32);
+        padding: px(8) px(16);
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: spacing(4);
+        gap: px(4);
         background-color: color(primary-50);
         color: color(primary-500);
         @include rounded(20);
@@ -141,7 +141,7 @@
     }
 
     .confirm-detail {
-      gap: spacing(16);
+      gap: px(16);
       flex-direction: column;
 
       .content {
@@ -149,7 +149,7 @@
           display: flex;
           align-items: center;
           justify-content: space-between;
-          margin-bottom: spacing(8);
+          margin-bottom: px(8);
 
           .label {
             color: color(gray-500);
@@ -161,7 +161,7 @@
 
   .actions {
     display: flex;
-    gap: spacing(40);
+    gap: px(40);
 
     button {
       flex: 1;
@@ -175,7 +175,7 @@
     align-self: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: spacing(16);
+    gap: px(16);
 
     .exchange-img,
     .exchange-info,
@@ -192,7 +192,7 @@
     .exchange-info {
       p {
         color: color(gray-500);
-        margin-top: spacing(8);
+        margin-top: px(8);
       }
     }
   }
@@ -200,7 +200,7 @@
   #exchange-failed {
     min-height: calc(dvh(100) - px(200));
     width: 100%;
-    padding-top: spacing(130);
+    padding-top: px(130);
 
     .exchange-img,
     .exchange-info,
@@ -211,7 +211,7 @@
     .exchange-info {
       p {
         color: color(gray-500);
-        margin-top: spacing(8);
+        margin-top: px(8);
       }
     }
 
@@ -223,23 +223,23 @@
   }
 
   #exchange-success {
-    gap: spacing(40);
-    margin-top: spacing(130);
+    gap: px(40);
+    margin-top: px(130);
 
     .success-info {
       display: flex;
       flex-direction: column;
-      gap: spacing(16);
+      gap: px(16);
     }
 
     .exchange-action {
       display: flex;
       justify-content: center;
-      gap: spacing(40);
+      gap: px(40);
     }
 
     .receipt {
-      gap: spacing(0);
+      gap: px(0);
       overflow: hidden;
       @include rounded(16);
 
@@ -255,7 +255,7 @@
       .product-info {
         .exchange {
           flex-wrap: wrap;
-          gap: spacing(20);
+          gap: px(20);
 
           .counting {
             flex: 100%;
@@ -268,14 +268,14 @@
 
   @include max-to(mobile) {
     main {
-      gap: spacing(40);
+      gap: px(40);
     }
 
     .main-info {
       flex-direction: column;
 
       .product-img {
-        max-width: calc(dvw(100) - spacing(64));
+        max-width: calc(dvw(100) - px(64));
       }
 
       .product-info {
@@ -285,7 +285,7 @@
 
         .exchange {
           background-color: color(gray-0);
-          gap: spacing(36);
+          gap: px(36);
 
           button.btn-xl {
             @include button(l);
@@ -297,7 +297,7 @@
     .receipt {
       .confirm-product,
       .confirm-detail {
-        padding: spacing(32) spacing(16);
+        padding: px(32) px(16);
       }
 
       .confirm-product {
@@ -308,23 +308,23 @@
 
     .actions {
       background-color: color(gray-0);
-      gap: spacing(20);
+      gap: px(20);
 
       button {
-        padding: spacing(12) spacing(16);
+        padding: px(12) px(16);
         @include fontRWD(body3);
         @include rounded(20);
       }
     }
 
     #exchange-failed {
-      padding-top: spacing(96);
+      padding-top: px(96);
     }
 
     #exchange-success {
       .exchange-action {
         flex-direction: column-reverse;
-        gap: spacing(20);
+        gap: px(20);
       }
     }
   }

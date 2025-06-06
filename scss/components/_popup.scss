@@ -1,12 +1,12 @@
 .popup {
   display: none;
   flex-direction: column;
-  gap: spacing(24);
+  gap: px(24);
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: spacing(32) spacing(32) spacing(24);
+  padding: px(32) px(32) px(24);
   @include rounded(24);
   background-color: color(gray-0);
   @include dropshadow;
@@ -18,7 +18,7 @@
     top: 0;
     left: 0;
     right: 0;
-    padding: spacing(12);
+    padding: px(12);
 
     i {
       width: px(32);
@@ -46,7 +46,7 @@
 
   h4 {
     text-align: center;
-    padding: spacing(0) spacing(16);
+    padding: px(0) px(16);
   }
 
   .popup-container {
@@ -56,14 +56,14 @@
     &.reminder {
       display: flex;
       flex-direction: column;
-      gap: spacing(24);
+      gap: px(24);
       text-align: center;
     }
   }
 
   .btns {
     display: flex;
-    gap: spacing(20);
+    gap: px(20);
 
     button {
       flex: 1;
@@ -75,11 +75,11 @@
   }
 
   @include max-to(mobile) {
-    width: calc(dvw(100) - spacing(40));
+    width: calc(dvw(100) - px(40));
 
     &.bottom_sheet {
       display: flex;
-      gap: spacing(0);
+      gap: px(0);
       width: dvw(100);
       top: auto;
       right: 0;
@@ -87,7 +87,7 @@
       left: 0;
       border-radius: px(24) px(24) 0 0;
       transform: translate(0, 0);
-      padding: spacing(0);
+      padding: px(0);
       @include transition(bottom);
       min-height: calc(dvh(100) - px(140));
 
@@ -117,7 +117,7 @@
 
       .popup-container {
         max-height: calc(dvh(100) - px(112));
-        padding: spacing(32) spacing(16);
+        padding: px(32) px(16);
         flex-grow: 1;
       }
 
@@ -127,7 +127,7 @@
         bottom: 0;
         left: 0;
         background-color: color(gray-0);
-        padding: spacing(16);
+        padding: px(16);
         @include dropshadow(up);
       }
 

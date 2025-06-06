@@ -1856,6 +1856,11 @@ input[type=text] {
   font-size: 1rem;
   transition: all 0.3s ease-in-out;
 }
+.select-wrapper .select-dropdown.disabled {
+  pointer-events: none;
+  background-color: #f9f9f9;
+  color: #7b7b7b;
+}
 .select-wrapper .select-items {
   position: absolute;
   box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
@@ -3487,7 +3492,7 @@ header.hide ~ #exchange .exchange-container .tab-wrapper {
     right: px(36);
     background-color: color(gray-50);
     border: px(2) solid color(primary-600);
-    padding: spacing(16) spacing(24);
+    padding: px(16) px(24);
     @include rounded(100);
   }
   */
@@ -3534,7 +3539,7 @@ header.hide ~ #exchange .exchange-container .tab-wrapper {
     &::after {
       top: px(16);
       right: px(16);
-      padding: spacing(8) spacing(12);
+      padding: px(8) px(12);
       height: px(26);
     }
     */
@@ -3666,6 +3671,25 @@ header.hide ~ #exchange .exchange-container .tab-wrapper {
   .mypoints .expired-info {
     gap: 0.5rem;
     padding: 0rem;
+  }
+}
+
+.note {
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #f9f9f9;
+  color: #191919;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 150%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+@media (max-width: 991px) {
+  .note {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 150%;
   }
 }
 

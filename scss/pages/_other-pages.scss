@@ -8,17 +8,17 @@
   .desc {
     display: flex;
     flex-direction: column;
-    gap: spacing(20);
+    gap: px(20);
     color: color(gray-600);
 
     h3,
     h4 {
       color: color(gray-900);
-      margin-bottom: spacing(8);
+      margin-bottom: px(8);
     }
 
     ul {
-      margin: spacing(-20) spacing(0) spacing(0) spacing(20);
+      margin: px(-20) px(0) px(0) px(20);
       list-style-type: disc;
     }
   }
@@ -26,25 +26,25 @@
   .denied {
     display: flex;
     flex-direction: column;
-    gap: spacing(20);
+    gap: px(20);
     color: color(gray-600);
     flex: 1;
 
     h3,
     h4 {
       color: color(gray-900);
-      margin-bottom: spacing(8);
+      margin-bottom: px(8);
     }
   }
 
   @include max-to(mobile) {
     .desc {
       flex: 1;
-      padding-top: spacing(80);
+      padding-top: px(80);
     }
 
     .denied {
-      padding-top: spacing(80);
+      padding-top: px(80);
     }
 
     .error-img {

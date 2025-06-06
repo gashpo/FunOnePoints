@@ -2,7 +2,7 @@
   height: calc(dvh(100) + px(40));
   background-color: color(primary-900);
   position: relative;
-  margin-bottom: spacing(40);
+  margin-bottom: px(40);
   color: color(gray-0);
   text-align: center;
   overflow: hidden;
@@ -19,7 +19,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: spacing(24);
+    gap: px(24);
 
     p {
       @include fontRWD(body1);
@@ -28,7 +28,7 @@
 
   @include max-to(tablet) {
     #keyvision-img {
-      margin: dvh(25) spacing(-200) 0 spacing(-200);
+      margin: dvh(25) px(-200) 0 px(-200);
     }
 
     .title {
@@ -48,7 +48,7 @@
 }
 
 #exchange {
-  padding: spacing(80);
+  padding: px(80);
   flex-direction: column;
 
   h2 {
@@ -61,14 +61,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: spacing(64);
-    margin-top: spacing(72);
+    gap: px(64);
+    margin-top: px(72);
 
     .tab-wrapper {
       background-color: color(gray-0);
       border: px(1) solid color(primary-500);
       @include rounded(48);
-      padding: spacing(0) spacing(48);
+      padding: px(0) px(48);
       position: sticky;
       z-index: 2;
       @include transition(top);
@@ -80,7 +80,7 @@
       .pd-container {
         display: flex;
         flex-wrap: wrap;
-        gap: spacing(12);
+        gap: px(12);
 
         .pd-card {
           background-color: color(gray-0);
@@ -93,7 +93,7 @@
           @include transition(box-shadow, 0.2s);
 
           .pd-img {
-            padding: spacing(20);
+            padding: px(20);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -107,10 +107,10 @@
           }
 
           .pd-info {
-            padding: spacing(20) spacing(20) spacing(24);
+            padding: px(20) px(20) px(24);
             display: flex;
             flex-wrap: wrap;
-            gap: spacing(16);
+            gap: px(16);
 
             h6 {
               width: 100%;
@@ -125,7 +125,7 @@
             .points {
               color: color(primary-600);
               display: flex;
-              gap: spacing(8);
+              gap: px(8);
 
               img {
                 width: px(24);
@@ -153,19 +153,19 @@
   }
 
   @include max-to(desktop) {
-    padding: spacing(80) spacing(0);
+    padding: px(80) px(0);
   }
 
   @include max-to(mobile) {
     .exchange-container {
       .tab-wrapper {
-        max-width: calc(dvw(100) - spacing(32));
-        padding: spacing(0) spacing(28);
+        max-width: calc(dvw(100) - px(32));
+        padding: px(0) px(28);
 
         .tab-scroll-left,
         .tab-scroll-right {
           color: color(primary-500);
-          padding: spacing(0) spacing(16);
+          padding: px(0) px(16);
         }
 
         .tab-scroll-left {
@@ -188,7 +188,7 @@
 
           button {
             display: block;
-            margin: spacing(32) auto spacing(0);
+            margin: px(32) auto px(0);
           }
         }
       }
@@ -200,8 +200,8 @@ header {
   ~ #exchange {
     .exchange-container {
       .tab-wrapper {
-        top: spacing(100);
-        // top: spacing(80);
+        top: px(100);
+        // top: px(80);
       }
     }
   }
@@ -210,7 +210,7 @@ header {
     ~ #exchange {
       .exchange-container {
         .tab-wrapper {
-          top: spacing(16);
+          top: px(16);
         }
       }
     }
@@ -220,7 +220,7 @@ header {
     ~ #exchange {
       .exchange-container {
         .tab-wrapper {
-          top: spacing(80);
+          top: px(80);
         }
       }
     }
@@ -228,7 +228,7 @@ header {
 }
 
 #collect {
-  margin: spacing(0) spacing(16);
+  margin: px(0) px(16);
   background-color: color(primary-600);
   color: color(gray-0);
   @include rounded(40);
@@ -236,15 +236,15 @@ header {
   .collect-container {
     max-width: px(1440);
     margin: auto;
-    padding: spacing(72);
+    padding: px(72);
     display: flex;
     align-items: center;
-    gap: spacing(72);
+    gap: px(72);
 
     .desc {
       display: flex;
       flex-direction: column;
-      gap: spacing(24);
+      gap: px(24);
       flex-grow: 1;
 
       h2 {
@@ -256,7 +256,7 @@ header {
           background-size: cover;
           width: px(100);
           height: px(100);
-          transform: rotate(-20deg) translate(spacing(8), spacing(-4));
+          transform: rotate(-20deg) translate(px(8), px(-4));
         }
       }
 
@@ -268,13 +268,13 @@ header {
     .collect-swiper {
       height: px(400);
       display: flex;
-      gap: spacing(64);
-      padding: spacing(0) spacing(30);
+      gap: px(64);
+      padding: px(0) px(30);
 
       .navigation {
         display: flex;
         flex-direction: column;
-        gap: spacing(32);
+        gap: px(32);
         justify-content: center;
 
         .swiper-button-prev,
@@ -328,7 +328,7 @@ header {
         @include rounded(20);
         position: relative;
         box-shadow: px(3) px(3) px(5) 0 rgba(#1f0049, 0.7);
-        padding: spacing(40) spacing(20);
+        padding: px(40) px(20);
 
         .card-bottom {
           position: absolute;
@@ -359,12 +359,12 @@ header {
 
   @include max-to(desktop) {
     .collect-container {
-      padding: spacing(54);
+      padding: px(54);
 
       .collect-swiper {
         flex-wrap: wrap;
         align-items: center;
-        margin-bottom: spacing(100);
+        margin-bottom: px(100);
 
         .swiper-pagination {
           flex: 1;
@@ -378,7 +378,7 @@ header {
           flex: 1;
           flex-direction: row;
           justify-content: flex-end;
-          gap: spacing(16);
+          gap: px(16);
         }
       }
     }
@@ -392,14 +392,14 @@ header {
 
   @include max-to(mobile) {
     .collect-container {
-      padding: spacing(72) spacing(20) spacing(64);
+      padding: px(72) px(20) px(64);
 
       .desc {
         h2 {
           display: flex;
           flex-direction: column-reverse;
           align-items: center;
-          gap: spacing(32);
+          gap: px(32);
 
           &::after {
             transform: rotate(-20deg);
@@ -415,8 +415,8 @@ header {
       .collect-swiper {
         flex-wrap: wrap;
         align-items: center;
-        padding: spacing(0) spacing(20);
-        gap: spacing(40);
+        padding: px(0) px(20);
+        gap: px(40);
         height: px(340);
 
         .swiper-wrapper {
@@ -427,7 +427,7 @@ header {
           width: px(240);
 
           .card-bottom {
-            bottom: spacing(-14);
+            bottom: px(-14);
           }
         }
       }
@@ -438,7 +438,7 @@ header {
 .direction {
   background-color: color(primary-900);
   position: relative;
-  padding: spacing(120) spacing(16) spacing(0);
+  padding: px(120) px(16) px(0);
 
   .direction-container {
     @include rounded(40);
@@ -446,19 +446,19 @@ header {
     background-image: url("../images/Vector.svg");
     background-repeat: no-repeat;
     background-position: top px(-2) left px(-2);
-    padding: spacing(72) spacing(60);
+    padding: px(72) px(60);
     position: relative;
     color: color(gray-0);
     display: flex;
     align-items: center;
-    gap: spacing(68);
+    gap: px(68);
 
     .desc {
-      margin-top: spacing(120);
+      margin-top: px(120);
       flex: 1;
 
       h2 {
-        margin-bottom: spacing(24);
+        margin-bottom: px(24);
       }
 
       p {
@@ -483,7 +483,7 @@ header {
         right: px(36);
         background-color: color(gray-50);
         border: px(2) solid color(primary-600);
-        padding: spacing(16) spacing(24);
+        padding: px(16) px(24);
         @include rounded(100);
         display: flex;
         align-items: center;
@@ -502,7 +502,7 @@ header {
         right: px(36);
         background-color: color(gray-50);
         border: px(2) solid color(primary-600);
-        padding: spacing(16) spacing(24);
+        padding: px(16) px(24);
         @include rounded(100);
       }
       */
@@ -531,13 +531,13 @@ header {
 
   @include max-to(tablet) {
     .direction-container {
-      gap: spacing(40);
+      gap: px(40);
 
       #particle-animate {
         .Logo-light {
           top: px(16);
           right: px(16);
-          padding: spacing(8) spacing(12);
+          padding: px(8) px(12);
           border: px(1) solid color(primary-600);
 
           img {
@@ -548,7 +548,7 @@ header {
         &::after {
           top: px(16);
           right: px(16);
-          padding: spacing(8) spacing(12);
+          padding: px(8) px(12);
           height: px(26);
         }
         */
@@ -560,11 +560,11 @@ header {
     .direction-container {
       background-image: url("../images/Vector_m.svg");
       flex-direction: column;
-      gap: spacing(32);
-      padding: spacing(48) spacing(20);
+      gap: px(32);
+      padding: px(48) px(20);
 
       .desc {
-        margin-top: spacing(180);
+        margin-top: px(180);
         text-align: center;
 
         p {
@@ -584,7 +584,7 @@ header {
 
         svg {
           width: px(270) !important;
-          margin-left: spacing(-16);
+          margin-left: px(-16);
         }
       }
     }

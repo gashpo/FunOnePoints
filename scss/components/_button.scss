@@ -2,12 +2,12 @@ button,
 .btn,
 input[type="submit"] {
   box-sizing: border-box;
-  padding: spacing(8) spacing(16);
+  padding: px(8) px(16);
   @include rounded(16);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: spacing(8);
+  gap: px(8);
   min-width: px(100);
   @include transition;
   line-height: 1.5;
@@ -25,14 +25,14 @@ input[type="submit"] {
   }
 
   &.icon-only {
-    padding: spacing(8) spacing(8);
+    padding: px(8) px(8);
     min-width: auto;
   }
 
   // 尺寸
   /* Large */
   &.btn-l {
-    padding: spacing(12) spacing(16);
+    padding: px(12) px(16);
     @include fontRWD(body3);
     @include rounded(20);
 
@@ -43,13 +43,13 @@ input[type="submit"] {
     }
 
     &.icon-only {
-      padding: spacing(12) spacing(12);
+      padding: px(12) px(12);
     }
   }
 
   /* Extra Large */
   &.btn-xl {
-    padding: spacing(16) spacing(40);
+    padding: px(16) px(40);
     @include fontRWD(body3);
     @include rounded(24);
 
@@ -60,7 +60,7 @@ input[type="submit"] {
     }
 
     &.icon-only {
-      padding: spacing(16) spacing(16);
+      padding: px(16) px(16);
     }
   }
 
@@ -151,8 +151,8 @@ a,
 
   i {
     font-size: fontsize(22) !important;
-    transform: translate(0, spacing(4));
-    margin-right: spacing(4);
+    transform: translate(0, px(4));
+    margin-right: px(4);
   }
 
   @include hover {
@@ -170,7 +170,7 @@ a,
 
     i {
       font-size: fontsize(16) !important;
-      transform: translate(0, spacing(3));
+      transform: translate(0, px(3));
     }
   }
 
@@ -196,15 +196,15 @@ a,
 
 @mixin button($size: null) {
   @if $size == l {
-    padding: spacing(12) spacing(16);
+    padding: px(12) px(16);
     @include rounded(20);
     @include fontRWD(body3);
   } @else if $size == xl {
-    padding: spacing(16) spacing(40);
+    padding: px(16) px(40);
     @include rounded(24);
     @include fontRWD(body3);
   } @else {
-    padding: spacing(8) spacing(16);
+    padding: px(8) px(16);
     @include rounded(16);
     @include fontRWD(body4);
   }

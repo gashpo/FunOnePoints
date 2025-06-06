@@ -1,6 +1,6 @@
 hr,
 .divider {
-  padding: spacing(8) spacing(0);
+  padding: px(8) px(0);
   width: 100%;
 
   &::before {
@@ -12,7 +12,7 @@ hr,
   }
 
   &.vertical {
-    padding: spacing(0) spacing(8);
+    padding: px(0) px(8);
     width: auto;
     height: 100%;
 

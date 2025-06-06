@@ -1,14 +1,14 @@
 .cookie {
     position: fixed;
     z-index: 2;
-    right: spacing(16);
-    bottom: spacing(20);
-    left: spacing(16);
+    right: px(16);
+    bottom: px(20);
+    left: px(16);
     background-color: color(gray-0);
     @include rounded(24);
-    padding: spacing(24);
+    padding: px(24);
     display: flex;
-    gap: spacing(24);
+    gap: px(24);
     align-items: center;
     justify-content: center;
     animation: fade-in 0.8s forwards;
@@ -30,7 +30,7 @@
 
 @keyframes fade-in {
     0% {
-        transform: translate(0, spacing(20));
+        transform: translate(0, px(20));
         opacity: 0;
     }
     100% {
@@ -45,7 +45,7 @@
         opacity: 1;
     }
     100% {
-        transform: translate(0, spacing(20));
+        transform: translate(0, px(20));
         opacity: 0;
     }
 }

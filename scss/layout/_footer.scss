@@ -1,7 +1,7 @@
 footer {
   background-color: color(primary-900);
   position: relative;
-  padding: spacing(104) spacing(32);
+  padding: px(104) px(32);
   color: color(gray-50);
   display: flex;
   align-items: center;
@@ -21,7 +21,7 @@ footer {
   .info {
     display: inline-flex;
     align-items: center;
-    gap: spacing(40);
+    gap: px(40);
 
     .logo {
       height: px(35);
@@ -31,25 +31,25 @@ footer {
     .menu {
       display: inline-flex;
       align-items: center;
-      gap: spacing(28);
+      gap: px(28);
     }
   }
 
   @include max-to(tablet) {
-    padding: spacing(104) spacing(20);
+    padding: px(104) px(20);
 
     .info {
-      gap: spacing(20);
+      gap: px(20);
 
       .menu {
-        gap: spacing(12);
+        gap: px(12);
       }
     }
   }
 
   @include max-to(mobile) {
     flex-direction: column;
-    gap: spacing(64);
+    gap: px(64);
 
     .info {
       flex-direction: column;
@@ -58,7 +58,7 @@ footer {
 }
 
 .footer-selector {
-  padding: spacing(13) spacing(28);
+  padding: px(13) px(28);
   background-color: color(primary-900);
   border: px(1) solid color(gray-0);
   color: color(gray-0);
@@ -73,7 +73,7 @@ footer {
   @include transition(color);
   display: inline-flex;
   align-items: center;
-  gap: spacing(8);
+  gap: px(8);
   cursor: pointer;
   @include fontRWD(body4);
 
@@ -92,8 +92,8 @@ copyright {
 
 #go-top {
   position: fixed;
-  right: spacing(36);
-  bottom: spacing(36);
+  right: px(36);
+  bottom: px(36);
   z-index: 3;
   color: color(gray-0);
   background-color: color(primary-900);
@@ -108,8 +108,8 @@ copyright {
   cursor: pointer;
 
   @include max-to(mobile) {
-    right: spacing(16);
-    bottom: spacing(16);
+    right: px(16);
+    bottom: px(16);
     width: px(52);
     height: px(52);
   }

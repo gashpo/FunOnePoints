@@ -1,14 +1,14 @@
 .regulations {
-  gap: spacing(24);
+  gap: px(24);
 
   ul {
     display: flex;
     flex-direction: column;
-    gap: spacing(24);
+    gap: px(24);
   }
 
   h5 {
-    margin-bottom: spacing(8);
+    margin-bottom: px(8);
   }
 
   h6 {

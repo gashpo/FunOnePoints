@@ -11,7 +11,7 @@ function adjustGoTopPosition() {
     }
   } else {
     // 在桌機模式還原預設樣式
-    $('#go-top').css('bottom', '36px'); // 或是你桌面版的 spacing(36)
+    $('#go-top').css('bottom', '36px'); // 或是你桌面版的 px(36)
   }
 }
 

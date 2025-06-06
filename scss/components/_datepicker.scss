@@ -4,7 +4,7 @@
   .datepicker {
     display: flex;
     flex-direction: column;
-    gap: spacing(24);
+    gap: px(24);
 
     .datepicker-header {
       width: 100%;
@@ -16,7 +16,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: spacing(8);
+        gap: px(8);
       }
 
       > i {
@@ -35,7 +35,7 @@
       span {
         text-transform: uppercase;
         color: color(gray-300);
-        padding: spacing(4);
+        padding: px(4);
         width: px(40);
         font-weight: fontweight(Bold);
       }
@@ -45,7 +45,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      gap: spacing(10) calc((100% - px(40) * 7) / 6);
+      gap: px(10) calc((100% - px(40) * 7) / 6);
 
       span {
         display: flex;
@@ -82,7 +82,7 @@
     height: px(540);
 
     .datepicker {
-      padding-bottom: spacing(70);
+      padding-bottom: px(70);
     }
   }
 }

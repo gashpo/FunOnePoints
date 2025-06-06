@@ -1,13 +1,13 @@
 .sidenav {
   background-color: color(gray-0);
   @include rounded(24);
-  padding: spacing(16);
+  padding: px(16);
 
   li {
     display: flex;
     align-items: center;
-    gap: spacing(16);
-    padding: spacing(16) spacing(8);
+    gap: px(16);
+    padding: px(16) px(8);
     @include rounded(20);
     cursor: pointer;
     @include transition(all);

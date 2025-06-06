@@ -13,16 +13,16 @@
   }
 
   .balance {
-    margin-top: spacing(96);
+    margin-top: px(96);
     background-color: color(gray-0);
-    padding: spacing(16);
+    padding: px(16);
     @include rounded(24);
     flex: 100%;
     height: fit-content;
     flex-grow: 0;
     display: flex;
     align-items: center;
-    gap: spacing(8);
+    gap: px(8);
 
     img {
       width: px(30);
@@ -34,14 +34,14 @@
     flex: 100%;
     flex-grow: 0;
     background-color: color(gray-0);
-    padding: spacing(16);
+    padding: px(16);
     @include rounded(24);
 
     li {
       display: flex;
       align-items: center;
-      padding: spacing(16);
-      gap: spacing(8);
+      padding: px(16);
+      gap: px(8);
       @include rounded(20);
       cursor: pointer;
 
