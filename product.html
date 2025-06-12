@@ -81,7 +81,8 @@
                             </div>
                         </div>
                         <!-- <button for="popup-login" class="btn-xl">登入提醒</button>
-                        <button for="popup-insufficient" class="btn-xl">餘額不足</button> -->
+                        <button for="popup-insufficientBalance" class="btn-xl">餘額不足</button> -->
+                        <button for="popup-insufficientQuantity" class="btn-xl">數量不足</button>
                         <button onclick="productConfirm()" class="btn-xl" disabled>立即兌換</button>
                     </div>
                 </div>
@@ -278,7 +279,7 @@
         </div>
     </div>
 
-    <div class="popup" id="popup-insufficient">
+    <div class="popup" id="popup-insufficientBalance">
         <h4>點數餘額不足</h4>
         <div class="popup-container text-center">
             <p>目前您的點數餘額不足以兌換此商品。</p>
@@ -286,6 +287,16 @@
         <div class="btns">
             <button class="btn-secondary">關閉</button>
             <button>如何獲得點數</button>
+        </div>
+    </div>
+
+    <div class="popup" id="popup-insufficientQuantity">
+        <h4>數量不足</h4>
+        <div class="popup-container text-center">
+            <p>很抱歉，此商品目前數量不足，無法完成兌換。</p>
+        </div>
+        <div class="btns">
+            <button>我知道了</button>
         </div>
     </div>
     
