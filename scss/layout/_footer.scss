@@ -4,8 +4,10 @@ footer {
   padding: px(104) px(32);
   color: color(gray-50);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  gap: px(72);
 
   &::before {
     position: absolute;
@@ -19,9 +21,11 @@ footer {
   }
 
   .info {
+    width: 100%;
+    max-width: px(1200);
     display: inline-flex;
-    align-items: center;
-    gap: px(40);
+    justify-content: space-between;
+    gap: px(64);
 
     .logo {
       height: px(35);
@@ -30,29 +34,53 @@ footer {
 
     .menu {
       display: inline-flex;
-      align-items: center;
-      gap: px(28);
-    }
-  }
+      flex-direction: column;
+      gap: px(12);
+      flex: 1;
 
-  @include max-to(tablet) {
-    padding: px(104) px(20);
+      li {
+        @include fontRWD(h6);
 
-    .info {
-      gap: px(20);
+        .footer-textlink {
+          span {
+            color: color(gray-50);
+            @include transition(color);
+            display: inline-flex;
+            align-items: center;
+            gap: px(8);
+            cursor: pointer;
+            @include fontRWD(body4);
+            text-decoration: none;
+          }
 
-      .menu {
-        gap: px(12);
+          i {
+            font-size: fontsize(20) !important;
+            color: color(gray-50);
+            transform: none;
+          }
+
+          @include hover {
+            span,
+            i {
+              color: color(primary-200);
+            }
+          }
+        }
       }
     }
   }
 
   @include max-to(mobile) {
-    flex-direction: column;
     gap: px(64);
 
     .info {
-      flex-direction: column;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: px(40) px(24);
+
+      .menu {
+        flex: calc((100% - px(24)) / 2);
+      }
     }
   }
 }
@@ -68,26 +96,9 @@ footer {
   text-align: center;
 }
 
-.footer-textlink {
-  color: color(gray-50);
-  @include transition(color);
-  display: inline-flex;
-  align-items: center;
-  gap: px(8);
-  cursor: pointer;
-  @include fontRWD(body4);
-
-  i {
-    font-size: fontsize(20) !important;
-  }
-
-  @include hover {
-    color: color(primary-200);
-  }
-}
-
 copyright {
   @include fontRWD(caption);
+  color: color(gray-200);
 }
 
 #go-top {

@@ -71,9 +71,8 @@
                                     <button class="step-minus" disabled>
                                         <i class="material-symbols-outlined">remove</i>
                                     </button>
-                                    <!-- <span class="count">1</span> -->
-                                    <input type="number" class="count" value="1" min="1">
-                                    <button class="step-plus">
+                                    <input type="number" class="count" value="1" min="1" disabled>
+                                    <button class="step-plus" disabled>
                                         <i class="material-symbols-outlined">add</i>
                                     </button>
                                 </div>
@@ -81,9 +80,9 @@
                                 <span class="helper" style="display: none;">總計：<span>510</span> 點</span>
                             </div>
                         </div>
-                        <button for="popup-login" class="btn-xl">登入提醒</button>
-                        <button for="popup-insufficient" class="btn-xl">餘額不足</button>
-                        <button onclick="productConfirm()" class="btn-xl">立即兌換</button>
+                        <!-- <button for="popup-login" class="btn-xl">登入提醒</button>
+                        <button for="popup-insufficient" class="btn-xl">餘額不足</button> -->
+                        <button onclick="productConfirm()" class="btn-xl" disabled>立即兌換</button>
                     </div>
                 </div>
             </div>

@@ -2015,6 +2015,9 @@ input[type=text] {
   -webkit-appearance: none;
   margin: 0;
 }
+.stepper-wrapper .stepper-content .count:disabled {
+  background-color: transparent;
+}
 .stepper-wrapper .helper {
   font-size: 0.75rem;
   font-weight: 400;
@@ -2234,8 +2237,10 @@ footer {
   padding: 6.5rem 2rem;
   color: #f9f9f9;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  gap: 4.5rem;
 }
 footer::before {
   position: absolute;
@@ -2248,9 +2253,11 @@ footer::before {
   border-radius: 0rem 0rem 2.5rem 2.5rem;
 }
 footer .info {
+  width: 100%;
+  max-width: 75rem;
   display: inline-flex;
-  align-items: center;
-  gap: 2.5rem;
+  justify-content: space-between;
+  gap: 4rem;
 }
 footer .info .logo {
   height: 2.1875rem;
@@ -2258,27 +2265,63 @@ footer .info .logo {
 }
 footer .info .menu {
   display: inline-flex;
-  align-items: center;
-  gap: 1.75rem;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
+}
+footer .info .menu li {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 120%;
 }
 @media (max-width: 991px) {
-  footer {
-    padding: 6.5rem 1.25rem;
+  footer .info .menu li {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 120%;
   }
-  footer .info {
-    gap: 1.25rem;
+}
+footer .info .menu li .footer-textlink span {
+  color: #f9f9f9;
+  transition: color 0.3s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 150%;
+  text-decoration: none;
+}
+@media (max-width: 991px) {
+  footer .info .menu li .footer-textlink span {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 150%;
   }
-  footer .info .menu {
-    gap: 0.75rem;
+}
+footer .info .menu li .footer-textlink i {
+  font-size: 1.25rem !important;
+  color: #f9f9f9;
+  transform: none;
+}
+@media (hover: hover) {
+  footer .info .menu li .footer-textlink:hover span,
+  footer .info .menu li .footer-textlink:hover i {
+    color: #c199f8;
   }
 }
 @media (max-width: 767px) {
   footer {
-    flex-direction: column;
     gap: 4rem;
   }
   footer .info {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2.5rem 1.5rem;
+  }
+  footer .info .menu {
+    flex: calc((100% - 1.5rem) / 2);
   }
 }
 
@@ -2302,37 +2345,11 @@ footer .info .menu {
   }
 }
 
-.footer-textlink {
-  color: #f9f9f9;
-  transition: color 0.3s ease-in-out;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  cursor: pointer;
-  font-size: 0.875rem;
-  font-weight: 400;
-  line-height: 150%;
-}
-@media (max-width: 991px) {
-  .footer-textlink {
-    font-size: 0.875rem;
-    font-weight: 400;
-    line-height: 150%;
-  }
-}
-.footer-textlink i {
-  font-size: 1.25rem !important;
-}
-@media (hover: hover) {
-  .footer-textlink:hover {
-    color: #c199f8;
-  }
-}
-
 copyright {
   font-size: 0.75rem;
   font-weight: 400;
   line-height: 120%;
+  color: #cacaca;
 }
 @media (max-width: 991px) {
   copyright {
@@ -3146,11 +3163,14 @@ body:has(#mobile-menu) {
   transition: box-shadow 0.2s ease-in-out;
 }
 #exchange .exchange-container .tab-container .pd-container .pd-card .pd-img {
-  padding: 1.25rem;
+  position: relative;
+  margin: 1.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
   aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 1rem;
 }
 #exchange .exchange-container .tab-container .pd-container .pd-card .pd-img + .pd-info {
   background-image: url("../images/divider_h.svg");
@@ -3190,6 +3210,42 @@ body:has(#mobile-menu) {
   #exchange .exchange-container .tab-container .pd-container .pd-card .pd-info .points h5 span {
     font-size: 0.75rem;
     font-weight: 400;
+    line-height: 120%;
+  }
+}
+#exchange .exchange-container .tab-container .pd-container .pd-card.redeemed .pd-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+#exchange .exchange-container .tab-container .pd-container .pd-card.redeemed .pd-img::after {
+  position: absolute;
+  content: "兌換\a完畢";
+  white-space: pre;
+  width: 5rem;
+  height: 5rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #f0e5fd;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 120%;
+  border: 0.125rem solid #f0e5fd;
+  border-radius: 6.25rem;
+}
+@media (max-width: 991px) {
+  #exchange .exchange-container .tab-container .pd-container .pd-card.redeemed .pd-img::after {
+    font-size: 1.125rem;
+    font-weight: 700;
     line-height: 120%;
   }
 }
