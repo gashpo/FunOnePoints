@@ -25,6 +25,9 @@
         background-image: url("../images/product/Product-default.png");
         background-repeat: no-repeat;
         background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         &:has(img) {
           background-image: none;
@@ -146,12 +149,13 @@
   gap: px(16);
 
   .product-code,
+  .product-serial,
   .product-info {
     background-color: color(gray-0);
   }
 
-  .product-code {
-    // min-height: px(240);
+  .product-code,
+  .product-serial {
     display: flex;
     padding: px(20) px(16);
     justify-content: center;
@@ -191,6 +195,16 @@
     }
   }
 
+  .product-serial {
+    .input-wrapper:not(:first-child) {
+      margin-top: px(-28);
+    }
+
+    .copied {
+      color: color(success-500);
+    }
+  }
+
   .product-info {
     padding: px(32) px(16);
     position: relative;
@@ -221,8 +235,12 @@
       height: px(100);
       flex: 100%;
 
-      img {
+      .product-img {
+        height: 100%;
         aspect-ratio: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
 

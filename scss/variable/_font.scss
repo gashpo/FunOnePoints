@@ -164,7 +164,14 @@ $font-family: (
   }
 }
 
-// 用法
+// Google Symbols 樣式設定
+[class*="material-symbols"] {
+  &.filled {
+    font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48 !important;
+  }
+}
+
+// 預設用法
 p,
 span {
   @include fontRWD(body3);

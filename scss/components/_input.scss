@@ -53,6 +53,10 @@ input {
       top: px(12);
       font-size: fontsize(22) !important;
       color: color(gray-500);
+
+      &.inner-btn {
+        cursor: pointer;
+      }
     }
 
     .error-message {
