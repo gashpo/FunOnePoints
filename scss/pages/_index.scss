@@ -8,7 +8,7 @@
   overflow: hidden;
   border-radius: 0 0 px(40) px(40);
 
-  #keyvision-img {
+  .keyvision-img {
     margin-top: 14%;
     transform: scale(1.2);
   }
@@ -27,7 +27,7 @@
   }
 
   @include max-to(tablet) {
-    #keyvision-img {
+    .keyvision-img {
       margin: dvh(25) px(-200) 0 px(-200);
     }
 
@@ -544,7 +544,7 @@ header {
       */
     }
 
-    #decorate {
+    .decorate {
       position: absolute;
       top: 0;
       left: 0;
@@ -614,7 +614,7 @@ header {
         width: 100%;
       }
 
-      #decorate {
+      .decorate {
         width: px(90);
         overflow: hidden;
 

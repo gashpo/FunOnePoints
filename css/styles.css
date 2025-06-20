@@ -986,11 +986,9 @@ input[type=submit] i {
     background-color: #5100be;
   }
 }
-button:disabled, button.loading,
+button:disabled,
 .btn:disabled,
-.btn.loading,
-input[type=submit]:disabled,
-input[type=submit].loading {
+input[type=submit]:disabled {
   background-color: #e0ccfc !important;
   cursor: default;
 }
@@ -1013,19 +1011,15 @@ input[type=submit].btn-secondary i {
     background-color: #f9f9f9;
   }
 }
-button.btn-secondary:disabled, button.btn-secondary.loading,
+button.btn-secondary:disabled,
 .btn.btn-secondary:disabled,
-.btn.btn-secondary.loading,
-input[type=submit].btn-secondary:disabled,
-input[type=submit].btn-secondary.loading {
+input[type=submit].btn-secondary:disabled {
   background-color: #ffffff !important;
   color: #d7d7d7;
 }
-button.btn-secondary:disabled i, button.btn-secondary.loading i,
+button.btn-secondary:disabled i,
 .btn.btn-secondary:disabled i,
-.btn.btn-secondary.loading i,
-input[type=submit].btn-secondary:disabled i,
-input[type=submit].btn-secondary.loading i {
+input[type=submit].btn-secondary:disabled i {
   color: #d7d7d7;
 }
 button.btn-tertiary,
@@ -1056,11 +1050,6 @@ button.btn-tertiary:disabled i,
 .btn.btn-tertiary:disabled i,
 input[type=submit].btn-tertiary:disabled i {
   color: #d7d7d7;
-}
-button.btn-tertiary.loading,
-.btn.btn-tertiary.loading,
-input[type=submit].btn-tertiary.loading {
-  background-color: transparent !important;
 }
 
 a,
@@ -3069,7 +3058,7 @@ body:has(#mobile-menu) {
   overflow: hidden;
   border-radius: 0 0 2.5rem 2.5rem;
 }
-.keyvision #keyvision-img {
+.keyvision .keyvision-img {
   margin-top: 14%;
   transform: scale(1.2);
 }
@@ -3094,7 +3083,7 @@ body:has(#mobile-menu) {
   }
 }
 @media (max-width: 991px) {
-  .keyvision #keyvision-img {
+  .keyvision .keyvision-img {
     margin: calc(var(--vh, 1vh) * 25) -12.5rem 0 -12.5rem;
   }
   .keyvision .title {
@@ -3568,7 +3557,7 @@ header.hide ~ #exchange .exchange-container .tab-wrapper {
 .direction .direction-container #particle-animate .Logo-light img {
   height: 1.25rem;
 }
-.direction .direction-container #decorate {
+.direction .direction-container .decorate {
   position: absolute;
   top: 0;
   left: 0;
@@ -3640,11 +3629,11 @@ header.hide ~ #exchange .exchange-container .tab-wrapper {
     max-width: 100%;
     width: 100%;
   }
-  .direction .direction-container #decorate {
+  .direction .direction-container .decorate {
     width: 5.625rem;
     overflow: hidden;
   }
-  .direction .direction-container #decorate svg {
+  .direction .direction-container .decorate svg {
     width: 16.875rem !important;
     margin-left: -1rem;
   }

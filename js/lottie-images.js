@@ -1,42 +1,30 @@
-var loadingWhite = lottie.loadAnimation({
-  container: document.getElementById("lottie-loading_white"),
-  renderer: "svg",
-  loop: true,
-  autoplay: true,
-  path: "images/Loading_white.json",
-});
-var loadingGray = lottie.loadAnimation({
-  container: document.getElementById("lottie-loading_gray"),
-  renderer: "svg",
-  loop: true,
-  autoplay: true,
-  path: "images/Loading_gray.json",
-});
-var loading = lottie.loadAnimation({
-  container: document.getElementById("lottie-loading"),
-  renderer: "svg",
-  loop: true,
-  autoplay: true,
-  path: "images/loading.json",
-});
-var success = lottie.loadAnimation({
-  container: document.getElementById("lottie-success"),
-  renderer: "svg",
-  loop: true,
-  autoplay: true,
-  path: "images/Success.json",
-});
-var kvimg = lottie.loadAnimation({
-  container: document.getElementById("keyvision-img"),
-  renderer: "svg",
-  loop: true,
-  autoplay: true,
-  path: "images/KV.json",
-});
-var decorate = lottie.loadAnimation({
-  container: document.getElementById("decorate"),
-  renderer: "svg",
-  loop: true,
-  autoplay: true,
-  path: "images/decorate.json",
+document.addEventListener("DOMContentLoaded", function () {
+  const lottieElements = document.querySelectorAll("[data-animation-path]");
+
+  // 預設設定
+  const defaultSettings = {
+    renderer: "svg",
+    loop: true,
+    autoplay: true,
+  };
+
+  lottieElements.forEach(function (element) {
+    const animationPath = element.getAttribute("data-animation-path");
+
+    // 如果需要覆蓋預設值，仍可透過 data 屬性設定
+    const settings = {
+      container: element,
+      path: animationPath,
+      renderer:
+        element.getAttribute("data-anim-renderer") || defaultSettings.renderer,
+      loop: element.hasAttribute("data-anim-loop")
+        ? element.getAttribute("data-anim-loop") === "true"
+        : defaultSettings.loop,
+      autoplay: element.hasAttribute("data-anim-autoplay")
+        ? element.getAttribute("data-anim-autoplay") === "true"
+        : defaultSettings.autoplay,
+    };
+
+    lottie.loadAnimation(settings);
+  });
 });
