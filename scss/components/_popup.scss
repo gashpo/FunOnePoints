@@ -89,7 +89,7 @@
       transform: translate(0, 0);
       padding: px(0);
       @include transition(bottom);
-      min-height: calc(dvh(100) - px(140));
+      min-height: calc(100svh - px(140));
 
       .action {
         height: px(60);
