@@ -365,6 +365,7 @@
   @include max-to(mobile) {
     &.bottom_sheet {
       padding: px(60) px(0) px(0);
+      opacity: 0;
 
       .popup-container {
         padding: px(0);
@@ -372,6 +373,7 @@
 
       &.show {
         bottom: 0;
+        opacity: 1;
       }
     }
   }

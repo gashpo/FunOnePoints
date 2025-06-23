@@ -4156,12 +4156,14 @@ ul.point-list + button {
 @media (max-width: 767px) {
   .popup-ticket.bottom_sheet {
     padding: 3.75rem 0rem 0rem;
+    opacity: 0;
   }
   .popup-ticket.bottom_sheet .popup-container {
     padding: 0rem;
   }
   .popup-ticket.bottom_sheet.show {
     bottom: 0;
+    opacity: 1;
   }
 }
 
