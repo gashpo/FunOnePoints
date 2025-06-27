@@ -1739,7 +1739,7 @@ input[type=text] {
     transform: translate(0, 0);
     padding: 0rem;
     transition: bottom 0.3s ease-in-out;
-    min-height: calc(100svh - 8.75rem);
+    max-height: calc(var(--vh, 1vh) * 100 - 8.75rem);
   }
   .popup.bottom_sheet .action {
     height: 3.75rem;
@@ -4395,6 +4395,9 @@ ul.member-list li .value i {
   aspect-ratio: 1;
   overflow: hidden;
   border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .product .receipt .confirm-product .product-info {
   display: flex;
